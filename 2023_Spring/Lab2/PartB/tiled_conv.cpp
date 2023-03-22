@@ -46,18 +46,45 @@ void tiled_conv (
         for(int tj = 0; tj < N_TILE_COLS; tj++)
         {
             std::cout << "Processing Tile " << ti*N_TILE_COLS + tj + 1;
-            std::cout << "/" << N_TILE_ROWS * N_TILE_COLS << std::endl;    
+            std::cout << "/" << N_TILE_ROWS * N_TILE_COLS << std::endl;
 
-            //--------------------------------------------------------------------------
-            // TODO: Your code for Task B and Task C goes here 
-            //
-            // Implement the required code to run convolution on an entire tile. 
-            // Refer to utils.cpp for the required functions
-            //
-            // Hint: You need to split the filter kernels into sub-groups 
-            //       for processing.
-            //--------------------------------------------------------------------------
-            
+            TILE_DEPTH:
+            for(int tk = 0; tk < OUT_FM_DEPTH / OUT_BUF_DEPTH; tk++) {
+                //load bufers with memory
+                if (tk == 0) {
+                    load_input_tile_block_from_DRAM(
+                        conv_in_buf,
+                        input_feature_map,
+                        ti,
+                        tj
+                    );
+                }
+
+                load_layer_params_from_DRAM(
+                    conv_wt_buf,
+                    conv_bias_buf,
+                    layer_weights,
+                    layer_bias,
+                    tk
+                );
+
+
+                conv_7x7(
+                    conv_out_buf,
+                    conv_in_buf,
+                    conv_wt_buf,
+                    conv_bias_buf
+                );
+
+                //store output memory
+                store_output_tile_to_DRAM(
+                    output_feature_map,
+                    conv_out_buf,
+                    ti,
+                    tj,
+                    tk
+                );
+            }
         }
     }
 }

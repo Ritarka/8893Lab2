@@ -22,6 +22,7 @@ create_clock -period 10 -name default
 #csim_design -O -clean
 
 ## C code synthesis to generate Verilog code
+config_schedule -enable_dsp_full_reg=false
 csynth_design
 
 ## C and Verilog co-simulation

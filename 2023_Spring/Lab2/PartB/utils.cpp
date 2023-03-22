@@ -42,7 +42,15 @@ void load_input_tile_block_from_DRAM (
                 //
                 // Hint: Either load 0 or input feature into 
                 //       the buffer based on border conditions
-                in_fm_buf[f][i][j] = 0; // Just a placeholder
+
+                //in_fm_buf[c][i][j] = 0; // Just a placeholder
+                int input_y = i + height_offset - 3;
+                int input_x = j + width_offset - 3;
+
+                if (input_y < 0 || input_y >= IN_FM_HEIGHT || input_x < 0 || input_x >= IN_FM_WIDTH)
+                    in_fm_buf[c][i][j] = 0;
+                else
+                    in_fm_buf[c][i][j] = in_fm[c][input_y][input_x];
             }
         }
     }

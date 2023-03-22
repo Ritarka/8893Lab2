@@ -15,9 +15,13 @@ CFLAG += -std=c++11 -Wno-unused-result
 
 all:
 	g++ *.cpp -o result $(CFLAG) $(IFLAG)
+	./result
 
 synth:
 	vitis_hls script.tcl
 
 clean:
 	rm -f *.o result *.log
+
+report:
+	gvim real_proj/solution1/syn/report/csynth.rpt

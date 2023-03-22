@@ -1,0 +1,63 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:724:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:738:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:752:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartA/script.tcl:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=real_matmul" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=MatA_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=MatB_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=MatC_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=MatA dim=1 cyclic factor=20" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:30:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=MatB dim=1 cyclic factor=20" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:31:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=MatC dim=1 cyclic factor=20" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:48:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:59:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="real_matmul.cpp:71:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="real_matmul" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="real_matmul.cpp:75:5" msg_body="Loop 'INNER_ROW_COL_MULT' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="INNER_ROW_COL_MULT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="real_matmul.cpp:18:0" msg_body="Unrolling loop 'INNER_ROW_COL_MULT' (real_matmul.cpp:75:5) in function 'real_matmul' completely with a factor of 20">
+        <args Factor="20" LoopLoc="real_matmul.cpp:75:5" LoopName="INNER_ROW_COL_MULT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="real_matmul.cpp:25:9" msg_body="Applying array_partition to 'MatA': Cyclic partitioning with factor 20 on dimension 1.">
+        <args Dim="1" Factor="20" Mode="Cyclic" UOName="MatA"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="real_matmul.cpp:26:12" msg_body="Applying array_partition to 'MatB': Cyclic partitioning with factor 20 on dimension 1.">
+        <args Dim="1" Factor="20" Mode="Cyclic" UOName="MatB"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="real_matmul.cpp:27:12" msg_body="Applying array_partition to 'MatC': Cyclic partitioning with factor 20 on dimension 1.">
+        <args Dim="1" Factor="20" Mode="Cyclic" UOName="MatC"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

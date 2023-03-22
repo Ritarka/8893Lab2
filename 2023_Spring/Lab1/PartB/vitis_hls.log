@@ -1,0 +1,480 @@
+INFO: [HLS 200-10] Running '/tools/software/xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'rsamanta9' on host 'ece-linlabsrv01.ece.gatech.edu' (Linux_x86_64 version 4.18.0-425.10.1.el8_7.x86_64) on Sat Mar 11 12:56:42 EST 2023
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux release 8.7 (Ootpa)"
+INFO: [HLS 200-10] In directory '/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB'
+Sourcing Tcl script '/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB/complex_proj/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source /nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB/complex_proj/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project complex_proj 
+INFO: [HLS 200-10] Opening project '/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB/complex_proj'.
+INFO: [HLS 200-1510] Running: set_top complex_matmul 
+INFO: [HLS 200-1510] Running: add_files complex_matmul.cpp 
+INFO: [HLS 200-10] Adding design file 'complex_matmul.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb main.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'main.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB/complex_proj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: source ./complex_proj/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name complex_matmul complex_matmul 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 760.160 MB.
+INFO: [HLS 200-10] Analyzing design file 'complex_matmul.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 5.22 seconds. CPU system time: 1 seconds. Elapsed time: 6.41 seconds; current allocated memory: 760.160 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'INNER_ROW_COL_MULT' is marked as complete unroll implied by the pipeline pragma (complex_matmul.cpp:98:5)
+INFO: [HLS 214-186] Unrolling loop 'INNER_ROW_COL_MULT' (complex_matmul.cpp:98:5) in function 'complex_matmul' completely with a factor of 20 (complex_matmul.cpp:17:0)
+INFO: [HLS 214-248] Applying array_partition to 'MatA': Cyclic partitioning with factor 20 on dimension 1. (complex_matmul.cpp:22:7)
+INFO: [HLS 214-248] Applying array_partition to 'MatB': Cyclic partitioning with factor 20 on dimension 1. (complex_matmul.cpp:23:7)
+INFO: [HLS 214-248] Applying array_partition to 'MatC': Cyclic partitioning with factor 20 on dimension 1. (complex_matmul.cpp:24:7)
+INFO: [HLS 214-248] Applying array_partition to 'cMatA': Cyclic partitioning with factor 20 on dimension 1. (complex_matmul.cpp:26:7)
+INFO: [HLS 214-248] Applying array_partition to 'cMatB': Cyclic partitioning with factor 20 on dimension 1. (complex_matmul.cpp:27:7)
+INFO: [HLS 214-248] Applying array_partition to 'cMatC': Cyclic partitioning with factor 20 on dimension 1. (complex_matmul.cpp:28:7)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_int<16>s' into 'complex_matmul(complex_t (*) [150], complex_t (*) [200], complex_t (*) [200])' (complex_matmul.cpp:116:34)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_int<16>s' into 'complex_matmul(complex_t (*) [150], complex_t (*) [200], complex_t (*) [200])' (complex_matmul.cpp:125:34)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.2 seconds. CPU system time: 0.71 seconds. Elapsed time: 6.13 seconds; current allocated memory: 760.594 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 760.594 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 5.19 seconds. CPU system time: 0.04 seconds. Elapsed time: 5.25 seconds; current allocated memory: 790.383 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 4.92 seconds. CPU system time: 0.01 seconds. Elapsed time: 4.95 seconds; current allocated memory: 793.109 MB.
+INFO: [XFORM 203-510] Pipelining loop 'MAT_A_COLS' (complex_matmul.cpp:45) in function 'complex_matmul' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'MAT_A_COLSc' (complex_matmul.cpp:54) in function 'complex_matmul' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'MAT_B_COLS' (complex_matmul.cpp:63) in function 'complex_matmul' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'MAT_B_COLSc' (complex_matmul.cpp:71) in function 'complex_matmul' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'MAT_C_COLS_INIT' (complex_matmul.cpp:81) in function 'complex_matmul' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'MAT_C_COLS' (complex_matmul.cpp:115) in function 'complex_matmul' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'MAT_C_COLSc' (complex_matmul.cpp:124) in function 'complex_matmul' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'complex_matmul' (complex_matmul.cpp:13)...9 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 5.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 5.23 seconds; current allocated memory: 816.836 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'MAT_A_ROWS' (complex_matmul.cpp:43:13) in function 'complex_matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'MAT_A_ROWSc' (complex_matmul.cpp:52:13) in function 'complex_matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'MAT_B_ROWS' (complex_matmul.cpp:61:13) in function 'complex_matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'MAT_B_ROWSc' (complex_matmul.cpp:69:13) in function 'complex_matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'MAT_C_ROWS_INIT' (complex_matmul.cpp:79:13) in function 'complex_matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUTER_COLS' (complex_matmul.cpp:91:17) in function 'complex_matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUTER_ROWS' (complex_matmul.cpp:89:13) in function 'complex_matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'MAT_C_ROWS' (complex_matmul.cpp:113:13) in function 'complex_matmul'.
+INFO: [XFORM 203-541] Flattening a loop nest 'MAT_C_ROWSc' (complex_matmul.cpp:122:13) in function 'complex_matmul'.
+INFO: [HLS 200-472] Inferring partial write operation for 'MatA.V' (complex_matmul.cpp:46:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'cMatA.V' (complex_matmul.cpp:55:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'MatB.V' (complex_matmul.cpp:64:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'cMatB.V' (complex_matmul.cpp:72:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'MatC.V' (complex_matmul.cpp:82:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'cMatC.V' (complex_matmul.cpp:83:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'MatC.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'cMatC.V' 
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 30000 on port 'mem' (complex_matmul.cpp:72:25). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 30000 on port 'mem' (complex_matmul.cpp:64:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 15000 on port 'mem' (complex_matmul.cpp:55:25). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 15000 on port 'mem' (complex_matmul.cpp:46:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.75 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.86 seconds; current allocated memory: 883.340 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'complex_matmul' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'complex_matmul_Pipeline_MAT_A_ROWS_MAT_A_COLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln43_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'MAT_A_ROWS_MAT_A_COLS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 12, loop 'MAT_A_ROWS_MAT_A_COLS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.27 seconds; current allocated memory: 885.184 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 885.184 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'complex_matmul_Pipeline_MAT_A_ROWSc_MAT_A_COLSc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln52_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'MAT_A_ROWSc_MAT_A_COLSc'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 12, loop 'MAT_A_ROWSc_MAT_A_COLSc'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 886.305 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 886.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'complex_matmul_Pipeline_MAT_B_ROWS_MAT_B_COLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln61_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_19'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_1'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_2'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_3'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_4'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_5'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_6'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_7'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_8'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_9'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_10'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_11'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_12'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_13'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_14'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_15'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_16'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_17'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_18'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'MAT_B_ROWS_MAT_B_COLS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 14, loop 'MAT_B_ROWS_MAT_B_COLS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 887.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 887.391 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'complex_matmul_Pipeline_MAT_B_ROWSc_MAT_B_COLSc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln69_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_19'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_1'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_2'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_3'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_4'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_5'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_6'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_7'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_8'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_9'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_10'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_11'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_12'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_13'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_14'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_15'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_16'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_17'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_18'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'MAT_B_ROWSc_MAT_B_COLSc'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 14, loop 'MAT_B_ROWSc_MAT_B_COLSc'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 888.453 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 888.453 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'complex_matmul_Pipeline_MAT_C_ROWS_INIT_MAT_C_COLS_INIT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln79_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'MAT_C_ROWS_INIT_MAT_C_COLS_INIT'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 12, loop 'MAT_C_ROWS_INIT_MAT_C_COLS_INIT'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 889.762 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 889.762 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'complex_matmul_Pipeline_OUTER_ROWS_OUTER_COLS_INNER_ROW_COL_PIPELINE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln91) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_58) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_59) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_55) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_56) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_54) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_52) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_50) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_48) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_46) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_45) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_44) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_42) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_40) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_36) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_34) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_30) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_28) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_29) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_24) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln887) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_60) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln232_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=empty_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_19'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_18'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_17'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_16'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_15'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_14'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_13'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_12'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_11'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_10'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_9'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_8'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_7'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_6'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_5'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_4'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_3'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_2'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V_1'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'cMatB_V'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_19'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_18'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_17'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_16'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_15'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_14'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_13'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_12'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_11'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_10'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_9'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_8'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_7'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_6'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_5'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_4'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_3'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_2'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V_1'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'MatB_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'OUTER_ROWS_OUTER_COLS_INNER_ROW_COL_PIPELINE'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 19, loop 'OUTER_ROWS_OUTER_COLS_INNER_ROW_COL_PIPELINE'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.26 seconds. CPU system time: 0.06 seconds. Elapsed time: 2.65 seconds; current allocated memory: 913.320 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.4 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.44 seconds; current allocated memory: 913.320 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'complex_matmul_Pipeline_MAT_C_ROWS_MAT_C_COLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln113_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln113_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'MAT_C_ROWS_MAT_C_COLS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 18, loop 'MAT_C_ROWS_MAT_C_COLS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.53 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.58 seconds; current allocated memory: 913.320 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 913.320 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'complex_matmul_Pipeline_MAT_C_ROWSc_MAT_C_COLSc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln122_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln122_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'MAT_C_ROWSc_MAT_C_COLSc'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 18, loop 'MAT_C_ROWSc_MAT_C_COLSc'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 913.320 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 913.320 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'complex_matmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 913.320 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 913.320 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'complex_matmul_Pipeline_MAT_A_ROWS_MAT_A_COLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3ns_8ns_8ns_10_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_9ns_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_7ns_6ns_5_11_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'complex_matmul_Pipeline_MAT_A_ROWS_MAT_A_COLS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.52 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.59 seconds; current allocated memory: 913.320 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'complex_matmul_Pipeline_MAT_A_ROWSc_MAT_A_COLSc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3ns_8ns_8ns_10_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_9ns_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_7ns_6ns_5_11_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'complex_matmul_Pipeline_MAT_A_ROWSc_MAT_A_COLSc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 913.320 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'complex_matmul_Pipeline_MAT_B_ROWS_MAT_B_COLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_4ns_8ns_8ns_11_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_8ns_6ns_5_12_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'complex_matmul_Pipeline_MAT_B_ROWS_MAT_B_COLS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.32 seconds; current allocated memory: 913.320 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'complex_matmul_Pipeline_MAT_B_ROWSc_MAT_B_COLSc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_4ns_8ns_8ns_11_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_8ns_6ns_5_12_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'complex_matmul_Pipeline_MAT_B_ROWSc_MAT_B_COLSc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 913.320 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'complex_matmul_Pipeline_MAT_C_ROWS_INIT_MAT_C_COLS_INIT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'complex_matmul_Pipeline_MAT_C_ROWS_INIT_MAT_C_COLS_INIT' pipeline 'MAT_C_ROWS_INIT_MAT_C_COLS_INIT' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3ns_8ns_8ns_10_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_9ns_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_7ns_6ns_5_11_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'complex_matmul_Pipeline_MAT_C_ROWS_INIT_MAT_C_COLS_INIT'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 914.062 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'complex_matmul_Pipeline_OUTER_ROWS_OUTER_COLS_INNER_ROW_COL_PIPELINE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'complex_matmul_Pipeline_OUTER_ROWS_OUTER_COLS_INNER_ROW_COL_PIPELINE' pipeline 'OUTER_ROWS_OUTER_COLS_INNER_ROW_COL_PIPELINE' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'complex_matmul_Pipeline_OUTER_ROWS_OUTER_COLS_INNER_ROW_COL_PIPELINE' is 15105 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_16ns_16_4_1': 40 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3ns_8ns_8ns_10_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_4ns_8ns_8ns_11_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_mulsub_16s_16s_16ns_16_4_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_4ns_9ns_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_9ns_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_10ns_17_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16s_16s_16_4_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_205_16_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_208_16_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_8ns_6ns_8_12_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'complex_matmul_Pipeline_OUTER_ROWS_OUTER_COLS_INNER_ROW_COL_PIPELINE'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.42 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.55 seconds; current allocated memory: 926.398 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'complex_matmul_Pipeline_MAT_C_ROWS_MAT_C_COLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'complex_matmul_Pipeline_MAT_C_ROWS_MAT_C_COLS' pipeline 'MAT_C_ROWS_MAT_C_COLS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3ns_8ns_8ns_10_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_9ns_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_7ns_10ns_17_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_207_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_7ns_6ns_7_11_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'complex_matmul_Pipeline_MAT_C_ROWS_MAT_C_COLS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.65 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.81 seconds; current allocated memory: 941.266 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'complex_matmul_Pipeline_MAT_C_ROWSc_MAT_C_COLSc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'complex_matmul_Pipeline_MAT_C_ROWSc_MAT_C_COLSc' pipeline 'MAT_C_ROWSc_MAT_C_COLSc' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3ns_8ns_8ns_10_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_9ns_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_7ns_10ns_17_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_207_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_7ns_6ns_7_11_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'complex_matmul_Pipeline_MAT_C_ROWSc_MAT_C_COLSc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 942.516 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'complex_matmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'complex_matmul/mem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'complex_matmul/MatA_DRAM' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'complex_matmul/MatB_DRAM' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'complex_matmul/MatC_DRAM' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'complex_matmul' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'MatA_DRAM', 'MatB_DRAM', 'MatC_DRAM' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'complex_matmul'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.38 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.48 seconds; current allocated memory: 956.152 MB.
+INFO: [RTMG 210-278] Implementing memory 'complex_matmul_MatA_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'complex_matmul_MatB_V_RAM_1WNR_AUTO_1R1W_ram (RAM_1WnR)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'complex_matmul_MatC_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2.39 seconds. CPU system time: 0.19 seconds. Elapsed time: 3.5 seconds; current allocated memory: 964.922 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.83 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.95 seconds; current allocated memory: 977.195 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for complex_matmul.
+INFO: [VLOG 209-307] Generating Verilog RTL for complex_matmul.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 40.59 seconds. CPU system time: 2.49 seconds. Elapsed time: 46.3 seconds; current allocated memory: 217.941 MB.
+INFO: [HLS 200-112] Total CPU user time: 46.57 seconds. Total CPU system time: 3.96 seconds. Total elapsed time: 51.73 seconds; peak allocated memory: 978.102 MB.

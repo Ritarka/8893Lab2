@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="real_proj" solutionName="solution1" date="2023-02-15T09:13:32.837-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'real_matmul_Pipeline_MAT_C_ROWS_MAT_C_COLS/m_axi_mem_BREADY' to 0." projectName="real_proj" solutionName="solution1" date="2023-02-15T09:13:32.618-0500" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

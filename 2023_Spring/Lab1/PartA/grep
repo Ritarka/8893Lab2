@@ -1,0 +1,49 @@
+vitis_hls script.tcl
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1.2 (64-bit)
+  **** SW Build 3605665 on Fri Aug  5 22:52:02 MDT 2022
+  **** IP Build 3603185 on Sat Aug  6 04:07:44 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /tools/software/xilinx/Vitis_HLS/2022.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/software/xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'rsamanta9' on host 'ece-linlab19.ece.gatech.edu' (Linux_x86_64 version 4.18.0-425.3.1.el8.x86_64) on Sat Feb 11 11:41:36 EST 2023
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux release 8.7 (Ootpa)"
+INFO: [HLS 200-10] In directory '/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartA'
+Sourcing Tcl script 'script.tcl'
+INFO: [HLS 200-1510] Running: source script.tcl
+INFO: [HLS 200-1510] Running: open_project real_proj 
+INFO: [HLS 200-10] Opening project '/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartA/real_proj'.
+INFO: [HLS 200-1510] Running: set_top real_matmul 
+INFO: [HLS 200-1510] Running: add_files real_matmul.cpp 
+INFO: [HLS 200-10] Adding design file 'real_matmul.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb main.cpp 
+INFO: [HLS 200-10] Adding test bench file 'main.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Opening solution '/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartA/real_proj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 760.172 MB.
+INFO: [HLS 200-10] Analyzing design file 'real_matmul.cpp' ... 
+ERROR: [HLS 207-3776] use of undeclared identifier 'matc' (real_matmul.cpp:29:38)
+WARNING: [HLS 207-5542] invalid variable expr  (real_matmul.cpp:29:38)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.36 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.58 seconds; current allocated memory: 0.000 MB.
+ 
+    while executing
+"source script.tcl"
+    invoked from within
+"hls::main script.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 3.66 seconds. Total CPU system time: 0.48 seconds. Total elapsed time: 3.96 seconds; peak allocated memory: 760.172 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sat Feb 11 11:41:40 2023...

@@ -28,8 +28,12 @@ IP_DEP+=model_conv.o
 main.o:./sim.cpp
 	$(CC) $(GCOV)  $(CFLAG)  -I "${ASSEMBLE_SRC_ROOT}" -o $@  -c $^   -MMD $(IFLAG)
 
+.SILENT:
+.PHONY: csim.out
 csim.out: main.o $(IP_DEP)
-	$(CC)  $(GCOV)  $(CFLAG) -MMD $(IFLAG)  -o $@  $^ 
+	if $(CC)  $(GCOV)  $(CFLAG) -MMD $(IFLAG)  -o $@  $^; then \
+		./csim.out; \
+	fi
 
 clean:
 	rm -f -r csim.d 

@@ -26,4 +26,37 @@ void conv_7x7 (
 // TODO: Your code for Part B goes here. 
 //---------------------------------------------------------------------------
 
+    //Initialize to all zeroes
+    for (int i = 0; i < OUT_BUF_DEPTH; i++) {
+        for (int j = 0; j < OUT_BUF_HEIGHT; j++) {
+            for (int z = 0; z < OUT_BUF_WIDTH; z++) {
+                Y_buf[i][j][z] = 0;
+            }
+        }
+    }
+
+    for (int kernel = 0; kernel < OUT_BUF_DEPTH; kernel++) {
+
+        for (int h = 0, oh = 0; oh < OUT_BUF_HEIGHT; h += STRIDE, oh++) {
+            for (int w = 0, ow = 0; ow < OUT_BUF_WIDTH; w += STRIDE, ow++) {
+
+                for (int chan = 0; chan < 3; chan++) {
+                    for (int i = 0; i < 7; i++) {
+                        for (int j = 0; j < 7; j++) {
+                            fm_t feature = X_buf[chan][h + i][w + j];
+
+                            Y_buf[kernel][oh][ow] += feature * W_buf[kernel][chan][i][j];
+                        }
+                    }
+                }
+
+                Y_buf[kernel][oh][ow] += B_buf[kernel];
+                if (Y_buf[kernel][oh][ow] < 0) {
+                    Y_buf[kernel][oh][ow] = 0;
+                }
+            }
+        }
+
+    }
+
 }

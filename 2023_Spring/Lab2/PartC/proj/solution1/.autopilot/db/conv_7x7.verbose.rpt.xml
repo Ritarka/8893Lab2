@@ -1,0 +1,236 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'conv_7x7'" level="0">
+<item name = "Date">Wed Mar 22 11:02:43 2023
+</item>
+<item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
+<item name = "Project">proj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.949 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">31649, 31649, 0.316 ms, 0.316 ms, 31649, 31649, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_conv_7x7_Pipeline_CHANNEL_fu_193">conv_7x7_Pipeline_CHANNEL, 13, 13, 0.130 us, 0.130 us, 13, 13, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- KERNEL_HEIGHT">31648, 31648, 344, -, -, 92, no</column>
+<column name=" + WIDTH">340, 340, 17, -, -, 20, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, 1, -, -, -</column>
+<column name="Expression">-, -, 0, 3776, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 49, 9202, 107713, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 125, -</column>
+<column name="Register">-, -, 499, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 22, 9, 209, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_conv_7x7_Pipeline_CHANNEL_fu_193">conv_7x7_Pipeline_CHANNEL, 0, 49, 9202, 107673, 0</column>
+<column name="mux_42_16_1_1_U101">mux_42_16_1_1, 0, 0, 0, 20, 0</column>
+<column name="mux_42_16_1_1_U102">mux_42_16_1_1, 0, 0, 0, 20, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="mac_muladd_3ns_5ns_5ns_7_1_1_U103">mac_muladd_3ns_5ns_5ns_7_1_1, i0 * i1 + i2</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln31_1_fu_263_p2">+, 0, 0, 14, 7, 1</column>
+<column name="add_ln31_fu_272_p2">+, 0, 0, 11, 3, 1</column>
+<column name="add_ln36_fu_463_p2">+, 0, 0, 13, 5, 1</column>
+<column name="add_ln40_fu_403_p2">+, 0, 0, 13, 5, 1</column>
+<column name="add_ln859_fu_488_p2">+, 0, 0, 23, 16, 16</column>
+<column name="empty_51_fu_433_p2">+, 0, 0, 12, 11, 5</column>
+<column name="empty_52_fu_439_p2">+, 0, 0, 12, 11, 6</column>
+<column name="empty_53_fu_445_p2">+, 0, 0, 12, 11, 6</column>
+<column name="empty_54_fu_451_p2">+, 0, 0, 12, 11, 7</column>
+<column name="empty_55_fu_457_p2">+, 0, 0, 12, 11, 7</column>
+<column name="empty_60_fu_373_p2">+, 0, 0, 14, 6, 2</column>
+<column name="empty_61_fu_379_p2">+, 0, 0, 14, 6, 3</column>
+<column name="empty_62_fu_385_p2">+, 0, 0, 14, 6, 3</column>
+<column name="empty_63_fu_391_p2">+, 0, 0, 14, 6, 3</column>
+<column name="indvars_iv_next327_fu_409_p2">+, 0, 0, 14, 6, 2</column>
+<column name="indvars_iv_next337_fu_367_p2">+, 0, 0, 14, 6, 2</column>
+<column name="sub_ln1319_fu_355_p2">-, 0, 0, 14, 6, 6</column>
+<column name="and_ln71_fu_517_p2">and, 0, 0, 320, 320, 320</column>
+<column name="icmp_ln31_fu_257_p2">icmp, 0, 0, 10, 7, 7</column>
+<column name="icmp_ln36_fu_278_p2">icmp, 0, 0, 9, 5, 5</column>
+<column name="icmp_ln40_fu_397_p2">icmp, 0, 0, 9, 5, 5</column>
+<column name="empty_50_fu_423_p2">or, 0, 0, 10, 10, 5</column>
+<column name="empty_59_fu_361_p2">or, 0, 0, 6, 6, 1</column>
+<column name="or_ln71_fu_533_p2">or, 0, 0, 320, 320, 320</column>
+<column name="select_ln31_1_fu_334_p3">select, 0, 0, 6, 1, 1</column>
+<column name="select_ln31_2_fu_284_p3">select, 0, 0, 3, 1, 3</column>
+<column name="select_ln31_3_fu_306_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln31_fu_314_p3">select, 0, 0, 5, 1, 1</column>
+<column name="shl_ln71_1_fu_527_p2">shl, 0, 0, 1255, 320, 320</column>
+<column name="shl_ln71_fu_505_p2">shl, 0, 0, 1255, 16, 320</column>
+<column name="xor_ln71_fu_511_p2">xor, 0, 0, 320, 320, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="Y_buf_address0">14, 3, 7, 21</column>
+<column name="ap_NS_fsm">48, 9, 1, 9</column>
+<column name="empty_48_reg_159">9, 2, 320, 640</column>
+<column name="h_fu_102">9, 2, 6, 12</column>
+<column name="indvar_flatten_fu_114">9, 2, 7, 14</column>
+<column name="kernel_fu_110">9, 2, 3, 6</column>
+<column name="oh_fu_106">9, 2, 5, 10</column>
+<column name="ow_reg_170">9, 2, 5, 10</column>
+<column name="w_reg_182">9, 2, 6, 12</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="Y_buf_addr_reg_641">7, 0, 7, 0</column>
+<column name="add_ln31_1_reg_609">7, 0, 7, 0</column>
+<column name="add_ln40_reg_695">5, 0, 5, 0</column>
+<column name="ap_CS_fsm">8, 0, 8, 0</column>
+<column name="empty_48_reg_159">320, 0, 320, 0</column>
+<column name="empty_50_reg_710">5, 0, 10, 5</column>
+<column name="empty_51_reg_715">6, 0, 11, 5</column>
+<column name="empty_52_reg_720">6, 0, 11, 5</column>
+<column name="empty_53_reg_725">6, 0, 11, 5</column>
+<column name="empty_54_reg_730">6, 0, 11, 5</column>
+<column name="empty_55_reg_735">6, 0, 11, 5</column>
+<column name="empty_59_reg_656">5, 0, 6, 1</column>
+<column name="empty_60_reg_667">6, 0, 6, 0</column>
+<column name="empty_61_reg_672">6, 0, 6, 0</column>
+<column name="empty_62_reg_677">6, 0, 6, 0</column>
+<column name="empty_63_reg_682">6, 0, 6, 0</column>
+<column name="grp_conv_7x7_Pipeline_CHANNEL_fu_193_ap_start_reg">1, 0, 1, 0</column>
+<column name="h_fu_102">6, 0, 6, 0</column>
+<column name="icmp_ln36_reg_617">1, 0, 1, 0</column>
+<column name="indvar_flatten_fu_114">7, 0, 7, 0</column>
+<column name="indvars_iv_next327_reg_700">6, 0, 6, 0</column>
+<column name="indvars_iv_next337_reg_661">6, 0, 6, 0</column>
+<column name="kernel_fu_110">3, 0, 3, 0</column>
+<column name="oh_fu_106">5, 0, 5, 0</column>
+<column name="ow_reg_170">5, 0, 5, 0</column>
+<column name="select_ln31_1_reg_646">6, 0, 6, 0</column>
+<column name="select_ln31_2_reg_623">3, 0, 3, 0</column>
+<column name="select_ln31_3_reg_631">16, 0, 16, 0</column>
+<column name="select_ln31_reg_636">5, 0, 5, 0</column>
+<column name="sub_ln1319_reg_651">6, 0, 6, 0</column>
+<column name="tmp_16_reg_705">6, 0, 10, 4</column>
+<column name="w_reg_182">6, 0, 6, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, conv_7x7, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, conv_7x7, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, conv_7x7, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, conv_7x7, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, conv_7x7, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, conv_7x7, return value</column>
+<column name="Y_buf_address0">out, 7, ap_memory, Y_buf, array</column>
+<column name="Y_buf_ce0">out, 1, ap_memory, Y_buf, array</column>
+<column name="Y_buf_we0">out, 1, ap_memory, Y_buf, array</column>
+<column name="Y_buf_d0">out, 320, ap_memory, Y_buf, array</column>
+<column name="Y_buf_q0">in, 320, ap_memory, Y_buf, array</column>
+<column name="X_buf_address0">out, 8, ap_memory, X_buf, array</column>
+<column name="X_buf_ce0">out, 1, ap_memory, X_buf, array</column>
+<column name="X_buf_q0">in, 736, ap_memory, X_buf, array</column>
+<column name="X_buf_address1">out, 8, ap_memory, X_buf, array</column>
+<column name="X_buf_ce1">out, 1, ap_memory, X_buf, array</column>
+<column name="X_buf_q1">in, 736, ap_memory, X_buf, array</column>
+<column name="X_buf_address2">out, 8, ap_memory, X_buf, array</column>
+<column name="X_buf_ce2">out, 1, ap_memory, X_buf, array</column>
+<column name="X_buf_q2">in, 736, ap_memory, X_buf, array</column>
+<column name="X_buf_address3">out, 8, ap_memory, X_buf, array</column>
+<column name="X_buf_ce3">out, 1, ap_memory, X_buf, array</column>
+<column name="X_buf_q3">in, 736, ap_memory, X_buf, array</column>
+<column name="X_buf_address4">out, 8, ap_memory, X_buf, array</column>
+<column name="X_buf_ce4">out, 1, ap_memory, X_buf, array</column>
+<column name="X_buf_q4">in, 736, ap_memory, X_buf, array</column>
+<column name="X_buf_address5">out, 8, ap_memory, X_buf, array</column>
+<column name="X_buf_ce5">out, 1, ap_memory, X_buf, array</column>
+<column name="X_buf_q5">in, 736, ap_memory, X_buf, array</column>
+<column name="X_buf_address6">out, 8, ap_memory, X_buf, array</column>
+<column name="X_buf_ce6">out, 1, ap_memory, X_buf, array</column>
+<column name="X_buf_q6">in, 736, ap_memory, X_buf, array</column>
+<column name="W_buf_address0">out, 7, ap_memory, W_buf, array</column>
+<column name="W_buf_ce0">out, 1, ap_memory, W_buf, array</column>
+<column name="W_buf_q0">in, 112, ap_memory, W_buf, array</column>
+<column name="W_buf_address1">out, 7, ap_memory, W_buf, array</column>
+<column name="W_buf_ce1">out, 1, ap_memory, W_buf, array</column>
+<column name="W_buf_q1">in, 112, ap_memory, W_buf, array</column>
+<column name="W_buf_address2">out, 7, ap_memory, W_buf, array</column>
+<column name="W_buf_ce2">out, 1, ap_memory, W_buf, array</column>
+<column name="W_buf_q2">in, 112, ap_memory, W_buf, array</column>
+<column name="W_buf_address3">out, 7, ap_memory, W_buf, array</column>
+<column name="W_buf_ce3">out, 1, ap_memory, W_buf, array</column>
+<column name="W_buf_q3">in, 112, ap_memory, W_buf, array</column>
+<column name="W_buf_address4">out, 7, ap_memory, W_buf, array</column>
+<column name="W_buf_ce4">out, 1, ap_memory, W_buf, array</column>
+<column name="W_buf_q4">in, 112, ap_memory, W_buf, array</column>
+<column name="W_buf_address5">out, 7, ap_memory, W_buf, array</column>
+<column name="W_buf_ce5">out, 1, ap_memory, W_buf, array</column>
+<column name="W_buf_q5">in, 112, ap_memory, W_buf, array</column>
+<column name="W_buf_address6">out, 7, ap_memory, W_buf, array</column>
+<column name="W_buf_ce6">out, 1, ap_memory, W_buf, array</column>
+<column name="W_buf_q6">in, 112, ap_memory, W_buf, array</column>
+<column name="p_read">in, 16, ap_none, p_read, scalar</column>
+<column name="p_read1">in, 16, ap_none, p_read1, scalar</column>
+<column name="p_read2">in, 16, ap_none, p_read2, scalar</column>
+<column name="p_read3">in, 16, ap_none, p_read3, scalar</column>
+</table>
+</item>
+</section>
+</profile>

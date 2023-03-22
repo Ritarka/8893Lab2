@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'complex_matmul'" level="0">
+<item name = "Date">Sat Mar 11 12:57:24 2023
+</item>
+<item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
+<item name = "Project">complex_proj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">285138, 285138, 2.851 ms, 2.851 ms, 285139, 285139, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_complex_matmul_Pipeline_MAT_A_ROWS_MAT_A_COLS_fu_578">complex_matmul_Pipeline_MAT_A_ROWS_MAT_A_COLS, 15018, 15018, 0.150 ms, 0.150 ms, 15018, 15018, no</column>
+<column name="grp_complex_matmul_Pipeline_MAT_C_ROWS_INIT_MAT_C_COLS_INIT_fu_607">complex_matmul_Pipeline_MAT_C_ROWS_INIT_MAT_C_COLS_INIT, 20012, 20012, 0.200 ms, 0.200 ms, 20012, 20012, no</column>
+<column name="grp_complex_matmul_Pipeline_MAT_A_ROWSc_MAT_A_COLSc_fu_651">complex_matmul_Pipeline_MAT_A_ROWSc_MAT_A_COLSc, 15018, 15018, 0.150 ms, 0.150 ms, 15018, 15018, no</column>
+<column name="grp_complex_matmul_Pipeline_MAT_B_ROWS_MAT_B_COLS_fu_680">complex_matmul_Pipeline_MAT_B_ROWS_MAT_B_COLS, 30020, 30020, 0.300 ms, 0.300 ms, 30020, 30020, no</column>
+<column name="grp_complex_matmul_Pipeline_MAT_B_ROWSc_MAT_B_COLSc_fu_709">complex_matmul_Pipeline_MAT_B_ROWSc_MAT_B_COLSc, 30020, 30020, 0.300 ms, 0.300 ms, 30020, 30020, no</column>
+<column name="grp_complex_matmul_Pipeline_OUTER_ROWS_OUTER_COLS_INNER_ROW_COL_PIPELINE_fu_738">complex_matmul_Pipeline_OUTER_ROWS_OUTER_COLS_INNER_ROW_COL_PIPELINE, 150018, 150018, 1.500 ms, 1.500 ms, 150018, 150018, no</column>
+<column name="grp_complex_matmul_Pipeline_MAT_C_ROWS_MAT_C_COLS_fu_862">complex_matmul_Pipeline_MAT_C_ROWS_MAT_C_COLS, 20018, 20018, 0.200 ms, 0.200 ms, 20018, 20018, no</column>
+<column name="grp_complex_matmul_Pipeline_MAT_C_ROWSc_MAT_C_COLSc_fu_891">complex_matmul_Pipeline_MAT_C_ROWSc_MAT_C_COLSc, 20018, 20018, 0.200 ms, 0.200 ms, 20018, 20018, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

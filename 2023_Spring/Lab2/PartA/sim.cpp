@@ -87,7 +87,7 @@ int main ()
             }
         }
         
-        #ifdef PRINT_DEBUG
+        if (0) {
             // Prints sample output values (first feature of each channel) for comparison
             // Modify as required for debugging
             int row = 0;
@@ -97,7 +97,7 @@ int main ()
             cout << "Expected: " << conv_layer_golden_output_feature_map[f][row][col] << "\t"; 
             cout << "Actual: " << conv_layer_output_feature_map[f][row][col];
             cout << endl; 
-        #endif
+        }
     }
     
     mse = mse / (64 * 368 * 640);

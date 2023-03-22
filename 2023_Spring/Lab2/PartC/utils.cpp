@@ -24,10 +24,14 @@ void load_input_tile_block_from_DRAM (
     int  tj 
 )
 {
+    #pragma HLS FUNCTION_INSTANTIATE variable=ti
+    #pragma HLS FUNCTION_INSTANTIATE variable=tj
+
     const int height_offset = ti * TILE_HEIGHT;  
     const int width_offset  = tj * TILE_WIDTH;
 
     const int P = PADDING;
+    const int S = MARGIN >> 1;
 
     INPUT_BUFFER_DEPTH:
     for(int c = 0; c < IN_BUF_DEPTH; c++)
@@ -35,14 +39,18 @@ void load_input_tile_block_from_DRAM (
         INPUT_BUFFER_HEIGHT:
         for(int i = 0; i < IN_BUF_HEIGHT; i++)
         {
+            int input_y = i + height_offset - S;
+            
             INPUT_BUFFER_WIDTH:
             for(int j = 0; j < IN_BUF_WIDTH; j++)
             {
-                // TODO: Handle border features here
-                //
-                // Hint: Either load 0 or input feature into 
-                //       the buffer based on border conditions
-                in_fm_buf[f][i][j] = 0; // Just a placeholder
+                int input_x = j + width_offset - S;
+
+                if (input_y < 0 || input_y >= IN_FM_HEIGHT || input_x < 0 || input_x >= IN_FM_WIDTH) {
+                    in_fm_buf[c][i][j] = (fm_t) 0;
+                } else {
+                    in_fm_buf[c][i][j] = in_fm[c][input_y][input_x];
+                }
             }
         }
     }

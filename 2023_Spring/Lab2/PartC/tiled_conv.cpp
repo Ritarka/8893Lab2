@@ -2,13 +2,11 @@
 // Author:      <>
 // Course:      ECE8893 - Parallel Programming for FPGAs
 // Filename:    tiled_conv.cpp
-// Description: Implement a synthesizable tiling-based convolution for 
-//              ResNet-50's first 7x7 layer with an HD input image.
+// Description: Implement a functionally-correct synthesizable tiling-based 
+//              convolution for ResNet-50's first 7x7 layer with an 
+//              HD input image.
 //              
-// TODO: Use your unoptimized code from Part B and apply your favorite pragmas
-//       to achieve the target speedup (or higher)!
-//
-//       Add/remove/modify whatever you like. 
+// Note: Do not use pragmas other than the existing ones in Part B.
 ///////////////////////////////////////////////////////////////////////////////
 #include "utils.h"
 
@@ -37,6 +35,13 @@ void tiled_conv (
     wt_t conv_wt_buf[OUT_BUF_DEPTH][IN_BUF_DEPTH][KERNEL_HEIGHT][KERNEL_WIDTH];
     wt_t conv_bias_buf[OUT_BUF_DEPTH];
     fm_t conv_out_buf[OUT_BUF_DEPTH][OUT_BUF_HEIGHT][OUT_BUF_WIDTH] = {0};
+
+
+    #pragma HLS array_reshape variable=conv_in_buf  complete dim=3
+    #pragma HLS array_reshape variable=conv_out_buf complete dim=3
+
+    #pragma HLS array_reshape variable=conv_wt_buf complete dim=3
+    //#pragma HLS array_reshape variable=conv_out_buf complete dim=3
     
     //--------------------------------------------------------------------------
     // Process each tile iteratively
@@ -48,15 +53,52 @@ void tiled_conv (
         for(int tj = 0; tj < N_TILE_COLS; tj++)
         {
             std::cout << "Processing Tile " << ti*N_TILE_COLS + tj + 1;
-            std::cout << "/" << N_TILE_ROWS * N_TILE_COLS << std::endl;    
+            std::cout << "/" << N_TILE_ROWS * N_TILE_COLS << std::endl;
 
-            //--------------------------------------------------------------------------
-            // TODO: Your code for Part C goes here 
-            //
-            // You may use your Part B code here and make any modifications
-            // to optimize your design.
-            //--------------------------------------------------------------------------
-            
+            // load_input_tile_block_from_DRAM(
+            //     conv_in_buf,
+            //     input_feature_map,
+            //     ti,
+            //     tj
+            // );
+
+            TILE_DEPTH:
+            for(int tk = 0; tk < OUT_FM_DEPTH / OUT_BUF_DEPTH; tk++) {
+
+                if (tk == 0) {
+                    load_input_tile_block_from_DRAM(
+                        conv_in_buf,
+                        input_feature_map,
+                        ti,
+                        tj
+                    );
+                }
+
+                load_layer_params_from_DRAM(
+                    conv_wt_buf,
+                    conv_bias_buf,
+                    layer_weights,
+                    layer_bias,
+                    tk
+                );
+
+
+                conv_7x7(
+                    conv_out_buf,
+                    conv_in_buf,
+                    conv_wt_buf,
+                    conv_bias_buf
+                );
+
+                //store output memory
+                store_output_tile_to_DRAM(
+                    output_feature_map,
+                    conv_out_buf,
+                    ti,
+                    tj,
+                    tk
+                );
+            }
         }
     }
 }

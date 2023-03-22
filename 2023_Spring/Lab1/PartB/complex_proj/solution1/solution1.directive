@@ -1,0 +1,15 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="complex_matmul" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="complex_matmul"/>
+            </pragma>
+        </directive>
+        <directive functionName="complex_matmul" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="complex_matmul"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

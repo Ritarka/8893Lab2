@@ -1,0 +1,35 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "complex_matmul",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/nethome\/rsamanta9\/FPGA_ECE8893\/2023_Spring\/Lab1\/PartB\/complex_proj\/solution1\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "complex_matmul"
+              }]
+          }
+        },
+        {
+          "functionName": "complex_matmul",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "\/nethome\/rsamanta9\/FPGA_ECE8893\/2023_Spring\/Lab1\/PartB\/complex_proj\/solution1\/csynth.tcl",
+          "sourceLine": "15",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "complex_matmul"
+              }]
+          }
+        }
+      ]
+    }]}

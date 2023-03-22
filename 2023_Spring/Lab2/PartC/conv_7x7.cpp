@@ -2,10 +2,8 @@
 // Author:      <>
 // Course:      ECE8893 - Parallel Programming for FPGAs
 // Filename:    conv_7x7.cpp
-// Description: Implement an optimized 7x7 convolution for a single tile block
-//              
-// TODO: Use your unoptimized code from Part B and apply your favorite pragmas
-//       to achieve the target latency (or lower)!
+// Description: Implement a functionally-correct synthesizable 7x7 convolution 
+//              for a single tile block without any optimizations
 ///////////////////////////////////////////////////////////////////////////////
 #include "utils.h"
 
@@ -17,10 +15,65 @@ void conv_7x7 (
 )
 {
 //---------------------------------------------------------------------------
-// Part C: Optimize your Part B code to achieve an overall latency of 
-//         less than 750ms without exceeding 100% resource utiliization.
+// Part B: Implement a trivial functionally-correct single-tile convolution.
 //
-// TODO: Your code for Part C goes here. 
+//         This should have an overall latency in the order of 22-23 seconds.
+//
+//         If it's worse than trivial, it may be worth fixing this first.
+//         Otherwise, achieving the target latency with a worse-than-trivial
+//         baseline may be difficult!
+//
+// TODO: Your code for Part B goes here. 
 //---------------------------------------------------------------------------
+
+
+    KERNEL:
+    for (int kernel = 0; kernel < OUT_BUF_DEPTH; kernel++) {
+
+        //#pragma HLS pipeline off
+
+        HEIGHT:
+        for (int h = 0, oh = 0; oh < OUT_BUF_HEIGHT; h += STRIDE, oh++) {
+
+            //#pragma HLS unroll factor=4
+            WIDTH:
+            for (int w = 0, ow = 0; ow < OUT_BUF_WIDTH; w += STRIDE, ow++) {
+
+                //#pragma HLS pipeline
+                fm_t val = 0;
+
+                CHANNEL:
+                for (int chan = 0; chan < 3; chan++) {
+
+                    //#pragma HLS dataflow
+                    
+                    //#pragma HLS pipeline
+                    KERN_I:
+                    for (int i = 0; i < 7; i++) {
+
+                        static fm_t acc[7] = {0};
+                        #pragma HLS array_reshape variable=acc complete dim=1
+
+                        // #pragma HLS BIND_OP variable=acc op=add
+                        // #pragma HLS BIND_OP variable=W_buf op=mul
+                        // #pragma HLS BIND_OP variable=X_buf op=mul
+
+                        KERN_J:
+                        for (int j = 0; j < 7; j++) {
+                            acc[j] = X_buf[chan][h + i][w + j] * W_buf[kernel][chan][i][j];
+                        }
+
+                        ACC:
+                        for (int j = 0; j < 7; j++) {
+                            val += acc[j];
+                        }
+                    }
+                }
+
+                Y_buf[kernel][oh][ow] = val + B_buf[kernel];
+            }
+        }
+
+    }
 
 }

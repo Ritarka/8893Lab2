@@ -1,0 +1,1872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1678557445760">
+  <ports id="1" name="mem" type="PortType" coreId="62" bitwidth="32" iftype="IfTypeFifo">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="sext_ln72_1" type="PortType" coreId="3621216858" bitwidth="62">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="MatB_DRAM" type="PortType" coreId="71" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="cMatB_V" type="PortType" coreName="RAM_1WnR" coreId="0" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="5" name="cMatB_V_1" type="PortType" coreName="RAM_1WnR" coreId="0" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="6" name="cMatB_V_2" type="PortType" coreName="RAM_1WnR" coreId="3914626448" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="7" name="cMatB_V_3" type="PortType" coreName="RAM_1WnR" coreId="2244070256" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="8" name="cMatB_V_4" type="PortType" coreName="RAM_1WnR" coreId="0" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="9" name="cMatB_V_5" type="PortType" coreName="RAM_1WnR" coreId="3915687248" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="10" name="cMatB_V_6" type="PortType" coreName="RAM_1WnR" coreId="448" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="11" name="cMatB_V_7" type="PortType" coreName="RAM_1WnR" coreId="3914848864" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="12" name="cMatB_V_8" type="PortType" coreName="RAM_1WnR" coreId="3915344352" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="13" name="cMatB_V_9" type="PortType" coreName="RAM_1WnR" coreId="2243846032" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="14" name="cMatB_V_10" type="PortType" coreName="RAM_1WnR" coreId="3915341184" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="15" name="cMatB_V_11" type="PortType" coreName="RAM_1WnR" coreId="3915325616" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="16" name="cMatB_V_12" type="PortType" coreName="RAM_1WnR" coreId="3914774128" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="17" name="cMatB_V_13" type="PortType" coreName="RAM_1WnR" coreId="3915732568" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="18" name="cMatB_V_14" type="PortType" coreName="RAM_1WnR" coreId="3915732608" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="19" name="cMatB_V_15" type="PortType" coreName="RAM_1WnR" coreId="3915077408" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="20" name="cMatB_V_16" type="PortType" coreName="RAM_1WnR" coreId="3915342016" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="21" name="cMatB_V_17" type="PortType" coreName="RAM_1WnR" coreId="3913329136" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="22" name="cMatB_V_18" type="PortType" coreName="RAM_1WnR" coreId="3915671040" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="23" name="cMatB_V_19" type="PortType" coreName="RAM_1WnR" coreId="3913329136" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="1600">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="24" name="zext_ln69" type="PortType" coreId="1330007625" bitwidth="5">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="167" source_obj="//@ports.23" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="170" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="173" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="174" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="175" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="176" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="177" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="180" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="185" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="188" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="190" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="191" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="192" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="193" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="196" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="199" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="200" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="201" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="202" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.0"/>
+  <edges id="205" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.1"/>
+  <edges id="206" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.1"/>
+  <edges id="207" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.2"/>
+  <edges id="208" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.2"/>
+  <edges id="209" source_obj="//@regions.0/@basic_blocks.22/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.3"/>
+  <edges id="210" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.3"/>
+  <edges id="211" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.4"/>
+  <edges id="212" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.20/@node_objs.0"/>
+  <edges id="213" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.20/@node_objs.0"/>
+  <edges id="214" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.20/@node_objs.1"/>
+  <edges id="215" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="216" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="217" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="219" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="222" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="224" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="225" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="226" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="227" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="228" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="229" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="234" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="239" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="240" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="243" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="246" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="247" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="248" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="249" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="250" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="251" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@ports.3"/>
+  <edges id="254" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="255" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@ports.4"/>
+  <edges id="257" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="258" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@ports.5"/>
+  <edges id="260" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="261" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@ports.6"/>
+  <edges id="263" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="264" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@ports.7"/>
+  <edges id="266" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="267" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@ports.8"/>
+  <edges id="269" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="270" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@ports.9"/>
+  <edges id="272" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="273" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@ports.10"/>
+  <edges id="275" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="276" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@ports.11"/>
+  <edges id="278" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="279" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@ports.12"/>
+  <edges id="281" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="282" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@ports.13"/>
+  <edges id="284" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="285" source_obj="//@regions.0/@basic_blocks.1/@node_objs.27" sink_obj="//@ports.14"/>
+  <edges id="287" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="288" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@ports.15"/>
+  <edges id="290" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="291" source_obj="//@regions.0/@basic_blocks.1/@node_objs.29" sink_obj="//@ports.16"/>
+  <edges id="293" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="294" source_obj="//@regions.0/@basic_blocks.1/@node_objs.30" sink_obj="//@ports.17"/>
+  <edges id="296" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="297" source_obj="//@regions.0/@basic_blocks.1/@node_objs.31" sink_obj="//@ports.18"/>
+  <edges id="299" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="300" source_obj="//@regions.0/@basic_blocks.1/@node_objs.32" sink_obj="//@ports.19"/>
+  <edges id="302" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="303" source_obj="//@regions.0/@basic_blocks.1/@node_objs.33" sink_obj="//@ports.20"/>
+  <edges id="305" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="306" source_obj="//@regions.0/@basic_blocks.1/@node_objs.34" sink_obj="//@ports.21"/>
+  <edges id="308" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.34"/>
+  <edges id="309" source_obj="//@regions.0/@basic_blocks.1/@node_objs.35" sink_obj="//@ports.22"/>
+  <edges id="311" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.35"/>
+  <edges id="314" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="315" source_obj="//@regions.0/@basic_blocks.1/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="316" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="317" source_obj="//@regions.0/@basic_blocks.1/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="318" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="319" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="322" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="325" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="328" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="331" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="334" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="337" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="340" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="343" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="346" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="349" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="352" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="355" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="358" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="361" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="364" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="367" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="370" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="373" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="376" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="377" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.19/@node_objs.0"/>
+  <edges id="378" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.19/@node_objs.0"/>
+  <edges id="379" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.19/@node_objs.1"/>
+  <edges id="380" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.18/@node_objs.0"/>
+  <edges id="381" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.18/@node_objs.0"/>
+  <edges id="382" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.18/@node_objs.1"/>
+  <edges id="383" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.17/@node_objs.0"/>
+  <edges id="384" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.17/@node_objs.0"/>
+  <edges id="385" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.17/@node_objs.1"/>
+  <edges id="386" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.16/@node_objs.0"/>
+  <edges id="387" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.16/@node_objs.0"/>
+  <edges id="388" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.16/@node_objs.1"/>
+  <edges id="389" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.15/@node_objs.0"/>
+  <edges id="390" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.15/@node_objs.0"/>
+  <edges id="391" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.15/@node_objs.1"/>
+  <edges id="392" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.14/@node_objs.0"/>
+  <edges id="393" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.14/@node_objs.0"/>
+  <edges id="394" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.14/@node_objs.1"/>
+  <edges id="395" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.0"/>
+  <edges id="396" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.0"/>
+  <edges id="397" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.1"/>
+  <edges id="398" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.0"/>
+  <edges id="399" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.0"/>
+  <edges id="400" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.1"/>
+  <edges id="401" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.0"/>
+  <edges id="402" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.0"/>
+  <edges id="403" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.1"/>
+  <edges id="404" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="405" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="406" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.1"/>
+  <edges id="407" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.0"/>
+  <edges id="408" source_obj="//@regions.0/@basic_blocks.1/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.0"/>
+  <edges id="409" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.1"/>
+  <edges id="410" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.0"/>
+  <edges id="411" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.0"/>
+  <edges id="412" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.1"/>
+  <edges id="413" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.0"/>
+  <edges id="414" source_obj="//@regions.0/@basic_blocks.1/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.0"/>
+  <edges id="415" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.1"/>
+  <edges id="416" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="417" source_obj="//@regions.0/@basic_blocks.1/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="418" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.1"/>
+  <edges id="419" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="420" source_obj="//@regions.0/@basic_blocks.1/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="421" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="422" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="423" source_obj="//@regions.0/@basic_blocks.1/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="424" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="425" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="426" source_obj="//@regions.0/@basic_blocks.1/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="427" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="428" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="429" source_obj="//@regions.0/@basic_blocks.1/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="430" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="431" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.21/@node_objs.0"/>
+  <edges id="432" source_obj="//@regions.0/@basic_blocks.1/@node_objs.35" sink_obj="//@regions.0/@basic_blocks.21/@node_objs.0"/>
+  <edges id="433" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.21/@node_objs.1"/>
+  <edges id="491" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="492" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="493" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="494" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.21"/>
+  <edges id="495" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.20"/>
+  <edges id="496" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.19"/>
+  <edges id="497" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="498" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.17"/>
+  <edges id="499" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.16"/>
+  <edges id="500" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.15"/>
+  <edges id="501" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.14"/>
+  <edges id="502" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.13"/>
+  <edges id="503" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.12"/>
+  <edges id="504" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.11"/>
+  <edges id="505" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="506" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.9"/>
+  <edges id="507" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.8"/>
+  <edges id="508" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.7"/>
+  <edges id="509" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.6"/>
+  <edges id="510" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="511" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="512" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="513" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="514" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="515" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="516" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="517" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="518" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="519" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="520" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="521" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="522" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="523" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.11" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="524" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.12" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="525" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.13" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="526" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="527" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.15" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="528" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.16" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="529" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.17" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="530" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="531" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.19" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="532" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.20" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="533" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.21" sink_obj="//@regions.0/@basic_blocks.22"/>
+  <edges id="534" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.22" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="535" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="536" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="537" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="538" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="539" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.1"/>
+  <edges id="540" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.2"/>
+  <edges id="541" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.3"/>
+  <edges id="542" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.1"/>
+  <edges id="543" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.3"/>
+  <edges id="544" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.22/@node_objs.2"/>
+  <blocks id="40" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>for.inc155</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="j" originalName="j" coreId="4294967284" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="i" originalName="i" coreId="0" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="indvar_flatten50" coreId="4294967284" bitwidth="15" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="zext_ln69_read" coreId="0" bitwidth="5" opcode="read" nodeLabel="6.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <dataInputObjs>zext_ln69</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="MatB_DRAM12" coreId="4294967284" bitwidth="64" opcode="read" nodeLabel="6.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <dataInputObjs>MatB_DRAM</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="sext_ln72_1_read" coreId="0" bitwidth="62" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>sext_ln72_1</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="zext_ln69_cast" rtlName="zext_ln69_cast_fu_486_p1" coreId="0" bitwidth="32" opcode="zext" nodeLabel="6.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>lshr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="sext_ln72_1_cast" rtlName="sext_ln72_1_cast_fu_460_p1" coreId="0" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="mem_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="complex_matmul" bitwidth="32" opcode="getelementptr" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+      <dataInputObjs>mem</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>readreq</dataOutputObjs>
+      <dataOutputObjs>read</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="p_rd_req" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="complex_matmul" bitwidth="1" opcode="readreq" nodeLatency="6" m_display="0" m_delay="7.3" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="indvar_flatten50_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="i_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="j_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="br_ln0" coreId="3915687688" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <controlInputObjs>for.inc155</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="complex_matmul.cpp">
+      <validLinenumbers>72</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="160" name="for.inc180.preheader.exitStub" type="BlockType">
+    <controlInputObjs>for.inc155</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="159" name="_ln0" coreId="1819113532" opcode="ret" nodeLabel="21.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="650" pipe_depth="14" RegionName="MAT_B_ROWSc_MAT_B_COLSc">
+    <basic_blocks id="47" name="for.inc155" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc180.preheader.exitStub</controlOutputObjs>
+      <controlOutputObjs>for.inc158</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="indvar_flatten50_load" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915689440" contextFuncName="complex_matmul" bitwidth="15" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="icmp_ln69" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="icmp_ln69_fu_493_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="complex_matmul" bitwidth="1" opcode="icmp" nodeLabel="7.0" m_display="0" m_delay="2.31" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="add_ln69_1" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="add_ln69_1_fu_499_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="complex_matmul" bitwidth="15" opcode="add" nodeLabel="7.0" m_display="0" m_delay="1.94" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="br_ln69" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915693824" contextFuncName="complex_matmul" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.inc158</controlInputObjs>
+        <controlInputObjs>for.inc180.preheader.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>69</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="92" name="for.inc158" type="BlockType">
+      <controlInputObjs>for.inc155</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.19</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.0</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.1</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.2</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.3</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.4</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.5</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.6</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.7</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.8</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.9</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.10</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.11</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.12</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.13</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.14</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.15</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.16</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.17</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.case.18</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="j_load" lineNumber="71" fileName="complex_matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="complex_matmul" bitwidth="8" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="71" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="i_load" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." coreId="542329928" contextFuncName="complex_matmul" bitwidth="8" opcode="load" nodeLabel="7.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="add_ln69" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="add_ln69_fu_511_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="complex_matmul" bitwidth="8" opcode="add" nodeLabel="7.0" m_display="0" m_delay="1.91" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="icmp_ln71" lineNumber="71" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="icmp_ln71_fu_517_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="complex_matmul" bitwidth="1" opcode="icmp" nodeLabel="7.0" m_display="0" m_delay="1.55" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="71" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="select_ln69" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="select_ln69_fu_523_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="complex_matmul" bitwidth="8" opcode="select" nodeLabel="7.0" m_display="0" m_delay="1.24" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="select_ln69_1" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="select_ln69_1_fu_531_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="complex_matmul" bitwidth="8" opcode="select" nodeLabel="7.0" m_display="0" m_delay="1.24" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>urem</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="zext_ln69_1" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="mul_ln69_fu_563_p00" coreId="0" contextFuncName="complex_matmul" bitwidth="17" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="mul_ln69" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="mul_8ns_10ns_17_1_1_U88" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="complex_matmul" bitwidth="17" opcode="mul" nodeLabel="8.0" m_display="0" m_delay="4.52" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="tmp" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="tmp_fu_569_p4" coreId="0" contextFuncName="complex_matmul" bitwidth="4" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="zext_ln69_2" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="grp_fu_626_p00" coreId="0" contextFuncName="complex_matmul" bitwidth="11" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="mul_ln69_1" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="mac_muladd_4ns_8ns_8ns_11_4_1_U90" coreName="DSP48" implIndex="dsp48" control="no" opType="mul" coreId="119" contextFuncName="complex_matmul" bitwidth="11" opcode="mul" nodeLabel="8.0" nodeLatency="2" m_display="0" m_delay="1.05" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="urem_ln69" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="urem_8ns_6ns_5_12_1_U89" coreName="Divider" implIndex="auto" control="no" opType="urem" coreId="6" contextFuncName="complex_matmul" bitwidth="5" opcode="urem" nodeLabel="8.0" nodeLatency="11" m_display="0" m_delay="4.38" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="trunc_ln69" lineNumber="69" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="trunc_ln69_fu_591_p1" coreId="0" contextFuncName="complex_matmul" bitwidth="5" opcode="trunc" nodeLabel="19.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="69" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>urem</dataInputObjs>
+        <dataOutputObjs>switch</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="zext_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="grp_fu_626_p20" coreId="0" contextFuncName="complex_matmul" bitwidth="11" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="add_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="mac_muladd_4ns_8ns_8ns_11_4_1_U90" coreName="DSP48" implIndex="dsp48" control="no" opType="add" coreId="119" contextFuncName="complex_matmul" bitwidth="11" opcode="add" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="2.1" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="zext_ln72_1" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="zext_ln72_1_fu_603_p1" coreId="3915705792" contextFuncName="complex_matmul" bitwidth="64" opcode="zext" nodeLabel="20.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="cMatB_V_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>cMatB_V</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="cMatB_V_1_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_1</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="cMatB_V_2_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915310768" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_2</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="cMatB_V_3_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_3</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="cMatB_V_4_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915310768" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_4</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="cMatB_V_5_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_5</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="cMatB_V_6_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915572256" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_6</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="cMatB_V_7_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915636384" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_7</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="cMatB_V_8_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915572256" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_8</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="cMatB_V_9_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915631232" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_9</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="cMatB_V_10_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915572256" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_10</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="cMatB_V_11_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915633808" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_11</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="cMatB_V_12_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915659856" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_12</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="cMatB_V_13_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915722784" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_13</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="cMatB_V_14_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915659856" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_14</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="cMatB_V_15_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915720208" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_15</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="cMatB_V_16_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915572256" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_16</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="cMatB_V_17_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915644112" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_17</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="cMatB_V_18_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915659856" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_18</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="cMatB_V_19_addr" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915725360" contextFuncName="complex_matmul" bitwidth="11" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>cMatB_V_19</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="mem_addr_read" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="complex_matmul" bitwidth="32" opcode="read" nodeLabel="18.0" m_display="0" m_delay="7.3" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>lshr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="lshr_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="lshr_ln72_fu_595_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="lshr" coreId="75" contextFuncName="complex_matmul" bitwidth="32" opcode="lshr" nodeLabel="19.0" m_display="0" m_delay="4.42" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="trunc_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="trunc_ln72_fu_599_p1" coreId="3915572256" contextFuncName="complex_matmul" bitwidth="16" opcode="trunc" nodeLabel="19.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>lshr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915638896" contextFuncName="complex_matmul" opcode="switch" nodeLabel="19.0" m_display="0" m_delay="0.95" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <controlInputObjs>arrayidx15423.case.19</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.0</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.1</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.2</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.3</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.4</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.5</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.6</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.7</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.8</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.9</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.10</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.11</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.12</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.13</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.14</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.15</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.16</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.17</controlInputObjs>
+        <controlInputObjs>arrayidx15423.case.18</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>71</validLinenumbers>
+        <validLinenumbers>69</validLinenumbers>
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="95" name="arrayidx15423.case.18" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="cMatB_V_18_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="94" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915613152" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="98" name="arrayidx15423.case.17" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="cMatB_V_17_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="66" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="7955819" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="101" name="arrayidx15423.case.16" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="99" name="cMatB_V_16_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="68" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="100" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915728912" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="104" name="arrayidx15423.case.15" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="102" name="cMatB_V_15_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="70" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="103" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="402653968" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="107" name="arrayidx15423.case.14" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="105" name="cMatB_V_14_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="72" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915323424" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="110" name="arrayidx15423.case.13" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="108" name="cMatB_V_13_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="74" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915355072" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="113" name="arrayidx15423.case.12" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="111" name="cMatB_V_12_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="76" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="112" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="1663508590" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="116" name="arrayidx15423.case.11" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="cMatB_V_11_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="78" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="115" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="119" name="arrayidx15423.case.10" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="117" name="cMatB_V_10_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="80" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="118" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915438928" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="122" name="arrayidx15423.case.9" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="120" name="cMatB_V_9_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="82" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="121" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3914767568" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="125" name="arrayidx15423.case.8" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="123" name="cMatB_V_8_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="84" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="124" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="128" name="arrayidx15423.case.7" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="126" name="cMatB_V_7_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="86" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="127" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="131" name="arrayidx15423.case.6" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="129" name="cMatB_V_6_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="88" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="130" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915616416" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="134" name="arrayidx15423.case.5" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="132" name="cMatB_V_5_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="90" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="133" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3914767424" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="91" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="137" name="arrayidx15423.case.4" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="135" name="cMatB_V_4_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="92" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="136" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="176" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="140" name="arrayidx15423.case.3" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="138" name="cMatB_V_3_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="94" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="139" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915334656" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="143" name="arrayidx15423.case.2" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="141" name="cMatB_V_2_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="96" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="142" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="146" name="arrayidx15423.case.1" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="144" name="cMatB_V_1_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="98" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="145" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915624224" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="149" name="arrayidx15423.case.0" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="147" name="cMatB_V_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="100" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="148" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="152" name="arrayidx15423.case.19" type="BlockType">
+      <controlInputObjs>for.inc158</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx15423.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="150" name="cMatB_V_19_addr_write_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="complex_matmul" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="102" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="151" name="br_ln72" lineNumber="72" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915684736" contextFuncName="complex_matmul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="103" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="72" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>arrayidx15423.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="158" name="arrayidx15423.exit" type="BlockType">
+      <controlInputObjs>arrayidx15423.case.18</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.17</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.16</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.15</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.14</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.13</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.12</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.11</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.10</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.9</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.8</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.7</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.6</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.5</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.4</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.3</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.2</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.1</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.0</controlInputObjs>
+      <controlInputObjs>arrayidx15423.case.19</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc155</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="153" name="add_ln71" lineNumber="71" fileName="complex_matmul.cpp" fileDirectory=".." rtlName="add_ln71_fu_539_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="complex_matmul" bitwidth="8" opcode="add" nodeLabel="7.0" m_display="0" m_delay="1.91" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="71" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="154" name="indvar_flatten50_write_ln71" lineNumber="71" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915677904" contextFuncName="complex_matmul" opcode="store" nodeLabel="7.0" m_display="0" m_delay="1.58" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="71" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="155" name="i_write_ln71" lineNumber="71" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915679024" contextFuncName="complex_matmul" opcode="store" nodeLabel="7.0" m_display="0" m_delay="1.58" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="71" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="156" name="j_write_ln71" lineNumber="71" fileName="complex_matmul.cpp" fileDirectory=".." coreId="3915680064" contextFuncName="complex_matmul" opcode="store" nodeLabel="7.0" m_display="0" m_delay="1.58" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="71" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="157" name="br_ln71" lineNumber="71" fileName="complex_matmul.cpp" fileDirectory=".." coreId="1702043696" contextFuncName="complex_matmul" opcode="br" nodeLabel="7.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="complex_matmul.cpp" linenumber="71" fileDirectory="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB" functionName="complex_matmul"/>
+        <controlInputObjs>for.inc155</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="complex_matmul.cpp">
+        <validLinenumbers>71</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <regnodes realName="add_ln72_reg_690">
+    <nodeIds>65</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln69_cast_reg_661">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln72_reg_685">
+    <nodeIds>64</nodeIds>
+  </regnodes>
+  <regnodes realName="mem_addr_read_reg_695">
+    <nodeIds>88</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln69_reg_669">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln69_reg_700">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_641">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="j_reg_634">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="indvar_flatten50_reg_648">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="mem_addr_reg_655">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln72_reg_704">
+    <nodeIds>90</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln69_2_reg_680">
+    <nodeIds>59</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln69_1_reg_674">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <expressionNodes realName="cMatB_V_10_addr_gep_fu_270">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln71_fu_539">
+    <nodeIds>153</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln69_1_fu_531">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln69_fu_493">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="indvar_flatten50_fu_166">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_13_addr_gep_fu_291">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_17_addr_gep_fu_319">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_fu_158">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_12_addr_gep_fu_284">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln69_fu_523">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln69_fu_591">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_addr_gep_fu_200">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lshr_ln72_fu_595">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln69_fu_511">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln72_fu_599">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln69_1_fu_560">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_15_addr_gep_fu_305">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln71_fu_517">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_11_addr_gep_fu_277">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_14_addr_gep_fu_298">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln72_1_cast_fu_460">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln69_2_fu_579">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_18_addr_gep_fu_326">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_9_addr_gep_fu_263">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_162">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln72_fu_588">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln69_1_fu_499">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mem_addr_fu_464">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln69_fu_563">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_3_addr_gep_fu_221">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln72_1_fu_603">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_1_addr_gep_fu_207">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_4_addr_gep_fu_228">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_7_addr_gep_fu_249">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_6_addr_gep_fu_242">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_569">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln69_cast_fu_486">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_19_addr_gep_fu_333">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_16_addr_gep_fu_312">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_5_addr_gep_fu_235">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_8_addr_gep_fu_256">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cMatB_V_2_addr_gep_fu_214">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_626">
+    <nodeIds>60</nodeIds>
+    <nodeIds>65</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_583">
+    <nodeIds>61</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="mem_addr_read_read_fu_195">
+    <nodeIds>88</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_load_load_fu_508">
+    <nodeIds>49</nodeIds>
+  </ioNodes>
+  <ioNodes realName="sext_ln72_1_read_read_fu_170">
+    <nodeIds>30</nodeIds>
+  </ioNodes>
+  <ioNodes realName="j_load_load_fu_505">
+    <nodeIds>48</nodeIds>
+  </ioNodes>
+  <ioNodes realName="zext_ln69_read_read_fu_183">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_476">
+    <nodeIds>37</nodeIds>
+  </ioNodes>
+  <ioNodes realName="indvar_flatten50_load_load_fu_490">
+    <nodeIds>41</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_readreq_fu_176">
+    <nodeIds>35</nodeIds>
+  </ioNodes>
+  <ioNodes realName="MatB_DRAM12_read_fu_189">
+    <nodeIds>29</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_471">
+    <nodeIds>36</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln71_store_fu_545">
+    <nodeIds>154</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_481">
+    <nodeIds>38</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln71_store_fu_555">
+    <nodeIds>156</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln71_store_fu_550">
+    <nodeIds>155</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="cMatB_V">
+    <nodeIds>147</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_1">
+    <nodeIds>144</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_10">
+    <nodeIds>117</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_11">
+    <nodeIds>114</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_12">
+    <nodeIds>111</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_13">
+    <nodeIds>108</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_14">
+    <nodeIds>105</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_15">
+    <nodeIds>102</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_16">
+    <nodeIds>99</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_17">
+    <nodeIds>96</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_18">
+    <nodeIds>93</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_19">
+    <nodeIds>150</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_2">
+    <nodeIds>141</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_3">
+    <nodeIds>138</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_4">
+    <nodeIds>135</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_5">
+    <nodeIds>132</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_6">
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_7">
+    <nodeIds>126</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_8">
+    <nodeIds>123</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cMatB_V_9">
+    <nodeIds>120</nodeIds>
+  </memoryPorts>
+  <ioPorts name="MatB_DRAM">
+    <contents name="read">
+      <nodeIds>29</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V(p0)">
+    <contents name="store">
+      <nodeIds>147</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_1(p0)">
+    <contents name="store">
+      <nodeIds>144</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_10(p0)">
+    <contents name="store">
+      <nodeIds>117</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_11(p0)">
+    <contents name="store">
+      <nodeIds>114</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_12(p0)">
+    <contents name="store">
+      <nodeIds>111</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_13(p0)">
+    <contents name="store">
+      <nodeIds>108</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_14(p0)">
+    <contents name="store">
+      <nodeIds>105</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_15(p0)">
+    <contents name="store">
+      <nodeIds>102</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_16(p0)">
+    <contents name="store">
+      <nodeIds>99</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_17(p0)">
+    <contents name="store">
+      <nodeIds>96</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_18(p0)">
+    <contents name="store">
+      <nodeIds>93</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_19(p0)">
+    <contents name="store">
+      <nodeIds>150</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_2(p0)">
+    <contents name="store">
+      <nodeIds>141</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_3(p0)">
+    <contents name="store">
+      <nodeIds>138</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_4(p0)">
+    <contents name="store">
+      <nodeIds>135</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_5(p0)">
+    <contents name="store">
+      <nodeIds>132</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_6(p0)">
+    <contents name="store">
+      <nodeIds>129</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_7(p0)">
+    <contents name="store">
+      <nodeIds>126</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_8(p0)">
+    <contents name="store">
+      <nodeIds>123</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="cMatB_V_9(p0)">
+    <contents name="store">
+      <nodeIds>120</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="mem">
+    <contents name="read">
+      <nodeIds>88</nodeIds>
+    </contents>
+    <contents name="readreq">
+      <nodeIds>35</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="sext_ln72_1">
+    <contents name="read">
+      <nodeIds>30</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="zext_ln69">
+    <contents name="read">
+      <nodeIds>28</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="7" latency="7"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="35" stage="6" latency="7"/>
+    </states>
+    <states id="3">
+      <operations id="35" stage="5" latency="7"/>
+    </states>
+    <states id="4">
+      <operations id="35" stage="4" latency="7"/>
+    </states>
+    <states id="5">
+      <operations id="35" stage="3" latency="7"/>
+    </states>
+    <states id="6">
+      <operations id="35" stage="2" latency="7"/>
+    </states>
+    <states id="7">
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="7"/>
+      <operations id="39" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="153" stage="1" latency="1"/>
+      <operations id="154" stage="1" latency="1"/>
+      <operations id="155" stage="1" latency="1"/>
+      <operations id="156" stage="1" latency="1"/>
+      <operations id="157" stage="1" latency="1"/>
+    </states>
+    <states id="9">
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="3" latency="3"/>
+      <operations id="61" stage="12" latency="12"/>
+    </states>
+    <states id="10">
+      <operations id="60" stage="2" latency="3"/>
+      <operations id="61" stage="11" latency="12"/>
+    </states>
+    <states id="11">
+      <operations id="60" stage="1" latency="3"/>
+      <operations id="61" stage="10" latency="12"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="2" latency="2"/>
+    </states>
+    <states id="12">
+      <operations id="61" stage="9" latency="12"/>
+      <operations id="65" stage="1" latency="2"/>
+    </states>
+    <states id="13">
+      <operations id="61" stage="8" latency="12"/>
+    </states>
+    <states id="14">
+      <operations id="61" stage="7" latency="12"/>
+    </states>
+    <states id="15">
+      <operations id="61" stage="6" latency="12"/>
+    </states>
+    <states id="16">
+      <operations id="61" stage="5" latency="12"/>
+    </states>
+    <states id="17">
+      <operations id="61" stage="4" latency="12"/>
+    </states>
+    <states id="18">
+      <operations id="61" stage="3" latency="12"/>
+    </states>
+    <states id="19">
+      <operations id="61" stage="2" latency="12"/>
+      <operations id="88" stage="1" latency="1"/>
+    </states>
+    <states id="20">
+      <operations id="61" stage="1" latency="12"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+    </states>
+    <states id="21">
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="124" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="130" stage="1" latency="1"/>
+      <operations id="132" stage="1" latency="1"/>
+      <operations id="133" stage="1" latency="1"/>
+      <operations id="135" stage="1" latency="1"/>
+      <operations id="136" stage="1" latency="1"/>
+      <operations id="138" stage="1" latency="1"/>
+      <operations id="139" stage="1" latency="1"/>
+      <operations id="141" stage="1" latency="1"/>
+      <operations id="142" stage="1" latency="1"/>
+      <operations id="144" stage="1" latency="1"/>
+      <operations id="145" stage="1" latency="1"/>
+      <operations id="147" stage="1" latency="1"/>
+      <operations id="148" stage="1" latency="1"/>
+      <operations id="150" stage="1" latency="1"/>
+      <operations id="151" stage="1" latency="1"/>
+    </states>
+    <states id="22">
+      <operations id="159" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="22">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="complex_matmul_Pipeline_MAT_B_ROWSc_MAT_B_COLSc" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="30020" mMaxLatency="30020">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="6" mMaxLatency="6">
+      <basicBlocks>40</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="MAT_B_ROWSc_MAT_B_COLSc" mII="1" mDepth="14" mMinTripCount="30000" mMaxTripCount="30000" mMinLatency="30012" mMaxLatency="30012" mType="1">
+      <basicBlocks>47</basicBlocks>
+      <basicBlocks>92</basicBlocks>
+      <basicBlocks>95</basicBlocks>
+      <basicBlocks>98</basicBlocks>
+      <basicBlocks>101</basicBlocks>
+      <basicBlocks>104</basicBlocks>
+      <basicBlocks>107</basicBlocks>
+      <basicBlocks>110</basicBlocks>
+      <basicBlocks>113</basicBlocks>
+      <basicBlocks>116</basicBlocks>
+      <basicBlocks>119</basicBlocks>
+      <basicBlocks>122</basicBlocks>
+      <basicBlocks>125</basicBlocks>
+      <basicBlocks>128</basicBlocks>
+      <basicBlocks>131</basicBlocks>
+      <basicBlocks>134</basicBlocks>
+      <basicBlocks>137</basicBlocks>
+      <basicBlocks>140</basicBlocks>
+      <basicBlocks>143</basicBlocks>
+      <basicBlocks>146</basicBlocks>
+      <basicBlocks>149</basicBlocks>
+      <basicBlocks>152</basicBlocks>
+      <basicBlocks>158</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>160</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -1,0 +1,81 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:724:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:738:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:752:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB/complex_proj/solution1/csynth.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="complex_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=complex_matmul" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/nethome/rsamanta9/FPGA_ECE8893/2023_Spring/Lab1/PartB/complex_proj/solution1/directives.tcl:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="complex_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=complex_matmul" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="complex_matmul.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="complex_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2 port=MatA_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="complex_matmul.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="complex_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2 port=MatB_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="complex_matmul.cpp:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="complex_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2 port=MatC_DRAM offset=slave bundle=mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="complex_matmul.cpp:31:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="complex_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="complex_matmul.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="complex_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=MatA dim=1 cyclic factor=20" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="complex_matmul.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="complex_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=MatB dim=1 cyclic factor=20" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="complex_matmul.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="complex_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=MatC dim=1 cyclic factor=20" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="complex_matmul.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="complex_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=cMatA dim=1 cyclic factor=20" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="complex_matmul.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="complex_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=cMatB dim=1 cyclic factor=20" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="complex_matmul.cpp:39:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="complex_matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=cMatC dim=1 cyclic factor=20" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="complex_matmul.cpp:94:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="complex_matmul" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="complex_matmul.cpp:98:5" msg_body="Loop 'INNER_ROW_COL_MULT' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="INNER_ROW_COL_MULT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="complex_matmul.cpp:17:0" msg_body="Unrolling loop 'INNER_ROW_COL_MULT' (complex_matmul.cpp:98:5) in function 'complex_matmul' completely with a factor of 20">
+        <args Factor="20" LoopLoc="complex_matmul.cpp:98:5" LoopName="INNER_ROW_COL_MULT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="complex_matmul.cpp:22:7" msg_body="Applying array_partition to 'MatA': Cyclic partitioning with factor 20 on dimension 1.">
+        <args Dim="1" Factor="20" Mode="Cyclic" UOName="MatA"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="complex_matmul.cpp:23:7" msg_body="Applying array_partition to 'MatB': Cyclic partitioning with factor 20 on dimension 1.">
+        <args Dim="1" Factor="20" Mode="Cyclic" UOName="MatB"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="complex_matmul.cpp:24:7" msg_body="Applying array_partition to 'MatC': Cyclic partitioning with factor 20 on dimension 1.">
+        <args Dim="1" Factor="20" Mode="Cyclic" UOName="MatC"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="complex_matmul.cpp:26:7" msg_body="Applying array_partition to 'cMatA': Cyclic partitioning with factor 20 on dimension 1.">
+        <args Dim="1" Factor="20" Mode="Cyclic" UOName="cMatA"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="complex_matmul.cpp:27:7" msg_body="Applying array_partition to 'cMatB': Cyclic partitioning with factor 20 on dimension 1.">
+        <args Dim="1" Factor="20" Mode="Cyclic" UOName="cMatB"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="complex_matmul.cpp:28:7" msg_body="Applying array_partition to 'cMatC': Cyclic partitioning with factor 20 on dimension 1.">
+        <args Dim="1" Factor="20" Mode="Cyclic" UOName="cMatC"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="complex_matmul.cpp:116:34" msg_body="Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_int&lt;16&gt;s' into 'complex_matmul(complex_t (*) [150], complex_t (*) [200], complex_t (*) [200])'">
+        <args Callee="_llvm.fpga.pack.none.i16.s_struct.ap_int&lt;16&gt;s" Caller="complex_matmul(complex_t (*) [150], complex_t (*) [200], complex_t (*) [200])"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="complex_matmul.cpp:125:34" msg_body="Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_int&lt;16&gt;s' into 'complex_matmul(complex_t (*) [150], complex_t (*) [200], complex_t (*) [200])'">
+        <args Callee="_llvm.fpga.pack.none.i16.s_struct.ap_int&lt;16&gt;s" Caller="complex_matmul(complex_t (*) [150], complex_t (*) [200], complex_t (*) [200])"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+
