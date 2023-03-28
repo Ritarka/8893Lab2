@@ -4,7 +4,7 @@
 // ==============================================================
 `timescale 1 ns / 1 ps
 
-(* use_dsp = "yes" *) module tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_5(
+(* use_dsp = "yes" *) module tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_3(
     input  [2 - 1:0] in0,
     input  [7 - 1:0] in1,
     input  [6 - 1:0] in2,
@@ -46,7 +46,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_5 tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_5_U(
+tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_3 tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_3_U(
     .in0( din0 ),
     .in1( din1 ),
     .in2( din2 ),

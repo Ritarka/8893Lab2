@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'load_layer_params_from_DRAM'
 ================================================================
-* Date:           Tue Mar 28 06:22:07 2023
+* Date:           Tue Mar 28 08:18:49 2023
 
 * Version:        2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)
 * Project:        proj
@@ -102,8 +102,8 @@
     |add_ln84_1_fu_691_p2               |         +|   0|  0|   7|           7|           7|
     |add_ln84_fu_621_p2                 |         +|   0|  0|  14|           7|           7|
     |add_ln91_fu_769_p2                 |         +|   0|  0|  11|           3|           1|
-    |empty_36_fu_444_p2                 |         +|   0|  0|  71|          64|          64|
-    |empty_39_fu_724_p2                 |         +|   0|  0|  71|          64|          64|
+    |empty_50_fu_444_p2                 |         +|   0|  0|  71|          64|          64|
+    |empty_53_fu_724_p2                 |         +|   0|  0|  71|          64|          64|
     |sub_ln84_1_fu_633_p2               |         -|   0|  0|   7|           7|           7|
     |sub_ln84_fu_590_p2                 |         -|   0|  0|  14|           6|           6|
     |and_ln73_1_fu_522_p2               |       and|   0|  0|   2|           1|           1|
@@ -156,7 +156,7 @@
     |ap_phi_mux_kh_phi_fu_392_p4  |    9|          2|    3|          6|
     |ap_phi_mux_kw_phi_fu_404_p4  |    9|          2|    3|          6|
     |c_reg_366                    |    9|          2|    2|          4|
-    |f_1_reg_412                  |    9|          2|    3|          6|
+    |f_2_reg_412                  |    9|          2|    3|          6|
     |f_reg_344                    |    9|          2|    3|          6|
     |indvar_flatten11_reg_355     |    9|          2|    8|         16|
     |indvar_flatten33_reg_333     |    9|          2|   10|         20|
@@ -190,7 +190,7 @@
     |bias_buf_06_fu_160               |  16|   0|   16|          0|
     |c_reg_366                        |   2|   0|    2|          0|
     |empty_reg_906                    |  15|   0|   15|          0|
-    |f_1_reg_412                      |   3|   0|    3|          0|
+    |f_2_reg_412                      |   3|   0|    3|          0|
     |f_reg_344                        |   3|   0|    3|          0|
     |icmp_ln73_reg_947                |   1|   0|    1|          0|
     |icmp_ln73_reg_947_pp0_iter1_reg  |   1|   0|    1|          0|
@@ -316,6 +316,6 @@
 |p_read3               |   in|   16|     ap_none|                      p_read3|        scalar|
 |weights               |   in|   64|     ap_none|                      weights|        scalar|
 |bias                  |   in|   64|     ap_none|                         bias|        scalar|
-|kernel_group_offset   |   in|    4|     ap_none|          kernel_group_offset|        scalar|
+|kernel_group          |   in|    4|     ap_none|                 kernel_group|        scalar|
 +----------------------+-----+-----+------------+-----------------------------+--------------+
 

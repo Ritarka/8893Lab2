@@ -18,25 +18,40 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>8.260</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1421006337</Best-caseLatency>
-<Average-caseLatency>1421006337</Average-caseLatency>
-<Worst-caseLatency>1421006337</Worst-caseLatency>
-<Best-caseRealTimeLatency>14.210 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>14.210 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>14.210 sec</Worst-caseRealTimeLatency>
-<Interval-min>1421006338</Interval-min>
-<Interval-max>1421006338</Interval-max>
+<Best-caseLatency>1417125889</Best-caseLatency>
+<Average-caseLatency>1451589633</Average-caseLatency>
+<Worst-caseLatency>1486053377</Worst-caseLatency>
+<Best-caseRealTimeLatency>14.171 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>14.516 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>14.861 sec</Worst-caseRealTimeLatency>
+<Interval-min>1417125890</Interval-min>
+<Interval-max>1486053378</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<TILE_ROW_TILE_COL>
-<TripCount>512</TripCount>
-<Latency>1421006336</Latency>
-<AbsoluteTimeLatency>14210063360</AbsoluteTimeLatency>
-<IterationLatency>2775403</IterationLatency>
+<TILE_ROW_TILE_COL_TILE_DEPTH>
+<TripCount>8192</TripCount>
+<Latency>
+<range>
+<min>1417125888</min>
+<max>1486053376</max>
+</range>
+</Latency>
+<AbsoluteTimeLatency>
+<range>
+<min>14171258880</min>
+<max>14860533760</max>
+</range>
+</AbsoluteTimeLatency>
+<IterationLatency>
+<range>
+<min>172989</min>
+<max>181403</max>
+</range>
+</IterationLatency>
 <INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH>
 <TripCount>7176</TripCount>
 <Latency>7186</Latency>
@@ -44,16 +59,30 @@
 <PipelineII>1</PipelineII>
 <PipelineDepth>12</PipelineDepth>
 </INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH>
-</TILE_ROW_TILE_COL>
+<OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH>
+<TripCount>1840</TripCount>
+<Latency>1860</Latency>
+<AbsoluteTimeLatency>18600</AbsoluteTimeLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>22</PipelineDepth>
+</OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH>
+<OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH>
+<TripCount>1840</TripCount>
+<Latency>1860</Latency>
+<AbsoluteTimeLatency>18600</AbsoluteTimeLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>22</PipelineDepth>
+</OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH>
+</TILE_ROW_TILE_COL_TILE_DEPTH>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <BRAM_18K>34</BRAM_18K>
-<DSP>10</DSP>
-<FF>4224</FF>
-<LUT>7950</LUT>
+<DSP>12</DSP>
+<FF>6737</FF>
+<LUT>10347</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

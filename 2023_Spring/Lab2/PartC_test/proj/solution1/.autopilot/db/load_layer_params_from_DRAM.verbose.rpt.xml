@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'load_layer_params_from_DRAM'" level="0">
-<item name = "Date">Tue Mar 28 06:22:07 2023
+<item name = "Date">Tue Mar 28 08:18:49 2023
 </item>
 <item name = "Version">2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)</item>
 <item name = "Project">proj</item>
@@ -90,8 +90,8 @@
 <column name="add_ln84_1_fu_691_p2">+, 0, 0, 7, 7, 7</column>
 <column name="add_ln84_fu_621_p2">+, 0, 0, 14, 7, 7</column>
 <column name="add_ln91_fu_769_p2">+, 0, 0, 11, 3, 1</column>
-<column name="empty_36_fu_444_p2">+, 0, 0, 71, 64, 64</column>
-<column name="empty_39_fu_724_p2">+, 0, 0, 71, 64, 64</column>
+<column name="empty_50_fu_444_p2">+, 0, 0, 71, 64, 64</column>
+<column name="empty_53_fu_724_p2">+, 0, 0, 71, 64, 64</column>
 <column name="sub_ln84_1_fu_633_p2">-, 0, 0, 7, 7, 7</column>
 <column name="sub_ln84_fu_590_p2">-, 0, 0, 14, 6, 6</column>
 <column name="and_ln73_1_fu_522_p2">and, 0, 0, 2, 1, 1</column>
@@ -140,7 +140,7 @@
 <column name="ap_phi_mux_kh_phi_fu_392_p4">9, 2, 3, 6</column>
 <column name="ap_phi_mux_kw_phi_fu_404_p4">9, 2, 3, 6</column>
 <column name="c_reg_366">9, 2, 2, 4</column>
-<column name="f_1_reg_412">9, 2, 3, 6</column>
+<column name="f_2_reg_412">9, 2, 3, 6</column>
 <column name="f_reg_344">9, 2, 3, 6</column>
 <column name="indvar_flatten11_reg_355">9, 2, 8, 16</column>
 <column name="indvar_flatten33_reg_333">9, 2, 10, 20</column>
@@ -170,7 +170,7 @@
 <column name="bias_buf_06_fu_160">16, 0, 16, 0</column>
 <column name="c_reg_366">2, 0, 2, 0</column>
 <column name="empty_reg_906">15, 0, 15, 0</column>
-<column name="f_1_reg_412">3, 0, 3, 0</column>
+<column name="f_2_reg_412">3, 0, 3, 0</column>
 <column name="f_reg_344">3, 0, 3, 0</column>
 <column name="icmp_ln73_reg_947">1, 0, 1, 0</column>
 <column name="icmp_ln73_reg_947_pp0_iter1_reg">1, 0, 1, 0</column>
@@ -292,7 +292,7 @@
 <column name="p_read3">in, 16, ap_none, p_read3, scalar</column>
 <column name="weights">in, 64, ap_none, weights, scalar</column>
 <column name="bias">in, 64, ap_none, bias, scalar</column>
-<column name="kernel_group_offset">in, 4, ap_none, kernel_group_offset, scalar</column>
+<column name="kernel_group">in, 4, ap_none, kernel_group, scalar</column>
 </table>
 </item>
 </section>

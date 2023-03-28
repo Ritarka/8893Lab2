@@ -32550,9 +32550,9 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv (
             TILE_DEPTH:
             for(int tk = 0; tk < depth; tk++) {
 
-#pragma HLS unroll
 
- if (tk == 0) {
+
+                if (tk == 0) {
                     load_input_tile_block_from_DRAM(
                         conv_in_buf,
                         input_feature_map,

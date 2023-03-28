@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'load_layer_params_from_DRAM'" level="0">
-<item name = "Date">Mon Mar 27 21:26:25 2023
+<item name = "Date">Tue Mar 28 08:41:43 2023
 </item>
 <item name = "Version">2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)</item>
 <item name = "Project">proj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">613, 613, 6.130 us, 6.130 us, 613, 613, none</column>
+<column name="">612, 612, 6.120 us, 6.120 us, 612, 612, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- WEIGHT_KERNEL_NUM_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH">590, 590, 4, 1, 1, 588, yes</column>
+<column name="- WEIGHT_KERNEL_NUM_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH">589, 589, 3, 1, 1, 588, yes</column>
 <column name="- BIAS">4, 4, 2, 1, 1, 4, yes</column>
 </table>
 </item>

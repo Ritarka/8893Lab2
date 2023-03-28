@@ -5,7 +5,7 @@
 
 `timescale 1 ns / 1 ps
 
-module tiled_conv_mul_2ns_22ns_23_1_1_Multiplier_4(a, b, p);
+module tiled_conv_mul_2ns_22ns_23_1_1_Multiplier_3(a, b, p);
 input[2 - 1 : 0] a; 
 input[22 - 1 : 0] b; 
 output[23 - 1 : 0] p;
@@ -29,7 +29,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-tiled_conv_mul_2ns_22ns_23_1_1_Multiplier_4 tiled_conv_mul_2ns_22ns_23_1_1_Multiplier_4_U(
+tiled_conv_mul_2ns_22ns_23_1_1_Multiplier_3 tiled_conv_mul_2ns_22ns_23_1_1_Multiplier_3_U(
     .a( din0 ),
     .b( din1 ),
     .p( dout ));

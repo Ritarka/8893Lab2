@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv_7x7'" level="0">
-<item name = "Date">Tue Mar 28 06:22:08 2023
+<item name = "Date">Tue Mar 28 08:18:50 2023
 </item>
 <item name = "Version">2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)</item>
 <item name = "Project">proj</item>
@@ -107,13 +107,13 @@
 <column name="add_ln35_1_fu_1931_p2">+, 0, 0, 15, 8, 1</column>
 <column name="add_ln35_fu_1260_p2">+, 0, 0, 13, 5, 1</column>
 <column name="add_ln38_fu_1926_p2">+, 0, 0, 11, 3, 1</column>
-<column name="add_ln46_3_fu_1455_p2">+, 0, 0, 13, 5, 1</column>
-<column name="add_ln46_4_fu_1547_p2">+, 0, 0, 14, 7, 1</column>
-<column name="add_ln46_5_fu_1581_p2">+, 0, 0, 14, 7, 2</column>
-<column name="add_ln46_6_fu_1597_p2">+, 0, 0, 14, 7, 2</column>
-<column name="add_ln46_7_fu_1635_p2">+, 0, 0, 14, 7, 3</column>
-<column name="add_ln46_8_fu_1651_p2">+, 0, 0, 14, 7, 3</column>
-<column name="add_ln46_9_fu_1702_p2">+, 0, 0, 14, 7, 3</column>
+<column name="add_ln46_2_fu_1455_p2">+, 0, 0, 13, 5, 1</column>
+<column name="add_ln46_3_fu_1547_p2">+, 0, 0, 14, 7, 1</column>
+<column name="add_ln46_4_fu_1581_p2">+, 0, 0, 14, 7, 2</column>
+<column name="add_ln46_5_fu_1597_p2">+, 0, 0, 14, 7, 2</column>
+<column name="add_ln46_6_fu_1635_p2">+, 0, 0, 14, 7, 3</column>
+<column name="add_ln46_7_fu_1651_p2">+, 0, 0, 14, 7, 3</column>
+<column name="add_ln46_8_fu_1702_p2">+, 0, 0, 14, 7, 3</column>
 <column name="add_ln46_fu_1488_p2">+, 0, 0, 10, 2, 1</column>
 <column name="add_ln49_fu_1697_p2">+, 0, 0, 11, 3, 1</column>
 <column name="add_ln703_1_fu_1833_p2">+, 0, 0, 9, 16, 16</column>
@@ -126,11 +126,11 @@
 <column name="add_ln703_fu_1916_p2">+, 0, 0, 23, 16, 16</column>
 <column name="add_ln78_1_fu_1307_p2">+, 0, 0, 9, 9, 9</column>
 <column name="add_ln78_fu_1194_p2">+, 0, 0, 9, 9, 9</column>
-<column name="empty_42_fu_1104_p2">+, 0, 0, 14, 6, 2</column>
-<column name="empty_43_fu_1110_p2">+, 0, 0, 14, 6, 3</column>
-<column name="empty_44_fu_1116_p2">+, 0, 0, 14, 6, 3</column>
-<column name="empty_45_fu_1122_p2">+, 0, 0, 14, 6, 3</column>
-<column name="empty_47_fu_1566_p2">+, 0, 0, 14, 6, 6</column>
+<column name="empty_56_fu_1104_p2">+, 0, 0, 14, 6, 2</column>
+<column name="empty_57_fu_1110_p2">+, 0, 0, 14, 6, 3</column>
+<column name="empty_58_fu_1116_p2">+, 0, 0, 14, 6, 3</column>
+<column name="empty_59_fu_1122_p2">+, 0, 0, 14, 6, 3</column>
+<column name="empty_61_fu_1566_p2">+, 0, 0, 14, 6, 6</column>
 <column name="indvars_iv_next31_dup_fu_1265_p2">+, 0, 0, 14, 6, 2</column>
 <column name="indvars_iv_next31_fu_1098_p2">+, 0, 0, 14, 6, 2</column>
 <column name="indvars_iv_next31_mid1_fu_1339_p2">+, 0, 0, 14, 6, 3</column>
@@ -229,7 +229,7 @@
 <column name="accu_V_reg_994">16, 0, 16, 0</column>
 <column name="add_ln1116_6_reg_2535">12, 0, 12, 0</column>
 <column name="add_ln32_2_reg_2006">11, 0, 11, 0</column>
-<column name="add_ln46_3_reg_2154">5, 0, 5, 0</column>
+<column name="add_ln46_2_reg_2154">5, 0, 5, 0</column>
 <column name="add_ln46_reg_2163">2, 0, 2, 0</column>
 <column name="add_ln49_reg_2485">3, 0, 3, 0</column>
 <column name="add_ln703_2_reg_2620">16, 0, 16, 0</column>
@@ -239,10 +239,10 @@
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="chan_reg_971">2, 0, 2, 0</column>
-<column name="empty_42_reg_2021">6, 0, 6, 0</column>
-<column name="empty_43_reg_2026">6, 0, 6, 0</column>
-<column name="empty_44_reg_2031">6, 0, 6, 0</column>
-<column name="empty_45_reg_2036">6, 0, 6, 0</column>
+<column name="empty_56_reg_2021">6, 0, 6, 0</column>
+<column name="empty_57_reg_2026">6, 0, 6, 0</column>
+<column name="empty_58_reg_2031">6, 0, 6, 0</column>
+<column name="empty_59_reg_2036">6, 0, 6, 0</column>
 <column name="empty_reg_2011">5, 0, 6, 1</column>
 <column name="h_reg_901">6, 0, 6, 0</column>
 <column name="i_reg_983">3, 0, 3, 0</column>

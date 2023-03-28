@@ -32511,8 +32511,20 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv (
     wt_t conv_wt_buf[4][3][7][7];
     wt_t conv_bias_buf[4];
     fm_t conv_out_buf[4][46 / 2][40 / 2] = {0};
-# 51 "tiled_conv.cpp"
-    TILE_ROW:
+
+
+#pragma HLS array_partition variable=conv_out_buf complete dim=1
+
+#pragma HLS array_partition variable=conv_in_buf complete dim=3
+#pragma HLS array_partition variable=conv_wt_buf complete dim=3
+
+#pragma HLS array_partition variable=conv_bias_buf complete dim=1
+
+
+
+
+
+ TILE_ROW:
     for(int ti = 0; ti < (int) 736 / 46; ti++)
     {
         TILE_COL:

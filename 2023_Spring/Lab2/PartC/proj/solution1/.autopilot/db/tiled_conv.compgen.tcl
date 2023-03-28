@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 203
+set id 392
 set name tiled_conv_mul_2ns_22ns_23_1_1
 set corename simcore_mul
 set op mul
@@ -67,7 +67,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, che
 }
 
 
-set id 204
+set id 393
 set name tiled_conv_mac_muladd_5ns_7ns_3s_11_1_1
 set corename simcore_mac
 set op mac
@@ -149,7 +149,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 205
+set id 394
 set name tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1
 set corename simcore_mac
 set op mac
@@ -231,97 +231,15 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 206
-set name tiled_conv_mac_muladd_8ns_7ns_6ns_13_1_1
-set corename simcore_mac
-set op mac
-set stage_num 1
-set max_latency -1
-set registered_input 1
-set in0_width 8
-set in0_signed 0
-set in1_width 7
-set in1_signed 0
-set in2_width 6
-set in2_signed 0
-set out_width 13
-set exp i0*i1+i2
-set arg_lists {i0 {8 0 +} i1 {7 0 +} m {13 0 +} i2 {6 0 +} p {13 0 +} c_reg {1} rnd {0} acc {0} }
-set TrueReset 0
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
-eval "ap_gen_simcore_mac { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mac, check your AutoPilot builtin lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler ${name}
-}
-
-
-set op mac
-set corename DSP48
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    true_reset ${TrueReset} \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    in2_width ${in2_width} \
-    in2_signed ${in2_signed} \
-    out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
-}
-}
-
-
 # Memory (RAM/ROM)  definition:
-set ID 211
+set ID 398
 set hasByteEnable 0
-set MemName tiled_conv_conv_in_buf_V
+set MemName tiled_conv_conv_in_buf_V_0
 set CoreName ap_simcore_mem
 set PortList { 2 1 }
 set DataWd 16
-set AddrRange 7176
-set AddrWd 13
+set AddrRange 156
+set AddrWd 8
 set impl_style auto
 set TrueReset 0
 set HasInitializer 0
@@ -399,14 +317,14 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 212
+set ID 399
 set hasByteEnable 0
-set MemName tiled_conv_conv_wt_buf_V
+set MemName tiled_conv_conv_wt_buf_V_0
 set CoreName ap_simcore_mem
 set PortList { 2 1 }
 set DataWd 16
-set AddrRange 588
-set AddrWd 10
+set AddrRange 84
+set AddrWd 7
 set impl_style auto
 set TrueReset 0
 set HasInitializer 0
@@ -484,14 +402,14 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 213
+set ID 400
 set hasByteEnable 0
-set MemName tiled_conv_conv_out_buf_V
+set MemName tiled_conv_conv_out_buf_0_V
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 16
-set AddrRange 1840
-set AddrWd 11
+set AddrRange 460
+set AddrWd 9
 set impl_style auto
 set TrueReset 0
 set HasInitializer 0
@@ -621,7 +539,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 214 \
+			id 401 \
 			corename tiled_conv_control_axilite \
 			name tiled_conv_control_s_axi \
 			ports {$port_control} \
@@ -642,7 +560,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 215 \
+    id 402 \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 
@@ -663,7 +581,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 216 \
+    id 403 \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 

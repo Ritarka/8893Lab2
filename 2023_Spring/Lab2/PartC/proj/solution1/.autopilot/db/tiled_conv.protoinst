@@ -13,7 +13,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_conv_7x7_fu_392/grp_conv_7x7_fu_392_activity": {
+				"grp_conv_7x7_fu_1275/grp_conv_7x7_fu_1275_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -23,7 +23,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_load_layer_params_from_DRAM_fu_403/grp_load_layer_params_from_DRAM_fu_403_activity": {
+				"grp_load_layer_params_from_DRAM_fu_1370/grp_load_layer_params_from_DRAM_fu_1370_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -33,7 +33,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_store_output_tile_to_DRAM_fu_433/grp_store_output_tile_to_DRAM_fu_433_activity": {
+				"grp_store_output_tile_to_DRAM_fu_1340/grp_store_output_tile_to_DRAM_fu_1340_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

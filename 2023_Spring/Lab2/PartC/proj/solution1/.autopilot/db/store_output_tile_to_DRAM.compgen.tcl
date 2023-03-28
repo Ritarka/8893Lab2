@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 192
+set id 378
 set name tiled_conv_mul_4ns_7ns_10_1_1
 set corename simcore_mul
 set op mul
@@ -67,7 +67,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, che
 }
 
 
-set id 194
+set id 380
 set name tiled_conv_mul_mul_6ns_20ns_25_1_1
 set corename simcore_mul
 set op mul
@@ -154,14 +154,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 199 \
+    id 385 \
     name out_fm_buf_V \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename out_fm_buf_V \
     op interface \
-    ports { out_fm_buf_V_address0 { O 11 vector } out_fm_buf_V_ce0 { O 1 bit } out_fm_buf_V_q0 { I 16 vector } } \
+    ports { out_fm_buf_V_address0 { O 9 vector } out_fm_buf_V_ce0 { O 1 bit } out_fm_buf_V_q0 { I 16 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_fm_buf_V'"
@@ -169,10 +169,67 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 
 
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 386 \
+    name out_fm_buf_1_V \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename out_fm_buf_1_V \
+    op interface \
+    ports { out_fm_buf_1_V_address0 { O 9 vector } out_fm_buf_1_V_ce0 { O 1 bit } out_fm_buf_1_V_q0 { I 16 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_fm_buf_1_V'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 387 \
+    name out_fm_buf_2_V \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename out_fm_buf_2_V \
+    op interface \
+    ports { out_fm_buf_2_V_address0 { O 9 vector } out_fm_buf_2_V_ce0 { O 1 bit } out_fm_buf_2_V_q0 { I 16 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_fm_buf_2_V'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 388 \
+    name out_fm_buf_3_V \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename out_fm_buf_3_V \
+    op interface \
+    ports { out_fm_buf_3_V_address0 { O 9 vector } out_fm_buf_3_V_ce0 { O 1 bit } out_fm_buf_3_V_q0 { I 16 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_fm_buf_3_V'"
+}
+}
+
+
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 197 \
+    id 383 \
     name fm \
     type other \
     dir O \
@@ -187,7 +244,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 198 \
+    id 384 \
     name out_fm \
     type other \
     dir I \
@@ -202,7 +259,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 200 \
+    id 389 \
     name ti \
     type other \
     dir I \
@@ -217,7 +274,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 201 \
+    id 390 \
     name tj \
     type other \
     dir I \
@@ -232,7 +289,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 202 \
+    id 391 \
     name kernel_group \
     type other \
     dir I \

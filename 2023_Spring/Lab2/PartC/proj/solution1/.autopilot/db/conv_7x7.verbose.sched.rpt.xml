@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv_7x7'" level="0">
-<item name = "Date">Mon Mar 27 21:26:59 2023
+<item name = "Date">Tue Mar 28 08:45:06 2023
 </item>
 <item name = "Version">2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)</item>
 <item name = "Project">proj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.157 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.289 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">136217, 136217, 1.362 ms, 1.362 ms, 136217, 136217, none</column>
+<column name="">29464, 29464, 0.295 ms, 0.295 ms, 29464, 29464, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- HEIGHT_WIDTH_KERNEL">136215, 136215, 87, 74, 1, 1840, yes</column>
+<column name="- HEIGHT_WIDTH_KERNEL">29462, 29462, 24, 16, 1, 1840, yes</column>
 </table>
 </item>
 </section>

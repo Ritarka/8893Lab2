@@ -93,7 +93,7 @@ module tiled_conv_load_layer_params_from_DRAM (
         p_read3,
         weights,
         bias,
-        kernel_group_offset,
+        kernel_group,
         ap_return_0,
         ap_return_1,
         ap_return_2,
@@ -206,7 +206,7 @@ input  [15:0] p_read2;
 input  [15:0] p_read3;
 input  [63:0] weights;
 input  [63:0] bias;
-input  [3:0] kernel_group_offset;
+input  [3:0] kernel_group;
 output  [15:0] ap_return_0;
 output  [15:0] ap_return_1;
 output  [15:0] ap_return_2;
@@ -254,7 +254,7 @@ reg   [1:0] c_reg_366;
 reg   [5:0] indvar_flatten_reg_377;
 reg   [2:0] kh_reg_388;
 reg   [2:0] kw_reg_400;
-reg   [2:0] f_1_reg_412;
+reg   [2:0] f_2_reg_412;
 wire   [14:0] empty_fu_435_p2;
 reg   [14:0] empty_reg_906;
 reg   [63:0] wt_addr_reg_911;
@@ -327,14 +327,14 @@ wire   [5:0] kernel_offset_fu_423_p3;
 wire   [5:0] empty_fu_435_p0;
 wire   [9:0] empty_fu_435_p1;
 wire   [63:0] p_cast_fu_441_p1;
-wire   [63:0] empty_36_fu_444_p2;
+wire   [63:0] empty_50_fu_444_p2;
 wire   [62:0] trunc_ln_fu_450_p4;
 wire   [2:0] add_ln73_fu_482_p2;
 wire   [1:0] select_ln73_fu_494_p3;
 wire   [1:0] add_ln76_fu_528_p2;
 wire   [5:0] add_ln79_1_fu_548_p2;
 wire   [7:0] add_ln76_1_fu_562_p2;
-wire   [4:0] tmp_7_fu_579_p3;
+wire   [4:0] tmp_s_fu_579_p3;
 wire   [5:0] zext_ln84_1_fu_586_p1;
 wire   [5:0] zext_ln84_fu_576_p1;
 wire   [5:0] sub_ln84_fu_590_p2;
@@ -356,7 +356,7 @@ wire   [6:0] sub_ln84_1_fu_633_p2;
 wire   [6:0] zext_ln84_3_fu_687_p1;
 wire   [6:0] tmp_fu_713_p3;
 wire   [63:0] p_cast2_fu_720_p1;
-wire   [63:0] empty_39_fu_724_p2;
+wire   [63:0] empty_53_fu_724_p2;
 wire   [62:0] trunc_ln2_fu_729_p4;
 wire   [15:0] select_ln96_fu_849_p3;
 wire   [15:0] select_ln96_1_fu_856_p3;
@@ -474,9 +474,9 @@ end
 
 always @ (posedge ap_clk) begin
     if (((icmp_ln91_fu_775_p2 == 1'd0) & (ap_enable_reg_pp1_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp1_stage0) & (1'b0 == ap_block_pp1_stage0_11001))) begin
-        f_1_reg_412 <= add_ln91_fu_769_p2;
+        f_2_reg_412 <= add_ln91_fu_769_p2;
     end else if ((1'b1 == ap_CS_fsm_state20)) begin
-        f_1_reg_412 <= 3'd0;
+        f_2_reg_412 <= 3'd0;
     end
 end
 
@@ -1016,7 +1016,7 @@ assign add_ln84_1_fu_691_p2 = (sub_ln84_1_fu_633_p2 + zext_ln84_3_fu_687_p1);
 
 assign add_ln84_fu_621_p2 = ($signed(sext_ln76_fu_596_p1) + $signed(zext_ln84_2_fu_618_p1));
 
-assign add_ln91_fu_769_p2 = (f_1_reg_412 + 3'd1);
+assign add_ln91_fu_769_p2 = (f_2_reg_412 + 3'd1);
 
 assign and_ln73_1_fu_522_p2 = (xor_ln73_fu_510_p2 & icmp_ln79_fu_516_p2);
 
@@ -1090,9 +1090,9 @@ assign ap_return_2 = select_ln96_2_fu_863_p3;
 
 assign ap_return_3 = select_ln96_3_fu_870_p3;
 
-assign empty_36_fu_444_p2 = (p_cast_fu_441_p1 + weights);
+assign empty_50_fu_444_p2 = (p_cast_fu_441_p1 + weights);
 
-assign empty_39_fu_724_p2 = (p_cast2_fu_720_p1 + bias);
+assign empty_53_fu_724_p2 = (p_cast2_fu_720_p1 + bias);
 
 assign empty_fu_435_p0 = empty_fu_435_p00;
 
@@ -1108,9 +1108,9 @@ assign icmp_ln79_fu_516_p2 = ((indvar_flatten_reg_377 == 6'd49) ? 1'b1 : 1'b0);
 
 assign icmp_ln82_fu_600_p2 = ((ap_phi_mux_kw_phi_fu_404_p4 == 3'd7) ? 1'b1 : 1'b0);
 
-assign icmp_ln91_fu_775_p2 = ((f_1_reg_412 == 3'd4) ? 1'b1 : 1'b0);
+assign icmp_ln91_fu_775_p2 = ((f_2_reg_412 == 3'd4) ? 1'b1 : 1'b0);
 
-assign kernel_offset_fu_423_p3 = {{kernel_group_offset}, {2'd0}};
+assign kernel_offset_fu_423_p3 = {{kernel_group}, {2'd0}};
 
 assign m_axi_wt_ARBURST = 2'd0;
 
@@ -1216,15 +1216,15 @@ assign sub_ln84_1_fu_633_p2 = (shl_ln84_fu_627_p2 - add_ln84_fu_621_p2);
 
 assign sub_ln84_fu_590_p2 = (zext_ln84_1_fu_586_p1 - zext_ln84_fu_576_p1);
 
-assign tmp_7_fu_579_p3 = {{select_ln73_1_reg_957}, {2'd0}};
+assign tmp_fu_713_p3 = {{kernel_group}, {3'd0}};
 
-assign tmp_fu_713_p3 = {{kernel_group_offset}, {3'd0}};
+assign tmp_s_fu_579_p3 = {{select_ln73_1_reg_957}, {2'd0}};
 
-assign trunc_ln2_fu_729_p4 = {{empty_39_fu_724_p2[63:1]}};
+assign trunc_ln2_fu_729_p4 = {{empty_53_fu_724_p2[63:1]}};
 
-assign trunc_ln93_fu_781_p1 = f_1_reg_412[1:0];
+assign trunc_ln93_fu_781_p1 = f_2_reg_412[1:0];
 
-assign trunc_ln_fu_450_p4 = {{empty_36_fu_444_p2[63:1]}};
+assign trunc_ln_fu_450_p4 = {{empty_50_fu_444_p2[63:1]}};
 
 assign weight_buf1_address0 = zext_ln84_4_fu_703_p1;
 
@@ -1258,7 +1258,7 @@ assign xor_ln73_fu_510_p2 = (icmp_ln76_fu_488_p2 ^ 1'd1);
 
 assign xor_ln76_fu_639_p2 = (icmp_ln79_reg_969 ^ 1'd1);
 
-assign zext_ln84_1_fu_586_p1 = tmp_7_fu_579_p3;
+assign zext_ln84_1_fu_586_p1 = tmp_s_fu_579_p3;
 
 assign zext_ln84_2_fu_618_p1 = select_ln76_1_reg_984;
 

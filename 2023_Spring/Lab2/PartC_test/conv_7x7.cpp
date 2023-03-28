@@ -37,45 +37,48 @@ void conv_7x7 (
             KERNEL:
             for (int kernel = 0; kernel < OUT_BUF_DEPTH; kernel++) {
 
-                //#pragma HLS pipeline II=1
+                //#pragma HLS pipeline
 
-                //Y_buf[kernel][oh][ow] = 0;
-                fm_t accu = 0;
+                Y_buf[kernel][oh][ow] = 0;
+                //fm_t accu = 0;
 
                 CHANNEL:
                 for (int chan = 0; chan < 3; chan++) {
 
                     KERN_I:
                     for (int i = 0; i < 7; i++) {
-                        //#pragma HLS unroll
+                        #pragma HLS unroll
 
                         fm_t acc[7] = {0};
                         #pragma HLS array_partition variable=acc complete dim=1
 
+                        const int h_i = h + i;
+
                         KERN_J:
                         for (int j = 0; j < 7; j++) {
                             #pragma HLS unroll
-                            acc[j] = X_buf[chan][h + i][w + j] * W_buf[kernel][chan][i][j];
+                            acc[j] = X_buf[chan][h_i][w + j] * W_buf[kernel][chan][i][j];
                         }
 
-                        // fm_t a1 = acc[0] + acc[1];
-                        // fm_t a2 = acc[2] + acc[3];
-                        // fm_t a3 = acc[4] + acc[5];
+                        fm_t a1 = acc[0] + acc[1];
+                        fm_t a2 = acc[2] + acc[3];
+                        fm_t a3 = acc[4] + acc[5];
 
-                        // fm_t b1 = a1 + a2;
-                        // fm_t b2 = a3 + acc[6];
+                        fm_t b1 = a1 + a2;
+                        fm_t b2 = a3 + acc[6];
 
-                        // Y_buf[kernel][oh][ow] += b1 + b2;
+                        Y_buf[kernel][oh][ow] += b1 + b2;
 
-                        ACC:
-                        for (int j = 0; j < 7; j++)
-                            accu += acc[j];
+                        // ACC:
+                        // for (int j = 0; j < 7; j++)
+                        //     accu += acc[j];
 
                     }
 
                 }
 
-                Y_buf[kernel][oh][ow] = accu + B_buf[kernel];
+                //Y_buf[kernel][oh][ow] = accu + B_buf[kernel];
+                Y_buf[kernel][oh][ow] += B_buf[kernel];
 
             }
         }

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'tiled_conv'" level="0">
-<item name = "Date">Mon Mar 27 21:27:14 2023
+<item name = "Date">Tue Mar 28 08:45:23 2023
 </item>
 <item name = "Version">2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)</item>
 <item name = "Project">proj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 9.634 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 8.260 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1135073281, 1135073281, 11.351 sec, 11.351 sec, 1135073282, 1135073282, none</column>
+<column name="">260552193, 260552193, 2.606 sec, 2.606 sec, 260552194, 260552194, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_ROW_TILE_COL">1135073280, 1135073280, 2216940, -, -, 512, no</column>
+<column name="- TILE_ROW_TILE_COL">260552192, 260552192, 508891, -, -, 512, no</column>
 <column name=" + INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH">7186, 7186, 12, 1, 1, 7176, yes</column>
 </table>
 </item>

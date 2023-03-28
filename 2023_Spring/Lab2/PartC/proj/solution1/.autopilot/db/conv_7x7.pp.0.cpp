@@ -32523,7 +32523,7 @@ void conv_7x7 (
  KERN_J:
                         for (int j = 0; j < 7; j++) {
 #pragma HLS unroll
- acc[j] += X_buf[chan][h + i][w + j] * W_buf[kernel][chan][i][j];
+ acc[j] = X_buf[chan][h + i][w + j] * W_buf[kernel][chan][i][j];
                         }
 
                         fm_t a1 = acc[0] + acc[1];

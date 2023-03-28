@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'tiled_conv'" level="0">
-<item name = "Date">Tue Mar 28 06:22:06 2023
+<item name = "Date">Tue Mar 28 08:18:47 2023
 </item>
 <item name = "Version">2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)</item>
 <item name = "Project">proj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 8.260 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,22 +24,23 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1421006337, 1421006337, 14.210 sec, 14.210 sec, 1421006338, 1421006338, none</column>
+<column name="">1417125889, 1486053377, 14.171 sec, 14.861 sec, 1417125890, 1486053378, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv_7x7_fu_504">conv_7x7, 171121, 171121, 1.711 ms, 1.711 ms, 171121, 171121, none</column>
-<column name="grp_store_output_tile_to_DRAM_fu_526">store_output_tile_to_DRAM, 1850, 1850, 18.500 us, 18.500 us, 1850, 1850, none</column>
-<column name="grp_load_layer_params_from_DRAM_fu_556">load_layer_params_from_DRAM, 612, 612, 6.120 us, 6.120 us, 612, 612, none</column>
+<column name="grp_conv_7x7_fu_937">conv_7x7, 171121, 171121, 1.711 ms, 1.711 ms, 171121, 171121, none</column>
+<column name="grp_load_layer_params_from_DRAM_fu_963">load_layer_params_from_DRAM, 612, 612, 6.120 us, 6.120 us, 612, 612, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- TILE_ROW_TILE_COL">1421006336, 1421006336, 2775403, -, -, 512, no</column>
+<column name="- TILE_ROW_TILE_COL_TILE_DEPTH">1417125888, 1486053376, 172989 ~ 181403, -, -, 8192, no</column>
 <column name=" + INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH">7186, 7186, 12, 1, 1, 7176, yes</column>
+<column name=" + OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH">1860, 1860, 22, 1, 1, 1840, yes</column>
+<column name=" + OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH">1860, 1860, 22, 1, 1, 1840, yes</column>
 </table>
 </item>
 </section>

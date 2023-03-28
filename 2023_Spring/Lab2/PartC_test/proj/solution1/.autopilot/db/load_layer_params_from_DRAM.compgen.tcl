@@ -316,14 +316,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 17 \
-    name kernel_group_offset \
+    name kernel_group \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_kernel_group_offset \
+    corename dc_kernel_group \
     op interface \
-    ports { kernel_group_offset { I 4 vector } } \
+    ports { kernel_group { I 4 vector } } \
 } "
 }
 

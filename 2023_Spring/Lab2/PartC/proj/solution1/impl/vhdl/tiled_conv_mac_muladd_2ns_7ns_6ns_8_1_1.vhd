@@ -6,7 +6,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_5 is
+entity tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_3 is
 port (
     in0:  in  std_logic_vector(2 - 1 downto 0);
     in1:  in  std_logic_vector(7 - 1 downto 0);
@@ -14,11 +14,11 @@ port (
     dout: out std_logic_vector(8 - 1 downto 0));
 
     attribute use_dsp : string;
-    attribute use_dsp of tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_5 : entity is "yes";
+    attribute use_dsp of tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_3 : entity is "yes";
 
 end entity;
 
-architecture behav of tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_5 is
+architecture behav of tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_3 is
     signal a       : signed(25-1 downto 0);
     signal b       : signed(18-1 downto 0);
     signal c       : signed(48-1 downto 0);
@@ -54,7 +54,7 @@ entity tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1 is
 end entity;
 
 architecture arch of tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1 is
-    component tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_5 is
+    component tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_3 is
         port (
             in0 : IN STD_LOGIC_VECTOR;
             in1 : IN STD_LOGIC_VECTOR;
@@ -65,7 +65,7 @@ architecture arch of tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1 is
 
 
 begin
-    tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_5_U :  component tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_5
+    tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_3_U :  component tiled_conv_mac_muladd_2ns_7ns_6ns_8_1_1_DSP48_3
     port map (
         in0 => din0,
         in1 => din1,
