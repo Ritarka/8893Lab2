@@ -1,13 +1,12 @@
 -- ==============================================================
--- Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1.2 (64-bit)
--- Tool Version Limit: 2022.04
--- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-- Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+-- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- ==============================================================
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_1 is
+entity tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_0 is
 port (
     in0:  in  std_logic_vector(16 - 1 downto 0);
     in1:  in  std_logic_vector(16 - 1 downto 0);
@@ -16,7 +15,7 @@ port (
 
 end entity;
 
-architecture behav of tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_1 is
+architecture behav of tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_0 is
     signal a       : signed(25-1 downto 0);
     signal b       : signed(18-1 downto 0);
     signal c       : signed(48-1 downto 0);
@@ -52,7 +51,7 @@ entity tiled_conv_mac_muladd_16s_16s_29ns_29_1_1 is
 end entity;
 
 architecture arch of tiled_conv_mac_muladd_16s_16s_29ns_29_1_1 is
-    component tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_1 is
+    component tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_0 is
         port (
             in0 : IN STD_LOGIC_VECTOR;
             in1 : IN STD_LOGIC_VECTOR;
@@ -63,7 +62,7 @@ architecture arch of tiled_conv_mac_muladd_16s_16s_29ns_29_1_1 is
 
 
 begin
-    tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_1_U :  component tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_1
+    tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_0_U :  component tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_0
     port map (
         in0 => din0,
         in1 => din1,

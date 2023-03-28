@@ -1,7 +1,6 @@
 # ==============================================================
-# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1.2 (64-bit)
-# Tool Version Limit: 2022.04
-# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+# Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 # ==============================================================
 COMPILER=
 ARCHIVER=
@@ -30,12 +29,15 @@ RELEASE_HEADERS := $(addprefix $(INCLUDEDIR)/,$(notdir $(HEADERS)))
 
 # Rules to compile and link
 $(OBJDIR)/%.o: %.c
+	#echo "Compiling $@ from $<"
 	$(COMPILER) $(COMPILER_FLAGS) $(EXTRA_COMPILER_FLAGS) $(INCLUDES) -o $@ $<
 $(LIB): $(OBJS)
+	#echo "Linking $@"
 	$(ARCHIVER) $(ARCHIVER_FLAGS) -r $@ $^
 
 # Rule to release include files
 $(INCLUDEDIR)/%.h: %.h
+	#echo "Copying '$<' to '$@'"
 	$(CP) $< $@
 
 # Dependencies between sources and objects

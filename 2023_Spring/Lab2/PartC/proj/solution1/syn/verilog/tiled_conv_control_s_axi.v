@@ -1,7 +1,6 @@
 // ==============================================================
-// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1.2 (64-bit)
-// Tool Version Limit: 2022.04
-// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+// Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
 `timescale 1ns/1ps
 module tiled_conv_control_s_axi
@@ -44,20 +43,19 @@ module tiled_conv_control_s_axi
 //        bit 0  - ap_start (Read/Write/COH)
 //        bit 1  - ap_done (Read/COR)
 //        bit 2  - ap_idle (Read)
-//        bit 3  - ap_ready (Read/COR)
+//        bit 3  - ap_ready (Read)
 //        bit 7  - auto_restart (Read/Write)
-//        bit 9  - interrupt (Read)
 //        others - reserved
 // 0x04 : Global Interrupt Enable Register
 //        bit 0  - Global Interrupt Enable (Read/Write)
 //        others - reserved
 // 0x08 : IP Interrupt Enable Register (Read/Write)
-//        bit 0 - enable ap_done interrupt (Read/Write)
-//        bit 1 - enable ap_ready interrupt (Read/Write)
+//        bit 0  - enable ap_done interrupt (Read/Write)
+//        bit 1  - enable ap_ready interrupt (Read/Write)
 //        others - reserved
-// 0x0c : IP Interrupt Status Register (Read/COR)
-//        bit 0 - ap_done (Read/COR)
-//        bit 1 - ap_ready (Read/COR)
+// 0x0c : IP Interrupt Status Register (Read/TOW)
+//        bit 0  - ap_done (COR/TOW)
+//        bit 1  - ap_ready (COR/TOW)
 //        others - reserved
 // 0x10 : Data signal of input_feature_map
 //        bit 31~0 - input_feature_map[31:0] (Read/Write)
@@ -122,16 +120,10 @@ localparam
     wire [ADDR_BITS-1:0]          raddr;
     // internal registers
     reg                           int_ap_idle;
-    reg                           int_ap_ready = 1'b0;
-    wire                          task_ap_ready;
+    reg                           int_ap_ready;
     reg                           int_ap_done = 1'b0;
-    wire                          task_ap_done;
-    reg                           int_task_ap_done = 1'b0;
     reg                           int_ap_start = 1'b0;
-    reg                           int_interrupt = 1'b0;
     reg                           int_auto_restart = 1'b0;
-    reg                           auto_restart_status = 1'b0;
-    wire                          auto_restart_done;
     reg                           int_gie = 1'b0;
     reg  [1:0]                    int_ier = 2'b0;
     reg  [1:0]                    int_isr = 2'b0;
@@ -233,11 +225,10 @@ always @(posedge ACLK) begin
             case (raddr)
                 ADDR_AP_CTRL: begin
                     rdata[0] <= int_ap_start;
-                    rdata[1] <= int_task_ap_done;
+                    rdata[1] <= int_ap_done;
                     rdata[2] <= int_ap_idle;
                     rdata[3] <= int_ap_ready;
                     rdata[7] <= int_auto_restart;
-                    rdata[9] <= int_interrupt;
                 end
                 ADDR_GIE: begin
                     rdata <= int_gie;
@@ -279,27 +270,12 @@ end
 
 
 //------------------------Register logic-----------------
-assign interrupt          = int_interrupt;
+assign interrupt          = int_gie & (|int_isr);
 assign ap_start           = int_ap_start;
-assign task_ap_done       = (ap_done && !auto_restart_status) || auto_restart_done;
-assign task_ap_ready      = ap_ready && !int_auto_restart;
-assign auto_restart_done  = auto_restart_status && (ap_idle && !int_ap_idle);
 assign input_feature_map  = int_input_feature_map;
 assign layer_weights      = int_layer_weights;
 assign layer_bias         = int_layer_bias;
 assign output_feature_map = int_output_feature_map;
-// int_interrupt
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_interrupt <= 1'b0;
-    else if (ACLK_EN) begin
-        if (int_gie && (|int_isr))
-            int_interrupt <= 1'b1;
-        else
-            int_interrupt <= 1'b0;
-    end
-end
-
 // int_ap_start
 always @(posedge ACLK) begin
     if (ARESET)
@@ -317,19 +293,10 @@ always @(posedge ACLK) begin
     if (ARESET)
         int_ap_done <= 1'b0;
     else if (ACLK_EN) begin
-            int_ap_done <= ap_done;
-    end
-end
-
-// int_task_ap_done
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_task_ap_done <= 1'b0;
-    else if (ACLK_EN) begin
-        if (task_ap_done)
-            int_task_ap_done <= 1'b1;
+        if (ap_done)
+            int_ap_done <= 1'b1;
         else if (ar_hs && raddr == ADDR_AP_CTRL)
-            int_task_ap_done <= 1'b0; // clear on read
+            int_ap_done <= 1'b0; // clear on read
     end
 end
 
@@ -347,10 +314,7 @@ always @(posedge ACLK) begin
     if (ARESET)
         int_ap_ready <= 1'b0;
     else if (ACLK_EN) begin
-        if (task_ap_ready)
-            int_ap_ready <= 1'b1;
-        else if (ar_hs && raddr == ADDR_AP_CTRL)
-            int_ap_ready <= 1'b0;
+            int_ap_ready <= ap_ready;
     end
 end
 
@@ -361,18 +325,6 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_AP_CTRL && WSTRB[0])
             int_auto_restart <=  WDATA[7];
-    end
-end
-
-// auto_restart_status
-always @(posedge ACLK) begin
-    if (ARESET)
-        auto_restart_status <= 1'b0;
-    else if (ACLK_EN) begin
-        if (int_auto_restart)
-            auto_restart_status <= 1'b1;
-        else if (ap_idle)
-            auto_restart_status <= 1'b0;
     end
 end
 
@@ -403,8 +355,8 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (int_ier[0] & ap_done)
             int_isr[0] <= 1'b1;
-        else if (ar_hs && raddr == ADDR_ISR)
-            int_isr[0] <= 1'b0; // clear on read
+        else if (w_hs && waddr == ADDR_ISR && WSTRB[0])
+            int_isr[0] <= int_isr[0] ^ WDATA[0]; // toggle on write
     end
 end
 
@@ -415,8 +367,8 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (int_ier[1] & ap_ready)
             int_isr[1] <= 1'b1;
-        else if (ar_hs && raddr == ADDR_ISR)
-            int_isr[1] <= 1'b0; // clear on read
+        else if (w_hs && waddr == ADDR_ISR && WSTRB[0])
+            int_isr[1] <= int_isr[1] ^ WDATA[1]; // toggle on write
     end
 end
 
@@ -500,16 +452,6 @@ always @(posedge ACLK) begin
     end
 end
 
-//synthesis translate_off
-always @(posedge ACLK) begin
-    if (ACLK_EN) begin
-        if (int_gie & ~int_isr[0] & int_ier[0] & ap_done)
-            $display ("// Interrupt Monitor : interrupt for ap_done detected @ \"%0t\"", $time);
-        if (int_gie & ~int_isr[1] & int_ier[1] & ap_ready)
-            $display ("// Interrupt Monitor : interrupt for ap_ready detected @ \"%0t\"", $time);
-    end
-end
-//synthesis translate_on
 
 //------------------------Memory logic-------------------
 

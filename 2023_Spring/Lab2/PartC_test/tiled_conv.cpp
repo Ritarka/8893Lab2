@@ -42,15 +42,15 @@ void tiled_conv (
     fm_t conv_out_buf[OUT_BUF_DEPTH][OUT_BUF_HEIGHT][OUT_BUF_WIDTH] = {0};
 
 
-    #pragma HLS array_partition variable=conv_out_buf type=complete dim=1
+    #pragma HLS array_partition variable=conv_out_buf complete dim=1
 
-    #pragma HLS array_partition variable=conv_in_buf_ping type=complete dim=3
-    #pragma HLS array_partition variable=conv_wt_buf_ping type=complete dim=3
+    #pragma HLS array_partition variable=conv_in_buf_ping complete dim=3
+    #pragma HLS array_partition variable=conv_wt_buf_ping complete dim=3
 
-    #pragma HLS array_partition variable=conv_in_buf_pong type=complete dim=3
-    #pragma HLS array_partition variable=conv_wt_buf_pong type=complete dim=3
+    #pragma HLS array_partition variable=conv_in_buf_pong complete dim=3
+    #pragma HLS array_partition variable=conv_wt_buf_pong complete dim=3
 
-    #pragma HLS array_partition variable=conv_bias_buf type=complete dim=1
+    #pragma HLS array_partition variable=conv_bias_buf complete dim=1
 
     static const int depth = OUT_FM_DEPTH / OUT_BUF_DEPTH;
 
@@ -70,26 +70,28 @@ void tiled_conv (
             std::cout << "Processing Tile " << ti*N_TILE_COLS + tj + 1;
             std::cout << "/" << N_TILE_ROWS * N_TILE_COLS << std::endl;
 
-            load_input_tile_block_from_DRAM(
-                conv_in_buf,
-                input_feature_map,
-                ti,
-                tj
-            );
-
-            load_layer_params_from_DRAM(
-                conv_wt_buf_ping,
-                conv_bias_buf_ping,
-                layer_weights,
-                layer_bias,
-                0
-            );
-
 
             TILE_DEPTH:
             for(int tk = 0; tk < depth; tk++) {
 
                 #pragma HLS unroll
+
+                if (tk == 0) {
+                    load_input_tile_block_from_DRAM(
+                        conv_in_buf,
+                        input_feature_map,
+                        ti,
+                        tj
+                    );
+
+                    load_layer_params_from_DRAM(
+                        conv_wt_buf_ping,
+                        conv_bias_buf_ping,
+                        layer_weights,
+                        layer_bias,
+                        0
+                    );
+                }
 
                 if (tk % 2 == 0) {
                     //write

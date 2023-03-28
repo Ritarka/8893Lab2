@@ -1,7 +1,6 @@
 -- ==============================================================
--- Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1.2 (64-bit)
--- Tool Version Limit: 2022.04
--- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-- Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+-- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- ==============================================================
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
@@ -49,20 +48,19 @@ end entity tiled_conv_control_s_axi;
 --        bit 0  - ap_start (Read/Write/COH)
 --        bit 1  - ap_done (Read/COR)
 --        bit 2  - ap_idle (Read)
---        bit 3  - ap_ready (Read/COR)
+--        bit 3  - ap_ready (Read)
 --        bit 7  - auto_restart (Read/Write)
---        bit 9  - interrupt (Read)
 --        others - reserved
 -- 0x04 : Global Interrupt Enable Register
 --        bit 0  - Global Interrupt Enable (Read/Write)
 --        others - reserved
 -- 0x08 : IP Interrupt Enable Register (Read/Write)
---        bit 0 - enable ap_done interrupt (Read/Write)
---        bit 1 - enable ap_ready interrupt (Read/Write)
+--        bit 0  - enable ap_done interrupt (Read/Write)
+--        bit 1  - enable ap_ready interrupt (Read/Write)
 --        others - reserved
--- 0x0c : IP Interrupt Status Register (Read/COR)
---        bit 0 - ap_done (Read/COR)
---        bit 1 - ap_ready (Read/COR)
+-- 0x0c : IP Interrupt Status Register (Read/TOW)
+--        bit 0  - ap_done (COR/TOW)
+--        bit 1  - ap_ready (COR/TOW)
 --        others - reserved
 -- 0x10 : Data signal of input_feature_map
 --        bit 31~0 - input_feature_map[31:0] (Read/Write)
@@ -121,17 +119,11 @@ architecture behave of tiled_conv_control_s_axi is
     signal ARREADY_t           : STD_LOGIC;
     signal RVALID_t            : STD_LOGIC;
     -- internal registers
-    signal int_ap_idle         : STD_LOGIC := '0';
-    signal int_ap_ready        : STD_LOGIC := '0';
-    signal task_ap_ready       : STD_LOGIC;
+    signal int_ap_idle         : STD_LOGIC;
+    signal int_ap_ready        : STD_LOGIC;
     signal int_ap_done         : STD_LOGIC := '0';
-    signal task_ap_done        : STD_LOGIC;
-    signal int_task_ap_done    : STD_LOGIC := '0';
     signal int_ap_start        : STD_LOGIC := '0';
-    signal int_interrupt       : STD_LOGIC := '0';
     signal int_auto_restart    : STD_LOGIC := '0';
-    signal auto_restart_status : STD_LOGIC := '0';
-    signal auto_restart_done   : STD_LOGIC;
     signal int_gie             : STD_LOGIC := '0';
     signal int_ier             : UNSIGNED(1 downto 0) := (others => '0');
     signal int_isr             : UNSIGNED(1 downto 0) := (others => '0');
@@ -255,11 +247,10 @@ begin
                     rdata_data <= (others => '0');
                     case (TO_INTEGER(raddr)) is
                     when ADDR_AP_CTRL =>
-                        rdata_data(9) <= int_interrupt;
                         rdata_data(7) <= int_auto_restart;
                         rdata_data(3) <= int_ap_ready;
                         rdata_data(2) <= int_ap_idle;
-                        rdata_data(1) <= int_task_ap_done;
+                        rdata_data(1) <= int_ap_done;
                         rdata_data(0) <= int_ap_start;
                     when ADDR_GIE =>
                         rdata_data(0) <= int_gie;
@@ -292,30 +283,12 @@ begin
     end process;
 
 -- ----------------------- Register logic ----------------
-    interrupt            <= int_interrupt;
+    interrupt            <= int_gie and (int_isr(0) or int_isr(1));
     ap_start             <= int_ap_start;
-    task_ap_done         <= (ap_done and not auto_restart_status) or auto_restart_done;
-    task_ap_ready        <= ap_ready and not int_auto_restart;
-    auto_restart_done    <= auto_restart_status and (ap_idle and not int_ap_idle);
     input_feature_map    <= STD_LOGIC_VECTOR(int_input_feature_map);
     layer_weights        <= STD_LOGIC_VECTOR(int_layer_weights);
     layer_bias           <= STD_LOGIC_VECTOR(int_layer_bias);
     output_feature_map   <= STD_LOGIC_VECTOR(int_output_feature_map);
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ARESET = '1') then
-                int_interrupt <= '0';
-            elsif (ACLK_EN = '1') then
-                if (int_gie = '1' and (int_isr(0) or int_isr(1)) = '1') then
-                    int_interrupt <= '1';
-                else
-                    int_interrupt <= '0';
-                end if;
-            end if;
-        end if;
-    end process;
 
     process (ACLK)
     begin
@@ -338,23 +311,10 @@ begin
             if (ARESET = '1') then
                 int_ap_done <= '0';
             elsif (ACLK_EN = '1') then
-                if (true) then
-                    int_ap_done <= ap_done;
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ARESET = '1') then
-                int_task_ap_done <= '0';
-            elsif (ACLK_EN = '1') then
-                if (task_ap_done = '1') then
-                    int_task_ap_done <= '1';
+                if (ap_done = '1') then
+                    int_ap_done <= '1';
                 elsif (ar_hs = '1' and raddr = ADDR_AP_CTRL) then
-                    int_task_ap_done <= '0'; -- clear on read
+                    int_ap_done <= '0'; -- clear on read
                 end if;
             end if;
         end if;
@@ -379,10 +339,8 @@ begin
             if (ARESET = '1') then
                 int_ap_ready <= '0';
             elsif (ACLK_EN = '1') then
-                if (task_ap_ready = '1') then
-                    int_ap_ready <= '1';
-                elsif (ar_hs = '1' and raddr = ADDR_AP_CTRL) then
-                    int_ap_ready <= '0';
+                if (true) then
+                    int_ap_ready <= ap_ready;
                 end if;
             end if;
         end if;
@@ -405,21 +363,6 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ARESET = '1') then
-                auto_restart_status <= '0';
-            elsif (ACLK_EN = '1') then
-                if (int_auto_restart = '1') then
-                    auto_restart_status <= '1';
-                elsif (ap_idle = '1') then
-                    auto_restart_status <= '0';
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ARESET = '1') then
                 int_gie <= '0';
             elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_GIE and WSTRB(0) = '1') then
@@ -433,7 +376,7 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ARESET = '1') then
-                int_ier <= (others=>'0');
+                int_ier <= "00";
             elsif (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_IER and WSTRB(0) = '1') then
                     int_ier <= UNSIGNED(WDATA(1 downto 0));
@@ -450,8 +393,8 @@ begin
             elsif (ACLK_EN = '1') then
                 if (int_ier(0) = '1' and ap_done = '1') then
                     int_isr(0) <= '1';
-                elsif (ar_hs = '1' and raddr = ADDR_ISR) then
-                    int_isr(0) <= '0'; -- clear on read
+                elsif (w_hs = '1' and waddr = ADDR_ISR and WSTRB(0) = '1') then
+                    int_isr(0) <= int_isr(0) xor WDATA(0); -- toggle on write
                 end if;
             end if;
         end if;
@@ -465,8 +408,8 @@ begin
             elsif (ACLK_EN = '1') then
                 if (int_ier(1) = '1' and ap_ready = '1') then
                     int_isr(1) <= '1';
-                elsif (ar_hs = '1' and raddr = ADDR_ISR) then
-                    int_isr(1) <= '0'; -- clear on read
+                elsif (w_hs = '1' and waddr = ADDR_ISR and WSTRB(0) = '1') then
+                    int_isr(1) <= int_isr(1) xor WDATA(1); -- toggle on write
                 end if;
             end if;
         end if;

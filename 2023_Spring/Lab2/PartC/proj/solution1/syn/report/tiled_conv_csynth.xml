@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2022.1.2</Version>
+<Version>2020.2.2</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -15,48 +15,45 @@
 </UserAssignments>
 
 <PerformanceEstimates>
-<PipelineType>no</PipelineType>
+<PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+<EstimatedClockPeriod>9.634</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>64262177</Best-caseLatency>
-<Average-caseLatency>64262177</Average-caseLatency>
-<Worst-caseLatency>64262177</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.643 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.643 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.643 sec</Worst-caseRealTimeLatency>
-<Interval-min>64262178</Interval-min>
-<Interval-max>64262178</Interval-max>
+<Best-caseLatency>1135073281</Best-caseLatency>
+<Average-caseLatency>1135073281</Average-caseLatency>
+<Worst-caseLatency>1135073281</Worst-caseLatency>
+<Best-caseRealTimeLatency>11.351 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>11.351 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>11.351 sec</Worst-caseRealTimeLatency>
+<Interval-min>1135073282</Interval-min>
+<Interval-max>1135073282</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<TILE_ROW>
-<TripCount>16</TripCount>
-<Latency>64262176</Latency>
-<AbsoluteTimeLatency>642621760</AbsoluteTimeLatency>
-<IterationLatency>4016386</IterationLatency>
-<InstanceList>
-</InstanceList>
-<TILE_COL>
-<TripCount>32</TripCount>
-<Latency>4016384</Latency>
-<AbsoluteTimeLatency>40163840</AbsoluteTimeLatency>
-<IterationLatency>125512</IterationLatency>
-<InstanceList>
-</InstanceList>
-</TILE_COL>
-</TILE_ROW>
+<TILE_ROW_TILE_COL>
+<TripCount>512</TripCount>
+<Latency>1135073280</Latency>
+<AbsoluteTimeLatency>11350732800</AbsoluteTimeLatency>
+<IterationLatency>2216940</IterationLatency>
+<INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH>
+<TripCount>7176</TripCount>
+<Latency>7186</Latency>
+<AbsoluteTimeLatency>71860</AbsoluteTimeLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>12</PipelineDepth>
+</INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH>
+</TILE_ROW_TILE_COL>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>58</BRAM_18K>
-<DSP>10</DSP>
-<FF>12276</FF>
-<LUT>21821</LUT>
+<BRAM_18K>15</BRAM_18K>
+<DSP>153</DSP>
+<FF>9369</FF>
+<LUT>22527</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -73,7 +70,9 @@
 <name>s_axi_control_AWVALID</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
@@ -84,7 +83,9 @@
 <name>s_axi_control_AWREADY</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
@@ -95,7 +96,9 @@
 <name>s_axi_control_AWADDR</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>6</Bits>
 <Attribute>unknown</Attribute>
@@ -106,7 +109,9 @@
 <name>s_axi_control_WVALID</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
@@ -117,7 +122,9 @@
 <name>s_axi_control_WREADY</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
@@ -128,7 +135,9 @@
 <name>s_axi_control_WDATA</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>32</Bits>
 <Attribute>unknown</Attribute>
@@ -139,7 +148,9 @@
 <name>s_axi_control_WSTRB</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>4</Bits>
 <Attribute>unknown</Attribute>
@@ -150,7 +161,9 @@
 <name>s_axi_control_ARVALID</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
@@ -161,7 +174,9 @@
 <name>s_axi_control_ARREADY</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
@@ -172,7 +187,9 @@
 <name>s_axi_control_ARADDR</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>6</Bits>
 <Attribute>unknown</Attribute>
@@ -183,7 +200,9 @@
 <name>s_axi_control_RVALID</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
@@ -194,7 +213,9 @@
 <name>s_axi_control_RREADY</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
@@ -205,7 +226,9 @@
 <name>s_axi_control_RDATA</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>32</Bits>
 <Attribute>unknown</Attribute>
@@ -216,7 +239,9 @@
 <name>s_axi_control_RRESP</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>2</Bits>
 <Attribute>unknown</Attribute>
@@ -227,7 +252,9 @@
 <name>s_axi_control_BVALID</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
@@ -238,7 +265,9 @@
 <name>s_axi_control_BREADY</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>unknown</Attribute>
@@ -249,7 +278,9 @@
 <name>s_axi_control_BRESP</name>
 <Object>control</Object>
 <Type>scalar</Type>
+<Scope></Scope>
 <IOProtocol>s_axi</IOProtocol>
+<IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>2</Bits>
 <Attribute>unknown</Attribute>

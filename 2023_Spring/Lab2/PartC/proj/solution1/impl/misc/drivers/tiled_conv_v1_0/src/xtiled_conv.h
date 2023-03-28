@@ -1,7 +1,6 @@
 // ==============================================================
-// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1.2 (64-bit)
-// Tool Version Limit: 2022.04
-// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+// Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
 #ifndef XTILED_CONV_H
 #define XTILED_CONV_H
@@ -39,7 +38,7 @@ typedef uint64_t u64;
 #else
 typedef struct {
     u16 DeviceId;
-    u64 Control_BaseAddress;
+    u32 Control_BaseAddress;
 } XTiled_conv_Config;
 #endif
 

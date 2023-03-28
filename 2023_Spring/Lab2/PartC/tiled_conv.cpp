@@ -37,12 +37,12 @@ void tiled_conv (
     fm_t conv_out_buf[OUT_BUF_DEPTH][OUT_BUF_HEIGHT][OUT_BUF_WIDTH] = {0};
 
 
-    #pragma HLS array_partition variable=conv_out_buf type=complete dim=1
+    // #pragma HLS array_partition variable=conv_out_buf complete dim=1
 
-    #pragma HLS array_partition variable=conv_in_buf type=complete dim=3
-    #pragma HLS array_partition variable=conv_wt_buf type=complete dim=3
+    // #pragma HLS array_partition variable=conv_in_buf complete dim=3
+    // #pragma HLS array_partition variable=conv_wt_buf complete dim=3
 
-    #pragma HLS array_partition variable=conv_bias_buf type=complete dim=1
+    // #pragma HLS array_partition variable=conv_bias_buf complete dim=1
 
     
     //--------------------------------------------------------------------------

@@ -1,11 +1,10 @@
 // ==============================================================
-// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1.2 (64-bit)
-// Tool Version Limit: 2022.04
-// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+// Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
 `timescale 1 ns / 1 ps
 
-module tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_1(
+module tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_0(
     input  [16 - 1:0] in0,
     input  [16 - 1:0] in1,
     input  [29 - 1:0] in2,
@@ -47,7 +46,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_1 tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_1_U(
+tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_0 tiled_conv_mac_muladd_16s_16s_29ns_29_1_1_DSP48_0_U(
     .in0( din0 ),
     .in1( din1 ),
     .in2( din2 ),

@@ -1,7 +1,6 @@
 // ==============================================================
-// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1.2 (64-bit)
-// Tool Version Limit: 2022.04
-// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+// Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
 /***************************** Include Files *********************************/
 #include "xtiled_conv.h"
@@ -188,7 +187,7 @@ void XTiled_conv_InterruptClear(XTiled_conv *InstancePtr, u32 Mask) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    //XTiled_conv_WriteReg(InstancePtr->Control_BaseAddress, XTILED_CONV_CONTROL_ADDR_ISR, Mask);
+    XTiled_conv_WriteReg(InstancePtr->Control_BaseAddress, XTILED_CONV_CONTROL_ADDR_ISR, Mask);
 }
 
 u32 XTiled_conv_InterruptGetEnabled(XTiled_conv *InstancePtr) {
@@ -202,7 +201,6 @@ u32 XTiled_conv_InterruptGetStatus(XTiled_conv *InstancePtr) {
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    // Current Interrupt Clear Behavior is Clear on Read(COR).
     return XTiled_conv_ReadReg(InstancePtr->Control_BaseAddress, XTILED_CONV_CONTROL_ADDR_ISR);
 }
 

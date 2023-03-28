@@ -28373,3 +28373,276 @@ INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3.22 seco
 INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
 INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.57 seconds. CPU system time: 0.11 seconds. Elapsed time: 1.96 seconds; current allocated memory: 1019.434 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for tiled_conv.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1464] Running solution command: config_schedule -enable_dsp_full_reg=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_schedule -enable_dsp_full_reg=false 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 211.947 MB.
+INFO: [HLS 200-10] Analyzing design file 'tiled_conv.cpp' ... 
+WARNING: [HLS 207-5527] unexpected pragma parameter 'type': tiled_conv.cpp:40:51
+WARNING: [HLS 207-5527] unexpected pragma parameter 'type': tiled_conv.cpp:42:50
+WARNING: [HLS 207-5527] unexpected pragma parameter 'type': tiled_conv.cpp:43:50
+WARNING: [HLS 207-5527] unexpected pragma parameter 'type': tiled_conv.cpp:45:52
+INFO: [HLS 200-10] Analyzing design file 'conv_7x7.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'utils.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 30.63 seconds. CPU system time: 2.48 seconds. Elapsed time: 33.85 seconds; current allocated memory: 213.235 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'TILE_DEPTH' (tiled_conv.cpp:72:13) in function 'tiled_conv' completely with a factor of 16 (tiled_conv.cpp:72:13)
+INFO: [HLS 214-186] Unrolling loop 'KERN_I' (conv_7x7.cpp:48:21) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:48:21)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-178] Inlining function 'load_input_tile_block_from_DRAM(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [52][46], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [736][1280], int, int)' into 'tiled_conv(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [736][1280], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][7][7], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [368][640])' (tiled_conv.cpp:19:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'tiled_conv(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [736][1280], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][7][7], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [368][640])' (tiled_conv.cpp:19:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'tiled_conv(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [736][1280], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][7][7], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [368][640])' (tiled_conv.cpp:19:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'tiled_conv(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [736][1280], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][7][7], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [368][640])' (tiled_conv.cpp:19:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'tiled_conv(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [736][1280], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][7][7], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [368][640])' (tiled_conv.cpp:19:0)
+INFO: [HLS 214-115] Multiple burst reads of length 588 and bit width 16 in loop 'WEIGHT_KERNEL_NUM'(utils.cpp:73:5) has been inferred on port 'wt' (utils.cpp:73:5)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 16 in loop 'BIAS'(utils.cpp:91:5) has been inferred on port 'wt' (utils.cpp:91:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_fixeds' into 'store_output_tile_to_DRAM(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [368][640], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [23][20], int, int, int) (.1)' (utils.cpp:134:83)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 9.18 seconds. CPU system time: 0.77 seconds. Elapsed time: 10.33 seconds; current allocated memory: 217.264 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 217.266 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.27 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.34 seconds; current allocated memory: 227.829 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.51 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.55 seconds; current allocated memory: 243.137 MB.
+INFO: [XFORM 203-510] Pipelining loop 'WEIGHT_KERNEL_WIDTH' (utils.cpp:82) in function 'load_layer_params_from_DRAM' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'BIAS' (utils.cpp:91) in function 'load_layer_params_from_DRAM' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'KERNEL' (conv_7x7.cpp:38) in function 'conv_7x7' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'OUTPUT_BUFFER_WIDTH' (utils.cpp:125) in function 'store_output_tile_to_DRAM' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'INPUT_BUFFER_WIDTH' (utils.cpp:42) in function 'tiled_conv' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'KERNEL' (conv_7x7.cpp:38) in function 'conv_7x7' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'CHANNEL' (conv_7x7.cpp:45) in function 'conv_7x7' completely with a factor of 3.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_bias_buf.V' (tiled_conv.cpp:36) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'conv_bias_buf.V' (tiled_conv.cpp:36) in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'tiled_conv' (tiled_conv.cpp:14)...10 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'store_output_tile_to_DRAM' (utils.cpp:107)...7 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv_7x7' (conv_7x7.cpp:32:52)...147 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3.41 seconds. CPU system time: 0.03 seconds. Elapsed time: 3.55 seconds; current allocated memory: 283.170 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'INPUT_BUFFER_HEIGHT' (utils.cpp:37:17) in function 'tiled_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'INPUT_BUFFER_DEPTH' (utils.cpp:34:13) in function 'tiled_conv'.
+WARNING: [HLS 200-960] Cannot flatten loop 'TILE_COL' (tiled_conv.cpp:55:17) in function 'tiled_conv' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'TILE_ROW' (tiled_conv.cpp:52:13) in function 'tiled_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUTPUT_BUFFER_HEIGHT' (utils.cpp:122:17) in function 'store_output_tile_to_DRAM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUTPUT_BUFFER_DEPTH' (utils.cpp:119:13) in function 'store_output_tile_to_DRAM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'WEIGHT_KERNEL_HEIGHT' (utils.cpp:79:21) in function 'load_layer_params_from_DRAM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'WEIGHT_KERNEL_DEPTH' (utils.cpp:76:17) in function 'load_layer_params_from_DRAM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'WEIGHT_KERNEL_NUM' (utils.cpp:73:13) in function 'load_layer_params_from_DRAM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'WIDTH' (conv_7x7.cpp:35:25) in function 'conv_7x7'.
+INFO: [XFORM 203-541] Flattening a loop nest 'HEIGHT' (conv_7x7.cpp:32:21) in function 'conv_7x7'.
+INFO: [HLS 200-472] Inferring partial write operation for 'conv_out_buf.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'conv_in_buf.V' (utils.cpp:47:40)
+INFO: [HLS 200-472] Inferring partial write operation for 'weight_buf' (utils.cpp:84:43)
+INFO: [HLS 200-472] Inferring partial write operation for 'Y_buf' 
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 5.81 seconds. CPU system time: 0.05 seconds. Elapsed time: 5.98 seconds; current allocated memory: 329.265 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tiled_conv' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_layer_params_from_DRAM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'WEIGHT_KERNEL_NUM_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'WEIGHT_KERNEL_NUM_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH'
+INFO: [SCHED 204-61] Pipelining loop 'BIAS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'BIAS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.33 seconds; current allocated memory: 330.936 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.35 seconds; current allocated memory: 331.564 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_7x7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'HEIGHT_WIDTH_KERNEL'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_7x7' (loop 'HEIGHT_WIDTH_KERNEL'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('conv_i_i285_6_1_lcssa166_write_ln708') of variable 'trunc_ln708_140' on local variable 'conv_i_i285_6_1_lcssa166' and 'load' operation ('conv_i_i285_6_1_lcssa166_load') on local variable 'conv_i_i285_6_1_lcssa166'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_7x7' (loop 'HEIGHT_WIDTH_KERNEL'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('conv_i_i285_6_1_lcssa166_write_ln708') of variable 'trunc_ln708_140' on local variable 'conv_i_i285_6_1_lcssa166' and 'load' operation ('conv_i_i285_6_1_lcssa166_load') on local variable 'conv_i_i285_6_1_lcssa166'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_7x7' (loop 'HEIGHT_WIDTH_KERNEL'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('conv_i_i285_6_1_lcssa166_write_ln708') of variable 'trunc_ln708_140' on local variable 'conv_i_i285_6_1_lcssa166' and 'load' operation ('conv_i_i285_6_1_lcssa166_load') on local variable 'conv_i_i285_6_1_lcssa166'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_7x7' (loop 'HEIGHT_WIDTH_KERNEL'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('conv_i_i285_6_1_lcssa166_write_ln708') of variable 'trunc_ln708_140' on local variable 'conv_i_i285_6_1_lcssa166' and 'load' operation ('conv_i_i285_6_1_lcssa166_load') on local variable 'conv_i_i285_6_1_lcssa166'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('X_buf_load_98', conv_7x7.cpp:35) on array 'X_buf' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'X_buf'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 74, Depth = 87, loop 'HEIGHT_WIDTH_KERNEL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 33.99 seconds. CPU system time: 0.43 seconds. Elapsed time: 34.76 seconds; current allocated memory: 340.533 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 6.72 seconds. CPU system time: 0.18 seconds. Elapsed time: 7.08 seconds; current allocated memory: 351.523 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_output_tile_to_DRAM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 10, loop 'OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 6.99 seconds. CPU system time: 0.21 seconds. Elapsed time: 7.44 seconds; current allocated memory: 351.896 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 352.353 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tiled_conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 12, loop 'INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH'
+WARNING: [HLS 200-871] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+WARNING: [HLS 200-1016] The critical path in module 'tiled_conv' consists of the following:	'mul' operation of DSP[115] ('mul_ln37', utils.cpp:37) [103]  (3.36 ns)
+	'add' operation of DSP[115] ('add_ln47_1', utils.cpp:47) [115]  (3.02 ns)
+	'getelementptr' operation ('conv_in_buf_V_addr', utils.cpp:47) [117]  (0 ns)
+	'store' operation ('conv_in_buf_V_addr_write_ln47', utils.cpp:47) of variable 'storemerge', utils.cpp:49 on array 'conv_in_buf.V', tiled_conv.cpp:34 [141]  (3.25 ns)
+
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1464] Running solution command: config_schedule -enable_dsp_full_reg=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_schedule -enable_dsp_full_reg=false 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 211.946 MB.
+INFO: [HLS 200-10] Analyzing design file 'tiled_conv.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'conv_7x7.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'utils.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 30.18 seconds. CPU system time: 2.55 seconds. Elapsed time: 33.47 seconds; current allocated memory: 213.136 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'TILE_DEPTH' (tiled_conv.cpp:72:13) in function 'tiled_conv' completely with a factor of 16 (tiled_conv.cpp:72:13)
+INFO: [HLS 214-186] Unrolling loop 'KERN_I' (conv_7x7.cpp:48:21) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:48:21)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-186] Unrolling loop 'KERN_J' (conv_7x7.cpp:55:25) in function 'conv_7x7' completely with a factor of 7 (conv_7x7.cpp:55:25)
+INFO: [HLS 214-178] Inlining function 'load_input_tile_block_from_DRAM(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [52][46], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [736][1280], int, int)' into 'tiled_conv(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [736][1280], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][7][7], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [368][640])' (tiled_conv.cpp:19:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'tiled_conv(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [736][1280], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][7][7], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [368][640])' (tiled_conv.cpp:19:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'tiled_conv(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [736][1280], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][7][7], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [368][640])' (tiled_conv.cpp:19:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'tiled_conv(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [736][1280], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][7][7], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [368][640])' (tiled_conv.cpp:19:0)
+WARNING: [HLS 214-205] The INTERFACE pragma must have a max_widen_bitwidth setting that is both a power of 2 and in the range [0, 1024]. The current value of '0' will be ignored, in 'tiled_conv(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [736][1280], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [3][7][7], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [368][640])' (tiled_conv.cpp:19:0)
+INFO: [HLS 214-115] Multiple burst reads of length 588 and bit width 16 in loop 'WEIGHT_KERNEL_NUM'(utils.cpp:73:5) has been inferred on port 'wt' (utils.cpp:73:5)
+INFO: [HLS 214-115] Multiple burst reads of length 4 and bit width 16 in loop 'BIAS'(utils.cpp:91:5) has been inferred on port 'wt' (utils.cpp:91:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_fixeds' into 'store_output_tile_to_DRAM(ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [368][640], ap_fixed<16, 3, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [23][20], int, int, int) (.1)' (utils.cpp:134:83)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 9.07 seconds. CPU system time: 0.72 seconds. Elapsed time: 10.07 seconds; current allocated memory: 217.113 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 217.115 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.32 seconds; current allocated memory: 227.678 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.48 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.53 seconds; current allocated memory: 242.978 MB.
+INFO: [XFORM 203-510] Pipelining loop 'WEIGHT_KERNEL_WIDTH' (utils.cpp:82) in function 'load_layer_params_from_DRAM' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'BIAS' (utils.cpp:91) in function 'load_layer_params_from_DRAM' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'KERNEL' (conv_7x7.cpp:38) in function 'conv_7x7' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'OUTPUT_BUFFER_WIDTH' (utils.cpp:125) in function 'store_output_tile_to_DRAM' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'INPUT_BUFFER_WIDTH' (utils.cpp:42) in function 'tiled_conv' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'KERNEL' (conv_7x7.cpp:38) in function 'conv_7x7' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'CHANNEL' (conv_7x7.cpp:45) in function 'conv_7x7' completely with a factor of 3.
+INFO: [XFORM 203-102] Automatically partitioning small array 'conv_bias_buf.V' (tiled_conv.cpp:36) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'conv_bias_buf.V' (tiled_conv.cpp:36) in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'tiled_conv' (tiled_conv.cpp:14)...10 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'store_output_tile_to_DRAM' (utils.cpp:107)...7 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv_7x7' (conv_7x7.cpp:32:52)...147 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3.27 seconds. CPU system time: 0.09 seconds. Elapsed time: 3.48 seconds; current allocated memory: 283.020 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'INPUT_BUFFER_HEIGHT' (utils.cpp:37:17) in function 'tiled_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'INPUT_BUFFER_DEPTH' (utils.cpp:34:13) in function 'tiled_conv'.
+WARNING: [HLS 200-960] Cannot flatten loop 'TILE_COL' (tiled_conv.cpp:55:17) in function 'tiled_conv' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'TILE_ROW' (tiled_conv.cpp:52:13) in function 'tiled_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUTPUT_BUFFER_HEIGHT' (utils.cpp:122:17) in function 'store_output_tile_to_DRAM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUTPUT_BUFFER_DEPTH' (utils.cpp:119:13) in function 'store_output_tile_to_DRAM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'WEIGHT_KERNEL_HEIGHT' (utils.cpp:79:21) in function 'load_layer_params_from_DRAM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'WEIGHT_KERNEL_DEPTH' (utils.cpp:76:17) in function 'load_layer_params_from_DRAM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'WEIGHT_KERNEL_NUM' (utils.cpp:73:13) in function 'load_layer_params_from_DRAM'.
+INFO: [XFORM 203-541] Flattening a loop nest 'WIDTH' (conv_7x7.cpp:35:25) in function 'conv_7x7'.
+INFO: [XFORM 203-541] Flattening a loop nest 'HEIGHT' (conv_7x7.cpp:32:21) in function 'conv_7x7'.
+INFO: [HLS 200-472] Inferring partial write operation for 'conv_out_buf.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'conv_in_buf.V' (utils.cpp:47:40)
+INFO: [HLS 200-472] Inferring partial write operation for 'weight_buf' (utils.cpp:84:43)
+INFO: [HLS 200-472] Inferring partial write operation for 'Y_buf' 
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 5.58 seconds. CPU system time: 0.04 seconds. Elapsed time: 5.7 seconds; current allocated memory: 329.135 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tiled_conv' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_layer_params_from_DRAM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'WEIGHT_KERNEL_NUM_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'WEIGHT_KERNEL_NUM_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH'
+INFO: [SCHED 204-61] Pipelining loop 'BIAS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'BIAS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 330.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 331.437 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_7x7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'HEIGHT_WIDTH_KERNEL'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_7x7' (loop 'HEIGHT_WIDTH_KERNEL'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('conv_i_i285_6_1_lcssa166_write_ln708') of variable 'trunc_ln708_140' on local variable 'conv_i_i285_6_1_lcssa166' and 'load' operation ('conv_i_i285_6_1_lcssa166_load') on local variable 'conv_i_i285_6_1_lcssa166'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_7x7' (loop 'HEIGHT_WIDTH_KERNEL'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('conv_i_i285_6_1_lcssa166_write_ln708') of variable 'trunc_ln708_140' on local variable 'conv_i_i285_6_1_lcssa166' and 'load' operation ('conv_i_i285_6_1_lcssa166_load') on local variable 'conv_i_i285_6_1_lcssa166'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_7x7' (loop 'HEIGHT_WIDTH_KERNEL'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('conv_i_i285_6_1_lcssa166_write_ln708') of variable 'trunc_ln708_140' on local variable 'conv_i_i285_6_1_lcssa166' and 'load' operation ('conv_i_i285_6_1_lcssa166_load') on local variable 'conv_i_i285_6_1_lcssa166'.
+WARNING: [HLS 200-880] The II Violation in module 'conv_7x7' (loop 'HEIGHT_WIDTH_KERNEL'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('conv_i_i285_6_1_lcssa166_write_ln708') of variable 'trunc_ln708_140' on local variable 'conv_i_i285_6_1_lcssa166' and 'load' operation ('conv_i_i285_6_1_lcssa166_load') on local variable 'conv_i_i285_6_1_lcssa166'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('X_buf_load_98', conv_7x7.cpp:35) on array 'X_buf' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'X_buf'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 74, Depth = 87, loop 'HEIGHT_WIDTH_KERNEL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 33.37 seconds. CPU system time: 0.43 seconds. Elapsed time: 33.89 seconds; current allocated memory: 340.409 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 6.52 seconds. CPU system time: 0.14 seconds. Elapsed time: 6.79 seconds; current allocated memory: 351.399 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_output_tile_to_DRAM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 10, loop 'OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 6.71 seconds. CPU system time: 0.19 seconds. Elapsed time: 7.06 seconds; current allocated memory: 351.772 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 352.231 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tiled_conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 12, loop 'INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH'
+WARNING: [HLS 200-871] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+WARNING: [HLS 200-1016] The critical path in module 'tiled_conv' consists of the following:	'mul' operation of DSP[115] ('mul_ln37', utils.cpp:37) [103]  (3.36 ns)
+	'add' operation of DSP[115] ('add_ln47_1', utils.cpp:47) [115]  (3.02 ns)
+	'getelementptr' operation ('conv_in_buf_V_addr', utils.cpp:47) [117]  (0 ns)
+	'store' operation ('conv_in_buf_V_addr_write_ln47', utils.cpp:47) of variable 'storemerge', utils.cpp:49 on array 'conv_in_buf.V', tiled_conv.cpp:34 [141]  (3.25 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.

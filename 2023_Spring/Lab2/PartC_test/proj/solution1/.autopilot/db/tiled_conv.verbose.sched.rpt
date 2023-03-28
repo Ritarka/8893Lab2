@@ -1,0 +1,1098 @@
+
+
+================================================================
+== Vitis HLS Report for 'tiled_conv'
+================================================================
+* Date:           Tue Mar 28 06:22:04 2023
+
+* Version:        2020.2.2 (Build 3118627 on Tue Feb  9 05:13:49 MST 2021)
+* Project:        proj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.260 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +------------+------------+------------+------------+------------+------------+---------+
+    |     Latency (cycles)    |    Latency (absolute)   |         Interval        | Pipeline|
+    |     min    |     max    |     min    |     max    |     min    |     max    |   Type  |
+    +------------+------------+------------+------------+------------+------------+---------+
+    |  1421006337|  1421006337|  14.210 sec|  14.210 sec|  1421006338|  1421006338|     none|
+    +------------+------------+------------+------------+------------+------------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------------------------------------------------+------------+------------+----------+-----------+-----------+------+----------+
+        |                                                              |     Latency (cycles)    | Iteration|  Initiation Interval  | Trip |          |
+        |                           Loop Name                          |     min    |     max    |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------------------------------------------------+------------+------------+----------+-----------+-----------+------+----------+
+        |- TILE_ROW_TILE_COL                                           |  1421006336|  1421006336|   2775403|          -|          -|   512|        no|
+        | + INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH  |        7186|        7186|        12|          1|          1|  7176|       yes|
+        +--------------------------------------------------------------+------------+------------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 12
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 81
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 12, States = { 4 5 6 7 8 9 10 11 12 13 14 15 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 16 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 4 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 76 
+76 --> 77 
+77 --> 78 
+78 --> 79 
+79 --> 80 
+80 --> 81 
+81 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.25>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_0_1 = alloca i32 1"   --->   Operation 82 'alloca' 'conv_bias_buf_ping_V_0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_1_1 = alloca i32 1"   --->   Operation 83 'alloca' 'conv_bias_buf_ping_V_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_2_1 = alloca i32 1"   --->   Operation 84 'alloca' 'conv_bias_buf_ping_V_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_3_1 = alloca i32 1"   --->   Operation 85 'alloca' 'conv_bias_buf_ping_V_3_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_0_1 = alloca i32 1"   --->   Operation 86 'alloca' 'conv_bias_buf_pong_V_0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_1_1 = alloca i32 1"   --->   Operation 87 'alloca' 'conv_bias_buf_pong_V_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_2_1 = alloca i32 1"   --->   Operation 88 'alloca' 'conv_bias_buf_pong_V_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_3_1 = alloca i32 1"   --->   Operation 89 'alloca' 'conv_bias_buf_pong_V_3_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_16"   --->   Operation 90 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %fm, void @empty_0, i32 0, i32 0, void @empty_10, i32 0, i32 1, void @empty_1, void @empty_2, void @empty_10, i32 16, i32 16, i32 16, i32 16, void @empty_10, void @empty_10"   --->   Operation 91 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %fm"   --->   Operation 92 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %wt, void @empty_0, i32 0, i32 0, void @empty_10, i32 0, i32 1, void @empty_11, void @empty_2, void @empty_10, i32 16, i32 16, i32 16, i32 16, void @empty_10, void @empty_10"   --->   Operation 93 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %wt"   --->   Operation 94 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %input_feature_map, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_3, void @empty_8, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty"   --->   Operation 95 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %input_feature_map, void @empty_5, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty"   --->   Operation 96 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %layer_weights, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_3, void @empty_9, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty"   --->   Operation 97 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %layer_weights, void @empty_5, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty"   --->   Operation 98 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %layer_bias, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_3, void @empty_18, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty"   --->   Operation 99 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %layer_bias, void @empty_5, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty"   --->   Operation 100 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_feature_map, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_3, void @empty_17, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty"   --->   Operation 101 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_feature_map, void @empty_5, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty"   --->   Operation 102 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_13, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_3, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10"   --->   Operation 103 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (1.00ns)   --->   "%output_feature_map_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %output_feature_map"   --->   Operation 104 'read' 'output_feature_map_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 105 [1/1] (1.00ns)   --->   "%layer_bias_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %layer_bias"   --->   Operation 105 'read' 'layer_bias_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 106 [1/1] (1.00ns)   --->   "%layer_weights_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %layer_weights"   --->   Operation 106 'read' 'layer_weights_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 107 [1/1] (1.00ns)   --->   "%input_feature_map_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %input_feature_map"   --->   Operation 107 'read' 'input_feature_map_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%conv_in_buf_V_0 = alloca i64 1" [tiled_conv.cpp:34]   --->   Operation 108 'alloca' 'conv_in_buf_V_0' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2392> <RAM>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%conv_in_buf_V_1 = alloca i64 1" [tiled_conv.cpp:34]   --->   Operation 109 'alloca' 'conv_in_buf_V_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2392> <RAM>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%conv_in_buf_V_2 = alloca i64 1" [tiled_conv.cpp:34]   --->   Operation 110 'alloca' 'conv_in_buf_V_2' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2392> <RAM>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%conv_wt_buf_ping_V_0 = alloca i64 1" [tiled_conv.cpp:36]   --->   Operation 111 'alloca' 'conv_wt_buf_ping_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%conv_wt_buf_ping_V_1 = alloca i64 1" [tiled_conv.cpp:36]   --->   Operation 112 'alloca' 'conv_wt_buf_ping_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%conv_wt_buf_ping_V_2 = alloca i64 1" [tiled_conv.cpp:36]   --->   Operation 113 'alloca' 'conv_wt_buf_ping_V_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%conv_wt_buf_ping_V_3 = alloca i64 1" [tiled_conv.cpp:36]   --->   Operation 114 'alloca' 'conv_wt_buf_ping_V_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%conv_wt_buf_ping_V_4 = alloca i64 1" [tiled_conv.cpp:36]   --->   Operation 115 'alloca' 'conv_wt_buf_ping_V_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%conv_wt_buf_ping_V_5 = alloca i64 1" [tiled_conv.cpp:36]   --->   Operation 116 'alloca' 'conv_wt_buf_ping_V_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%conv_wt_buf_ping_V_6 = alloca i64 1" [tiled_conv.cpp:36]   --->   Operation 117 'alloca' 'conv_wt_buf_ping_V_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%conv_wt_buf_pong_V_0 = alloca i64 1" [tiled_conv.cpp:39]   --->   Operation 118 'alloca' 'conv_wt_buf_pong_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%conv_wt_buf_pong_V_1 = alloca i64 1" [tiled_conv.cpp:39]   --->   Operation 119 'alloca' 'conv_wt_buf_pong_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%conv_wt_buf_pong_V_2 = alloca i64 1" [tiled_conv.cpp:39]   --->   Operation 120 'alloca' 'conv_wt_buf_pong_V_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%conv_wt_buf_pong_V_3 = alloca i64 1" [tiled_conv.cpp:39]   --->   Operation 121 'alloca' 'conv_wt_buf_pong_V_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%conv_wt_buf_pong_V_4 = alloca i64 1" [tiled_conv.cpp:39]   --->   Operation 122 'alloca' 'conv_wt_buf_pong_V_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%conv_wt_buf_pong_V_5 = alloca i64 1" [tiled_conv.cpp:39]   --->   Operation 123 'alloca' 'conv_wt_buf_pong_V_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%conv_wt_buf_pong_V_6 = alloca i64 1" [tiled_conv.cpp:39]   --->   Operation 124 'alloca' 'conv_wt_buf_pong_V_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%conv_out_buf_0_V = alloca i64 1" [tiled_conv.cpp:42]   --->   Operation 125 'alloca' 'conv_out_buf_0_V' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 460> <RAM>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%conv_out_buf_0_V_addr = getelementptr i16 %conv_out_buf_0_V, i64 0, i64 0"   --->   Operation 126 'getelementptr' 'conv_out_buf_0_V_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%conv_out_buf_1_V = alloca i64 1" [tiled_conv.cpp:42]   --->   Operation 127 'alloca' 'conv_out_buf_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%conv_out_buf_2_V = alloca i64 1" [tiled_conv.cpp:42]   --->   Operation 128 'alloca' 'conv_out_buf_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%conv_out_buf_3_V = alloca i64 1" [tiled_conv.cpp:42]   --->   Operation 129 'alloca' 'conv_out_buf_3_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (3.25ns)   --->   "%store_ln731 = store i16 0, i9 %conv_out_buf_0_V_addr"   --->   Operation 130 'store' 'store_ln731' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 460> <RAM>
+ST_1 : Operation 131 [1/1] (1.58ns)   --->   "%br_ln62 = br void" [tiled_conv.cpp:62]   --->   Operation 131 'br' 'br_ln62' <Predicate = true> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 2.99>
+ST_2 : Operation 132 [1/1] (0.00ns)   --->   "%indvar_flatten49 = phi i10 0, void %_ZN8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit, i10 %add_ln62_2, void %_Z31load_input_tile_block_from_DRAMPA52_A46_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA736_A1280_S2_ii.exit" [tiled_conv.cpp:62]   --->   Operation 132 'phi' 'indvar_flatten49' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 133 [1/1] (0.00ns)   --->   "%ti = phi i5 0, void %_ZN8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit, i5 %select_ln62_1, void %_Z31load_input_tile_block_from_DRAMPA52_A46_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA736_A1280_S2_ii.exit" [tiled_conv.cpp:62]   --->   Operation 133 'phi' 'ti' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 134 [1/1] (0.00ns)   --->   "%tj = phi i6 0, void %_ZN8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit, i6 %add_ln65, void %_Z31load_input_tile_block_from_DRAMPA52_A46_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA736_A1280_S2_ii.exit" [tiled_conv.cpp:65]   --->   Operation 134 'phi' 'tj' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 135 [1/1] (1.73ns)   --->   "%add_ln62_2 = add i10 %indvar_flatten49, i10 1" [tiled_conv.cpp:62]   --->   Operation 135 'add' 'add_ln62_2' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 136 [1/1] (1.77ns)   --->   "%icmp_ln62 = icmp_eq  i10 %indvar_flatten49, i10 512" [tiled_conv.cpp:62]   --->   Operation 136 'icmp' 'icmp_ln62' <Predicate = true> <Delay = 1.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 137 [1/1] (0.00ns)   --->   "%br_ln62 = br i1 %icmp_ln62, void %.split8, void" [tiled_conv.cpp:62]   --->   Operation 137 'br' 'br_ln62' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 138 [1/1] (1.78ns)   --->   "%add_ln62 = add i5 %ti, i5 1" [tiled_conv.cpp:62]   --->   Operation 138 'add' 'add_ln62' <Predicate = (!icmp_ln62)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 139 [1/1] (1.42ns)   --->   "%icmp_ln65 = icmp_eq  i6 %tj, i6 32" [tiled_conv.cpp:65]   --->   Operation 139 'icmp' 'icmp_ln65' <Predicate = (!icmp_ln62)> <Delay = 1.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 140 [1/1] (1.21ns)   --->   "%select_ln62_1 = select i1 %icmp_ln65, i5 %add_ln62, i5 %ti" [tiled_conv.cpp:62]   --->   Operation 140 'select' 'select_ln62_1' <Predicate = (!icmp_ln62)> <Delay = 1.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 141 [1/1] (0.00ns)   --->   "%trunc_ln62 = trunc i5 %select_ln62_1" [tiled_conv.cpp:62]   --->   Operation 141 'trunc' 'trunc_ln62' <Predicate = (!icmp_ln62)> <Delay = 0.00>
+ST_2 : Operation 142 [1/1] (0.00ns)   --->   "%ret_ln154 = ret" [tiled_conv.cpp:154]   --->   Operation 142 'ret' 'ret_ln154' <Predicate = (icmp_ln62)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 8.26>
+ST_3 : Operation 143 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @TILE_ROW_TILE_COL_str"   --->   Operation 143 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 144 [1/1] (0.00ns)   --->   "%empty_34 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 512, i64 512, i64 512"   --->   Operation 144 'speclooptripcount' 'empty_34' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 145 [1/1] (1.18ns)   --->   "%select_ln62 = select i1 %icmp_ln65, i6 0, i6 %tj" [tiled_conv.cpp:62]   --->   Operation 145 'select' 'select_ln62' <Predicate = true> <Delay = 1.18> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 146 [1/1] (0.00ns)   --->   "%zext_ln62 = zext i5 %select_ln62_1" [tiled_conv.cpp:62]   --->   Operation 146 'zext' 'zext_ln62' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 147 [1/1] (3.36ns) (grouped into DSP with root node add_ln62_1)   --->   "%mul_ln62 = mul i11 %zext_ln62, i11 46" [tiled_conv.cpp:62]   --->   Operation 147 'mul' 'mul_ln62' <Predicate = true> <Delay = 3.36> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 148 [1/1] (3.02ns) (root node of the DSP)   --->   "%add_ln62_1 = add i11 %mul_ln62, i11 2045" [tiled_conv.cpp:62]   --->   Operation 148 'add' 'add_ln62_1' <Predicate = true> <Delay = 3.02> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 149 [1/1] (0.00ns)   --->   "%specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [tiled_conv.cpp:65]   --->   Operation 149 'specloopname' 'specloopname_ln65' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 150 [1/1] (0.00ns)   --->   "%trunc_ln28 = trunc i6 %select_ln62" [utils.cpp:28]   --->   Operation 150 'trunc' 'trunc_ln28' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 151 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i5.i5, i5 %trunc_ln28, i5 0" [utils.cpp:28]   --->   Operation 151 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 152 [1/1] (0.00ns)   --->   "%shl_ln28_1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %trunc_ln28, i3 0" [utils.cpp:28]   --->   Operation 152 'bitconcatenate' 'shl_ln28_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 153 [1/1] (0.00ns)   --->   "%zext_ln28 = zext i8 %shl_ln28_1" [utils.cpp:28]   --->   Operation 153 'zext' 'zext_ln28' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 154 [1/1] (0.00ns)   --->   "%zext_ln28_1 = zext i10 %shl_ln" [utils.cpp:28]   --->   Operation 154 'zext' 'zext_ln28_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 155 [1/1] (1.73ns)   --->   "%add_ln46_1 = add i11 %zext_ln28_1, i11 %zext_ln28" [utils.cpp:46]   --->   Operation 155 'add' 'add_ln46_1' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 156 [1/1] (0.00ns)   --->   "%zext_ln46 = zext i11 %add_ln46_1" [utils.cpp:46]   --->   Operation 156 'zext' 'zext_ln46' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 157 [1/1] (1.88ns)   --->   "%p_mid126 = icmp_ugt  i11 %add_ln62_1, i11 735" [tiled_conv.cpp:62]   --->   Operation 157 'icmp' 'p_mid126' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 158 [1/1] (1.58ns)   --->   "%br_ln34 = br void" [utils.cpp:34]   --->   Operation 158 'br' 'br_ln34' <Predicate = true> <Delay = 1.58>
+
+State 4 <SV = 3> <Delay = 6.19>
+ST_4 : Operation 159 [1/1] (0.00ns)   --->   "%indvar_flatten38 = phi i13 0, void %.split8, i13 %add_ln34_2, void %_ZN8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i171" [utils.cpp:34]   --->   Operation 159 'phi' 'indvar_flatten38' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 160 [1/1] (0.00ns)   --->   "%c = phi i2 0, void %.split8, i2 %select_ln34_1, void %_ZN8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i171" [utils.cpp:47]   --->   Operation 160 'phi' 'c' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 161 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i12 0, void %.split8, i12 %select_ln37_4, void %_ZN8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i171" [utils.cpp:37]   --->   Operation 161 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 162 [1/1] (0.00ns)   --->   "%i = phi i6 0, void %.split8, i6 %select_ln37_1, void %_ZN8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i171" [utils.cpp:39]   --->   Operation 162 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 163 [1/1] (0.00ns)   --->   "%j = phi i6 0, void %.split8, i6 %add_ln42, void %_ZN8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i171" [utils.cpp:44]   --->   Operation 163 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 164 [1/1] (1.67ns)   --->   "%add_ln34_2 = add i13 %indvar_flatten38, i13 1" [utils.cpp:34]   --->   Operation 164 'add' 'add_ln34_2' <Predicate = true> <Delay = 1.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 165 [1/1] (0.00ns)   --->   "%zext_ln37 = zext i6 %i" [utils.cpp:37]   --->   Operation 165 'zext' 'zext_ln37' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 166 [1/1] (1.63ns)   --->   "%add_ln39 = add i11 %add_ln62_1, i11 %zext_ln37" [utils.cpp:39]   --->   Operation 166 'add' 'add_ln39' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 167 [1/1] (1.88ns)   --->   "%empty = icmp_ugt  i11 %add_ln39, i11 735" [utils.cpp:39]   --->   Operation 167 'icmp' 'empty' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 168 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 168 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 169 [1/1] (2.09ns)   --->   "%icmp_ln34 = icmp_eq  i13 %indvar_flatten38, i13 7176" [utils.cpp:34]   --->   Operation 169 'icmp' 'icmp_ln34' <Predicate = true> <Delay = 2.09> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 170 [1/1] (0.00ns)   --->   "%br_ln34 = br i1 %icmp_ln34, void %.split4, void %_Z31load_input_tile_block_from_DRAMPA52_A46_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA736_A1280_S2_ii.exit" [utils.cpp:34]   --->   Operation 170 'br' 'br_ln34' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 171 [1/1] (1.56ns)   --->   "%add_ln34 = add i2 %c, i2 1" [utils.cpp:34]   --->   Operation 171 'add' 'add_ln34' <Predicate = (!icmp_ln34)> <Delay = 1.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 172 [1/1] (1.99ns)   --->   "%icmp_ln37 = icmp_eq  i12 %indvar_flatten, i12 2392" [utils.cpp:37]   --->   Operation 172 'icmp' 'icmp_ln37' <Predicate = (!icmp_ln34)> <Delay = 1.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 173 [1/1] (1.18ns)   --->   "%select_ln34 = select i1 %icmp_ln37, i6 0, i6 %i" [utils.cpp:34]   --->   Operation 173 'select' 'select_ln34' <Predicate = (!icmp_ln34)> <Delay = 1.18> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 174 [1/1] (0.99ns)   --->   "%select_ln34_1 = select i1 %icmp_ln37, i2 %add_ln34, i2 %c" [utils.cpp:34]   --->   Operation 174 'select' 'select_ln34_1' <Predicate = (!icmp_ln34)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 175 [1/1] (0.00ns) (grouped into LUT with out node and_ln34)   --->   "%xor_ln34 = xor i1 %icmp_ln37, i1 1" [utils.cpp:34]   --->   Operation 175 'xor' 'xor_ln34' <Predicate = (!icmp_ln34)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 176 [1/1] (1.42ns)   --->   "%icmp_ln42 = icmp_eq  i6 %j, i6 46" [utils.cpp:42]   --->   Operation 176 'icmp' 'icmp_ln42' <Predicate = (!icmp_ln34)> <Delay = 1.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 177 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln34 = and i1 %icmp_ln42, i1 %xor_ln34" [utils.cpp:34]   --->   Operation 177 'and' 'and_ln34' <Predicate = (!icmp_ln34)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 178 [1/1] (1.82ns)   --->   "%add_ln37 = add i6 %select_ln34, i6 1" [utils.cpp:37]   --->   Operation 178 'add' 'add_ln37' <Predicate = (!icmp_ln34)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 179 [1/1] (0.00ns) (grouped into LUT with out node select_ln37)   --->   "%or_ln37 = or i1 %and_ln34, i1 %icmp_ln37" [utils.cpp:37]   --->   Operation 179 'or' 'or_ln37' <Predicate = (!icmp_ln34)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 180 [1/1] (1.18ns) (out node of the LUT)   --->   "%select_ln37 = select i1 %or_ln37, i6 0, i6 %j" [utils.cpp:37]   --->   Operation 180 'select' 'select_ln37' <Predicate = (!icmp_ln34)> <Delay = 1.18> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 181 [1/1] (1.18ns)   --->   "%select_ln37_1 = select i1 %and_ln34, i6 %add_ln37, i6 %select_ln34" [utils.cpp:37]   --->   Operation 181 'select' 'select_ln37_1' <Predicate = (!icmp_ln34)> <Delay = 1.18> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 182 [1/1] (0.00ns)   --->   "%zext_ln44 = zext i6 %select_ln37" [utils.cpp:44]   --->   Operation 182 'zext' 'zext_ln44' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_4 : Operation 183 [1/1] (1.82ns)   --->   "%add_ln46_2 = add i7 %zext_ln44, i7 125" [utils.cpp:46]   --->   Operation 183 'add' 'add_ln46_2' <Predicate = (!icmp_ln34)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 184 [1/1] (1.82ns)   --->   "%add_ln42 = add i6 %select_ln37, i6 1" [utils.cpp:42]   --->   Operation 184 'add' 'add_ln42' <Predicate = (!icmp_ln34)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 185 [1/1] (1.54ns)   --->   "%add_ln37_1 = add i12 %indvar_flatten, i12 1" [utils.cpp:37]   --->   Operation 185 'add' 'add_ln37_1' <Predicate = (!icmp_ln34)> <Delay = 1.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 186 [1/1] (0.69ns)   --->   "%select_ln37_4 = select i1 %icmp_ln37, i12 1, i12 %add_ln37_1" [utils.cpp:37]   --->   Operation 186 'select' 'select_ln37_4' <Predicate = (!icmp_ln34)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 187 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 187 'br' 'br_ln0' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 6.43>
+ST_5 : Operation 188 [1/1] (0.00ns)   --->   "%zext_ln34 = zext i2 %select_ln34_1" [utils.cpp:34]   --->   Operation 188 'zext' 'zext_ln34' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_5 : Operation 189 [1/1] (6.32ns)   --->   "%mul_ln34 = mul i23 %zext_ln34, i23 1884160" [utils.cpp:34]   --->   Operation 189 'mul' 'mul_ln34' <Predicate = (!icmp_ln34)> <Delay = 6.32> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 190 [1/1] (0.00ns) (grouped into LUT with out node or_ln46)   --->   "%select_ln34_2 = select i1 %icmp_ln37, i1 %p_mid126, i1 %empty" [utils.cpp:34]   --->   Operation 190 'select' 'select_ln34_2' <Predicate = (!icmp_ln34 & !and_ln34)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 191 [1/1] (0.00ns) (grouped into LUT with out node select_ln37_3)   --->   "%select_ln34_3 = select i1 %icmp_ln37, i11 %add_ln62_1, i11 %add_ln39" [utils.cpp:34]   --->   Operation 191 'select' 'select_ln34_3' <Predicate = (!icmp_ln34 & !and_ln34)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 192 [1/1] (0.00ns)   --->   "%zext_ln37_1 = zext i6 %add_ln37" [utils.cpp:37]   --->   Operation 192 'zext' 'zext_ln37_1' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_5 : Operation 193 [1/1] (1.63ns)   --->   "%add_ln39_1 = add i11 %add_ln62_1, i11 %zext_ln37_1" [utils.cpp:39]   --->   Operation 193 'add' 'add_ln39_1' <Predicate = (!icmp_ln34)> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 194 [1/1] (1.88ns)   --->   "%p_mid13 = icmp_ugt  i11 %add_ln39_1, i11 735" [utils.cpp:39]   --->   Operation 194 'icmp' 'p_mid13' <Predicate = (!icmp_ln34 & and_ln34)> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 195 [1/1] (0.00ns) (grouped into LUT with out node or_ln46)   --->   "%select_ln37_2 = select i1 %and_ln34, i1 %p_mid13, i1 %select_ln34_2" [utils.cpp:37]   --->   Operation 195 'select' 'select_ln37_2' <Predicate = (!icmp_ln34)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 196 [1/1] (0.69ns) (out node of the LUT)   --->   "%select_ln37_3 = select i1 %and_ln34, i11 %add_ln39_1, i11 %select_ln34_3" [utils.cpp:37]   --->   Operation 196 'select' 'select_ln37_3' <Predicate = (!icmp_ln34)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 197 [1/1] (0.00ns)   --->   "%sext_ln49_1_mid2_v = bitconcatenate i22 @_ssdm_op_BitConcatenate.i22.i11.i11, i11 %select_ln37_3, i11 0" [utils.cpp:37]   --->   Operation 197 'bitconcatenate' 'sext_ln49_1_mid2_v' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_5 : Operation 198 [1/1] (0.00ns)   --->   "%sext_ln37 = sext i22 %sext_ln49_1_mid2_v" [utils.cpp:37]   --->   Operation 198 'sext' 'sext_ln37' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_5 : Operation 199 [1/1] (0.00ns)   --->   "%sext_ln42_mid2_v = bitconcatenate i20 @_ssdm_op_BitConcatenate.i20.i11.i9, i11 %select_ln37_3, i9 0" [utils.cpp:37]   --->   Operation 199 'bitconcatenate' 'sext_ln42_mid2_v' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_5 : Operation 200 [1/1] (0.00ns)   --->   "%sext_ln42_mid2_v_cast = sext i20 %sext_ln42_mid2_v" [utils.cpp:37]   --->   Operation 200 'sext' 'sext_ln42_mid2_v_cast' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_5 : Operation 201 [1/1] (0.00ns)   --->   "%sext_ln46 = sext i7 %add_ln46_2" [utils.cpp:46]   --->   Operation 201 'sext' 'sext_ln46' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_5 : Operation 202 [1/1] (1.63ns)   --->   "%add_ln46 = add i12 %sext_ln46, i12 %zext_ln46" [utils.cpp:46]   --->   Operation 202 'add' 'add_ln46' <Predicate = (!icmp_ln34)> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 203 [1/1] (1.99ns)   --->   "%icmp_ln46 = icmp_ugt  i12 %add_ln46, i12 1279" [utils.cpp:46]   --->   Operation 203 'icmp' 'icmp_ln46' <Predicate = (!icmp_ln34)> <Delay = 1.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 204 [1/1] (0.99ns) (out node of the LUT)   --->   "%or_ln46 = or i1 %icmp_ln46, i1 %select_ln37_2" [utils.cpp:46]   --->   Operation 204 'or' 'or_ln46' <Predicate = (!icmp_ln34)> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 205 [1/1] (1.58ns)   --->   "%br_ln46 = br i1 %or_ln46, void, void %_ZN8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i" [utils.cpp:46]   --->   Operation 205 'br' 'br_ln46' <Predicate = (!icmp_ln34)> <Delay = 1.58>
+ST_5 : Operation 206 [1/1] (0.00ns)   --->   "%tmp_2 = bitconcatenate i13 @_ssdm_op_BitConcatenate.i13.i12.i1, i12 %add_ln46, i1 0" [utils.cpp:49]   --->   Operation 206 'bitconcatenate' 'tmp_2' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 0.00>
+ST_5 : Operation 207 [1/1] (0.00ns)   --->   "%zext_ln49 = zext i13 %tmp_2" [utils.cpp:49]   --->   Operation 207 'zext' 'zext_ln49' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 0.00>
+ST_5 : Operation 208 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln49 = add i23 %sext_ln37, i23 %zext_ln49" [utils.cpp:49]   --->   Operation 208 'add' 'add_ln49' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.05> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync>
+ST_5 : Operation 209 [1/1] (4.10ns) (root node of TernaryAdder)   --->   "%add_ln49_1 = add i23 %add_ln49, i23 %sext_ln42_mid2_v_cast" [utils.cpp:49]   --->   Operation 209 'add' 'add_ln49_1' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 4.10> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.05> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync>
+ST_5 : Operation 210 [1/1] (1.13ns)   --->   "%switch_ln47 = switch i2 %select_ln34_1, void %branch2, i2 0, void %branch0, i2 1, void %branch1" [utils.cpp:47]   --->   Operation 210 'switch' 'switch_ln47' <Predicate = true> <Delay = 1.13>
+
+State 6 <SV = 5> <Delay = 7.04>
+ST_6 : Operation 211 [1/1] (0.00ns)   --->   "%zext_ln34_1 = zext i23 %mul_ln34" [utils.cpp:34]   --->   Operation 211 'zext' 'zext_ln34_1' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_6 : Operation 212 [1/1] (3.52ns)   --->   "%add_ln34_1 = add i64 %zext_ln34_1, i64 %input_feature_map_read" [utils.cpp:34]   --->   Operation 212 'add' 'add_ln34_1' <Predicate = (!icmp_ln34)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 213 [1/1] (0.00ns)   --->   "%sext_ln49_1 = sext i23 %add_ln49_1" [utils.cpp:49]   --->   Operation 213 'sext' 'sext_ln49_1' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 0.00>
+ST_6 : Operation 214 [1/1] (3.52ns)   --->   "%add_ln49_2 = add i64 %sext_ln49_1, i64 %add_ln34_1" [utils.cpp:49]   --->   Operation 214 'add' 'add_ln49_2' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 215 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %add_ln49_2, i32 1, i32 63" [utils.cpp:49]   --->   Operation 215 'partselect' 'trunc_ln1' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 0.00>
+ST_6 : Operation 216 [1/1] (0.00ns)   --->   "%sext_ln49 = sext i63 %trunc_ln1" [utils.cpp:49]   --->   Operation 216 'sext' 'sext_ln49' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 0.00>
+ST_6 : Operation 217 [1/1] (0.00ns)   --->   "%fm_addr = getelementptr i16 %fm, i64 %sext_ln49" [utils.cpp:49]   --->   Operation 217 'getelementptr' 'fm_addr' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 218 [7/7] (7.30ns)   --->   "%fm_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i16P1A, i16 %fm_addr, i32 1" [utils.cpp:49]   --->   Operation 218 'readreq' 'fm_load_req' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 219 [6/7] (7.30ns)   --->   "%fm_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i16P1A, i16 %fm_addr, i32 1" [utils.cpp:49]   --->   Operation 219 'readreq' 'fm_load_req' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 220 [5/7] (7.30ns)   --->   "%fm_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i16P1A, i16 %fm_addr, i32 1" [utils.cpp:49]   --->   Operation 220 'readreq' 'fm_load_req' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 7.30>
+ST_10 : Operation 221 [4/7] (7.30ns)   --->   "%fm_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i16P1A, i16 %fm_addr, i32 1" [utils.cpp:49]   --->   Operation 221 'readreq' 'fm_load_req' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 10> <Delay = 7.30>
+ST_11 : Operation 222 [3/7] (7.30ns)   --->   "%fm_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i16P1A, i16 %fm_addr, i32 1" [utils.cpp:49]   --->   Operation 222 'readreq' 'fm_load_req' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 11> <Delay = 7.30>
+ST_12 : Operation 223 [2/7] (7.30ns)   --->   "%fm_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i16P1A, i16 %fm_addr, i32 1" [utils.cpp:49]   --->   Operation 223 'readreq' 'fm_load_req' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 12> <Delay = 7.30>
+ST_13 : Operation 224 [1/7] (7.30ns)   --->   "%fm_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i16P1A, i16 %fm_addr, i32 1" [utils.cpp:49]   --->   Operation 224 'readreq' 'fm_load_req' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 13> <Delay = 7.30>
+ST_14 : Operation 225 [1/1] (0.00ns)   --->   "%zext_ln47 = zext i6 %select_ln37_1" [utils.cpp:47]   --->   Operation 225 'zext' 'zext_ln47' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_14 : Operation 226 [1/1] (3.36ns) (grouped into DSP with root node add_ln47)   --->   "%mul_ln47 = mul i12 %zext_ln47, i12 46" [utils.cpp:47]   --->   Operation 226 'mul' 'mul_ln47' <Predicate = (!icmp_ln34)> <Delay = 3.36> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 227 [1/1] (0.00ns)   --->   "%zext_ln47_1 = zext i6 %select_ln37" [utils.cpp:47]   --->   Operation 227 'zext' 'zext_ln47_1' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_14 : Operation 228 [1/1] (3.02ns) (root node of the DSP)   --->   "%add_ln47 = add i12 %mul_ln47, i12 %zext_ln47_1" [utils.cpp:47]   --->   Operation 228 'add' 'add_ln47' <Predicate = (!icmp_ln34)> <Delay = 3.02> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 229 [1/1] (7.30ns)   --->   "%fm_addr_read = read i16 @_ssdm_op_Read.m_axi.i16P1A, i16 %fm_addr" [utils.cpp:49]   --->   Operation 229 'read' 'fm_addr_read' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 14> <Delay = 4.84>
+ST_15 : Operation 230 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH_str"   --->   Operation 230 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_15 : Operation 231 [1/1] (0.00ns)   --->   "%empty_33 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 7176, i64 7176, i64 7176"   --->   Operation 231 'speclooptripcount' 'empty_33' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_15 : Operation 232 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 232 'specpipeline' 'specpipeline_ln0' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_15 : Operation 233 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH_str"   --->   Operation 233 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_15 : Operation 234 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 234 'specpipeline' 'specpipeline_ln0' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_15 : Operation 235 [1/1] (0.00ns)   --->   "%zext_ln47_2 = zext i12 %add_ln47" [utils.cpp:47]   --->   Operation 235 'zext' 'zext_ln47_2' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_15 : Operation 236 [1/1] (0.00ns)   --->   "%conv_in_buf_V_0_addr = getelementptr i16 %conv_in_buf_V_0, i64 0, i64 %zext_ln47_2" [utils.cpp:47]   --->   Operation 236 'getelementptr' 'conv_in_buf_V_0_addr' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_15 : Operation 237 [1/1] (0.00ns)   --->   "%conv_in_buf_V_1_addr = getelementptr i16 %conv_in_buf_V_1, i64 0, i64 %zext_ln47_2" [utils.cpp:47]   --->   Operation 237 'getelementptr' 'conv_in_buf_V_1_addr' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_15 : Operation 238 [1/1] (0.00ns)   --->   "%conv_in_buf_V_2_addr = getelementptr i16 %conv_in_buf_V_2, i64 0, i64 %zext_ln47_2" [utils.cpp:47]   --->   Operation 238 'getelementptr' 'conv_in_buf_V_2_addr' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_15 : Operation 239 [1/1] (0.00ns)   --->   "%specloopname_ln42 = specloopname void @_ssdm_op_SpecLoopName, void @empty_15" [utils.cpp:42]   --->   Operation 239 'specloopname' 'specloopname_ln42' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_15 : Operation 240 [1/1] (1.58ns)   --->   "%br_ln0 = br void %_ZN8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i"   --->   Operation 240 'br' 'br_ln0' <Predicate = (!icmp_ln34 & !or_ln46)> <Delay = 1.58>
+ST_15 : Operation 241 [1/1] (0.00ns)   --->   "%storemerge = phi i16 %fm_addr_read, void, i16 0, void %.split4" [utils.cpp:49]   --->   Operation 241 'phi' 'storemerge' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 242 [1/1] (3.25ns)   --->   "%store_ln47 = store i16 %storemerge, i12 %conv_in_buf_V_1_addr" [utils.cpp:47]   --->   Operation 242 'store' 'store_ln47' <Predicate = (select_ln34_1 == 1)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2392> <RAM>
+ST_15 : Operation 243 [1/1] (0.00ns)   --->   "%br_ln47 = br void %_ZN8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i171" [utils.cpp:47]   --->   Operation 243 'br' 'br_ln47' <Predicate = (select_ln34_1 == 1)> <Delay = 0.00>
+ST_15 : Operation 244 [1/1] (3.25ns)   --->   "%store_ln47 = store i16 %storemerge, i12 %conv_in_buf_V_0_addr" [utils.cpp:47]   --->   Operation 244 'store' 'store_ln47' <Predicate = (select_ln34_1 == 0)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2392> <RAM>
+ST_15 : Operation 245 [1/1] (0.00ns)   --->   "%br_ln47 = br void %_ZN8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i171" [utils.cpp:47]   --->   Operation 245 'br' 'br_ln47' <Predicate = (select_ln34_1 == 0)> <Delay = 0.00>
+ST_15 : Operation 246 [1/1] (3.25ns)   --->   "%store_ln47 = store i16 %storemerge, i12 %conv_in_buf_V_2_addr" [utils.cpp:47]   --->   Operation 246 'store' 'store_ln47' <Predicate = (select_ln34_1 != 0 & select_ln34_1 != 1)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 2392> <RAM>
+ST_15 : Operation 247 [1/1] (0.00ns)   --->   "%br_ln47 = br void %_ZN8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i171" [utils.cpp:47]   --->   Operation 247 'br' 'br_ln47' <Predicate = (select_ln34_1 != 0 & select_ln34_1 != 1)> <Delay = 0.00>
+
+State 16 <SV = 4> <Delay = 6.58>
+ST_16 : Operation 248 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_0_1_load = load i16 %conv_bias_buf_ping_V_0_1" [tiled_conv.cpp:87]   --->   Operation 248 'load' 'conv_bias_buf_ping_V_0_1_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 249 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_1_1_load = load i16 %conv_bias_buf_ping_V_1_1" [tiled_conv.cpp:87]   --->   Operation 249 'load' 'conv_bias_buf_ping_V_1_1_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 250 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_2_1_load = load i16 %conv_bias_buf_ping_V_2_1" [tiled_conv.cpp:87]   --->   Operation 250 'load' 'conv_bias_buf_ping_V_2_1_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 251 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_3_1_load = load i16 %conv_bias_buf_ping_V_3_1" [tiled_conv.cpp:87]   --->   Operation 251 'load' 'conv_bias_buf_ping_V_3_1_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 252 [2/2] (6.58ns)   --->   "%call_ret = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_1_load, i16 %conv_bias_buf_ping_V_1_1_load, i16 %conv_bias_buf_ping_V_2_1_load, i16 %conv_bias_buf_ping_V_3_1_load, i64 %layer_weights_read, i64 %layer_bias_read, i4 0" [tiled_conv.cpp:87]   --->   Operation 252 'call' 'call_ret' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 253 [1/1] (1.82ns)   --->   "%add_ln65 = add i6 %select_ln62, i6 1" [tiled_conv.cpp:65]   --->   Operation 253 'add' 'add_ln65' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 5> <Delay = 0.80>
+ST_17 : Operation 254 [1/2] (0.80ns)   --->   "%call_ret = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_1_load, i16 %conv_bias_buf_ping_V_1_1_load, i16 %conv_bias_buf_ping_V_2_1_load, i16 %conv_bias_buf_ping_V_3_1_load, i64 %layer_weights_read, i64 %layer_bias_read, i4 0" [tiled_conv.cpp:87]   --->   Operation 254 'call' 'call_ret' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 255 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_0 = extractvalue i64 %call_ret" [tiled_conv.cpp:87]   --->   Operation 255 'extractvalue' 'conv_bias_buf_ping_V_0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 256 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_1 = extractvalue i64 %call_ret" [tiled_conv.cpp:87]   --->   Operation 256 'extractvalue' 'conv_bias_buf_ping_V_1' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 257 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_2 = extractvalue i64 %call_ret" [tiled_conv.cpp:87]   --->   Operation 257 'extractvalue' 'conv_bias_buf_ping_V_2' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 258 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_3 = extractvalue i64 %call_ret" [tiled_conv.cpp:87]   --->   Operation 258 'extractvalue' 'conv_bias_buf_ping_V_3' <Predicate = true> <Delay = 0.00>
+
+State 18 <SV = 6> <Delay = 6.58>
+ST_18 : Operation 259 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_0_1_load = load i16 %conv_bias_buf_pong_V_0_1" [tiled_conv.cpp:115]   --->   Operation 259 'load' 'conv_bias_buf_pong_V_0_1_load' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 260 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_1_1_load = load i16 %conv_bias_buf_pong_V_1_1" [tiled_conv.cpp:115]   --->   Operation 260 'load' 'conv_bias_buf_pong_V_1_1_load' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 261 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_2_1_load = load i16 %conv_bias_buf_pong_V_2_1" [tiled_conv.cpp:115]   --->   Operation 261 'load' 'conv_bias_buf_pong_V_2_1_load' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 262 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_3_1_load = load i16 %conv_bias_buf_pong_V_3_1" [tiled_conv.cpp:115]   --->   Operation 262 'load' 'conv_bias_buf_pong_V_3_1_load' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 263 [2/2] (2.06ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0, i16 %conv_bias_buf_ping_V_1, i16 %conv_bias_buf_ping_V_2, i16 %conv_bias_buf_ping_V_3" [tiled_conv.cpp:98]   --->   Operation 263 'call' 'call_ln98' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 264 [2/2] (6.58ns)   --->   "%call_ret1 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_1_load, i16 %conv_bias_buf_pong_V_1_1_load, i16 %conv_bias_buf_pong_V_2_1_load, i16 %conv_bias_buf_pong_V_3_1_load, i64 %layer_weights_read, i64 %layer_bias_read, i4 1" [tiled_conv.cpp:115]   --->   Operation 264 'call' 'call_ret1' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 7> <Delay = 0.80>
+ST_19 : Operation 265 [1/2] (0.00ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0, i16 %conv_bias_buf_ping_V_1, i16 %conv_bias_buf_ping_V_2, i16 %conv_bias_buf_ping_V_3" [tiled_conv.cpp:98]   --->   Operation 265 'call' 'call_ln98' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 266 [1/2] (0.80ns)   --->   "%call_ret1 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_1_load, i16 %conv_bias_buf_pong_V_1_1_load, i16 %conv_bias_buf_pong_V_2_1_load, i16 %conv_bias_buf_pong_V_3_1_load, i64 %layer_weights_read, i64 %layer_bias_read, i4 1" [tiled_conv.cpp:115]   --->   Operation 266 'call' 'call_ret1' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 267 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_0 = extractvalue i64 %call_ret1" [tiled_conv.cpp:115]   --->   Operation 267 'extractvalue' 'conv_bias_buf_pong_V_0' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 268 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_1 = extractvalue i64 %call_ret1" [tiled_conv.cpp:115]   --->   Operation 268 'extractvalue' 'conv_bias_buf_pong_V_1' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 269 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_2 = extractvalue i64 %call_ret1" [tiled_conv.cpp:115]   --->   Operation 269 'extractvalue' 'conv_bias_buf_pong_V_2' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 270 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_3 = extractvalue i64 %call_ret1" [tiled_conv.cpp:115]   --->   Operation 270 'extractvalue' 'conv_bias_buf_pong_V_3' <Predicate = true> <Delay = 0.00>
+
+State 20 <SV = 8> <Delay = 7.30>
+ST_20 : Operation 271 [2/2] (7.30ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 0" [tiled_conv.cpp:106]   --->   Operation 271 'call' 'call_ln106' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 272 [2/2] (6.58ns)   --->   "%call_ret2 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0, i16 %conv_bias_buf_ping_V_1, i16 %conv_bias_buf_ping_V_2, i16 %conv_bias_buf_ping_V_3, i64 %layer_weights_read, i64 %layer_bias_read, i4 2" [tiled_conv.cpp:142]   --->   Operation 272 'call' 'call_ret2' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 9> <Delay = 0.80>
+ST_21 : Operation 273 [1/2] (0.00ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 0" [tiled_conv.cpp:106]   --->   Operation 273 'call' 'call_ln106' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_21 : Operation 274 [1/2] (0.80ns)   --->   "%call_ret2 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0, i16 %conv_bias_buf_ping_V_1, i16 %conv_bias_buf_ping_V_2, i16 %conv_bias_buf_ping_V_3, i64 %layer_weights_read, i64 %layer_bias_read, i4 2" [tiled_conv.cpp:142]   --->   Operation 274 'call' 'call_ret2' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_21 : Operation 275 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_0_2 = extractvalue i64 %call_ret2" [tiled_conv.cpp:142]   --->   Operation 275 'extractvalue' 'conv_bias_buf_ping_V_0_2' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 276 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_1_2 = extractvalue i64 %call_ret2" [tiled_conv.cpp:142]   --->   Operation 276 'extractvalue' 'conv_bias_buf_ping_V_1_2' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 277 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_2_2 = extractvalue i64 %call_ret2" [tiled_conv.cpp:142]   --->   Operation 277 'extractvalue' 'conv_bias_buf_ping_V_2_2' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 278 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_3_2 = extractvalue i64 %call_ret2" [tiled_conv.cpp:142]   --->   Operation 278 'extractvalue' 'conv_bias_buf_ping_V_3_2' <Predicate = true> <Delay = 0.00>
+
+State 22 <SV = 10> <Delay = 2.06>
+ST_22 : Operation 279 [2/2] (2.06ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0, i16 %conv_bias_buf_pong_V_1, i16 %conv_bias_buf_pong_V_2, i16 %conv_bias_buf_pong_V_3" [tiled_conv.cpp:125]   --->   Operation 279 'call' 'call_ln125' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 11> <Delay = 0.00>
+ST_23 : Operation 280 [1/2] (0.00ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0, i16 %conv_bias_buf_pong_V_1, i16 %conv_bias_buf_pong_V_2, i16 %conv_bias_buf_pong_V_3" [tiled_conv.cpp:125]   --->   Operation 280 'call' 'call_ln125' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 12> <Delay = 7.30>
+ST_24 : Operation 281 [2/2] (7.30ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 1" [tiled_conv.cpp:133]   --->   Operation 281 'call' 'call_ln133' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 282 [2/2] (6.58ns)   --->   "%call_ret3 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0, i16 %conv_bias_buf_pong_V_1, i16 %conv_bias_buf_pong_V_2, i16 %conv_bias_buf_pong_V_3, i64 %layer_weights_read, i64 %layer_bias_read, i4 3" [tiled_conv.cpp:115]   --->   Operation 282 'call' 'call_ret3' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 13> <Delay = 0.80>
+ST_25 : Operation 283 [1/2] (0.00ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 1" [tiled_conv.cpp:133]   --->   Operation 283 'call' 'call_ln133' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_25 : Operation 284 [1/2] (0.80ns)   --->   "%call_ret3 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0, i16 %conv_bias_buf_pong_V_1, i16 %conv_bias_buf_pong_V_2, i16 %conv_bias_buf_pong_V_3, i64 %layer_weights_read, i64 %layer_bias_read, i4 3" [tiled_conv.cpp:115]   --->   Operation 284 'call' 'call_ret3' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_25 : Operation 285 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_0_2 = extractvalue i64 %call_ret3" [tiled_conv.cpp:115]   --->   Operation 285 'extractvalue' 'conv_bias_buf_pong_V_0_2' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 286 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_1_2 = extractvalue i64 %call_ret3" [tiled_conv.cpp:115]   --->   Operation 286 'extractvalue' 'conv_bias_buf_pong_V_1_2' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 287 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_2_2 = extractvalue i64 %call_ret3" [tiled_conv.cpp:115]   --->   Operation 287 'extractvalue' 'conv_bias_buf_pong_V_2_2' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 288 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_3_2 = extractvalue i64 %call_ret3" [tiled_conv.cpp:115]   --->   Operation 288 'extractvalue' 'conv_bias_buf_pong_V_3_2' <Predicate = true> <Delay = 0.00>
+
+State 26 <SV = 14> <Delay = 2.06>
+ST_26 : Operation 289 [2/2] (2.06ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_2, i16 %conv_bias_buf_ping_V_1_2, i16 %conv_bias_buf_ping_V_2_2, i16 %conv_bias_buf_ping_V_3_2" [tiled_conv.cpp:98]   --->   Operation 289 'call' 'call_ln98' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 27 <SV = 15> <Delay = 0.00>
+ST_27 : Operation 290 [1/2] (0.00ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_2, i16 %conv_bias_buf_ping_V_1_2, i16 %conv_bias_buf_ping_V_2_2, i16 %conv_bias_buf_ping_V_3_2" [tiled_conv.cpp:98]   --->   Operation 290 'call' 'call_ln98' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 28 <SV = 16> <Delay = 7.30>
+ST_28 : Operation 291 [2/2] (7.30ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 2" [tiled_conv.cpp:106]   --->   Operation 291 'call' 'call_ln106' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_28 : Operation 292 [2/2] (6.58ns)   --->   "%call_ret4 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_2, i16 %conv_bias_buf_ping_V_1_2, i16 %conv_bias_buf_ping_V_2_2, i16 %conv_bias_buf_ping_V_3_2, i64 %layer_weights_read, i64 %layer_bias_read, i4 4" [tiled_conv.cpp:142]   --->   Operation 292 'call' 'call_ret4' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 29 <SV = 17> <Delay = 0.80>
+ST_29 : Operation 293 [1/2] (0.00ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 2" [tiled_conv.cpp:106]   --->   Operation 293 'call' 'call_ln106' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_29 : Operation 294 [1/2] (0.80ns)   --->   "%call_ret4 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_2, i16 %conv_bias_buf_ping_V_1_2, i16 %conv_bias_buf_ping_V_2_2, i16 %conv_bias_buf_ping_V_3_2, i64 %layer_weights_read, i64 %layer_bias_read, i4 4" [tiled_conv.cpp:142]   --->   Operation 294 'call' 'call_ret4' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_29 : Operation 295 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_0_3 = extractvalue i64 %call_ret4" [tiled_conv.cpp:142]   --->   Operation 295 'extractvalue' 'conv_bias_buf_ping_V_0_3' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 296 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_1_3 = extractvalue i64 %call_ret4" [tiled_conv.cpp:142]   --->   Operation 296 'extractvalue' 'conv_bias_buf_ping_V_1_3' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 297 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_2_3 = extractvalue i64 %call_ret4" [tiled_conv.cpp:142]   --->   Operation 297 'extractvalue' 'conv_bias_buf_ping_V_2_3' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 298 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_3_3 = extractvalue i64 %call_ret4" [tiled_conv.cpp:142]   --->   Operation 298 'extractvalue' 'conv_bias_buf_ping_V_3_3' <Predicate = true> <Delay = 0.00>
+
+State 30 <SV = 18> <Delay = 2.06>
+ST_30 : Operation 299 [2/2] (2.06ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_2, i16 %conv_bias_buf_pong_V_1_2, i16 %conv_bias_buf_pong_V_2_2, i16 %conv_bias_buf_pong_V_3_2" [tiled_conv.cpp:125]   --->   Operation 299 'call' 'call_ln125' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 31 <SV = 19> <Delay = 0.00>
+ST_31 : Operation 300 [1/2] (0.00ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_2, i16 %conv_bias_buf_pong_V_1_2, i16 %conv_bias_buf_pong_V_2_2, i16 %conv_bias_buf_pong_V_3_2" [tiled_conv.cpp:125]   --->   Operation 300 'call' 'call_ln125' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 32 <SV = 20> <Delay = 7.30>
+ST_32 : Operation 301 [2/2] (7.30ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 3" [tiled_conv.cpp:133]   --->   Operation 301 'call' 'call_ln133' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_32 : Operation 302 [2/2] (6.58ns)   --->   "%call_ret5 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_2, i16 %conv_bias_buf_pong_V_1_2, i16 %conv_bias_buf_pong_V_2_2, i16 %conv_bias_buf_pong_V_3_2, i64 %layer_weights_read, i64 %layer_bias_read, i4 5" [tiled_conv.cpp:115]   --->   Operation 302 'call' 'call_ret5' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 33 <SV = 21> <Delay = 0.80>
+ST_33 : Operation 303 [1/2] (0.00ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 3" [tiled_conv.cpp:133]   --->   Operation 303 'call' 'call_ln133' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_33 : Operation 304 [1/2] (0.80ns)   --->   "%call_ret5 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_2, i16 %conv_bias_buf_pong_V_1_2, i16 %conv_bias_buf_pong_V_2_2, i16 %conv_bias_buf_pong_V_3_2, i64 %layer_weights_read, i64 %layer_bias_read, i4 5" [tiled_conv.cpp:115]   --->   Operation 304 'call' 'call_ret5' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_33 : Operation 305 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_0_3 = extractvalue i64 %call_ret5" [tiled_conv.cpp:115]   --->   Operation 305 'extractvalue' 'conv_bias_buf_pong_V_0_3' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 306 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_1_3 = extractvalue i64 %call_ret5" [tiled_conv.cpp:115]   --->   Operation 306 'extractvalue' 'conv_bias_buf_pong_V_1_3' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 307 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_2_3 = extractvalue i64 %call_ret5" [tiled_conv.cpp:115]   --->   Operation 307 'extractvalue' 'conv_bias_buf_pong_V_2_3' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 308 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_3_3 = extractvalue i64 %call_ret5" [tiled_conv.cpp:115]   --->   Operation 308 'extractvalue' 'conv_bias_buf_pong_V_3_3' <Predicate = true> <Delay = 0.00>
+
+State 34 <SV = 22> <Delay = 2.06>
+ST_34 : Operation 309 [2/2] (2.06ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_3, i16 %conv_bias_buf_ping_V_1_3, i16 %conv_bias_buf_ping_V_2_3, i16 %conv_bias_buf_ping_V_3_3" [tiled_conv.cpp:98]   --->   Operation 309 'call' 'call_ln98' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 35 <SV = 23> <Delay = 0.00>
+ST_35 : Operation 310 [1/2] (0.00ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_3, i16 %conv_bias_buf_ping_V_1_3, i16 %conv_bias_buf_ping_V_2_3, i16 %conv_bias_buf_ping_V_3_3" [tiled_conv.cpp:98]   --->   Operation 310 'call' 'call_ln98' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 36 <SV = 24> <Delay = 7.30>
+ST_36 : Operation 311 [2/2] (7.30ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 4" [tiled_conv.cpp:106]   --->   Operation 311 'call' 'call_ln106' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_36 : Operation 312 [2/2] (6.58ns)   --->   "%call_ret6 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_3, i16 %conv_bias_buf_ping_V_1_3, i16 %conv_bias_buf_ping_V_2_3, i16 %conv_bias_buf_ping_V_3_3, i64 %layer_weights_read, i64 %layer_bias_read, i4 6" [tiled_conv.cpp:142]   --->   Operation 312 'call' 'call_ret6' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 37 <SV = 25> <Delay = 0.80>
+ST_37 : Operation 313 [1/2] (0.00ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 4" [tiled_conv.cpp:106]   --->   Operation 313 'call' 'call_ln106' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_37 : Operation 314 [1/2] (0.80ns)   --->   "%call_ret6 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_3, i16 %conv_bias_buf_ping_V_1_3, i16 %conv_bias_buf_ping_V_2_3, i16 %conv_bias_buf_ping_V_3_3, i64 %layer_weights_read, i64 %layer_bias_read, i4 6" [tiled_conv.cpp:142]   --->   Operation 314 'call' 'call_ret6' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_37 : Operation 315 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_0_4 = extractvalue i64 %call_ret6" [tiled_conv.cpp:142]   --->   Operation 315 'extractvalue' 'conv_bias_buf_ping_V_0_4' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 316 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_1_4 = extractvalue i64 %call_ret6" [tiled_conv.cpp:142]   --->   Operation 316 'extractvalue' 'conv_bias_buf_ping_V_1_4' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 317 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_2_4 = extractvalue i64 %call_ret6" [tiled_conv.cpp:142]   --->   Operation 317 'extractvalue' 'conv_bias_buf_ping_V_2_4' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 318 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_3_4 = extractvalue i64 %call_ret6" [tiled_conv.cpp:142]   --->   Operation 318 'extractvalue' 'conv_bias_buf_ping_V_3_4' <Predicate = true> <Delay = 0.00>
+
+State 38 <SV = 26> <Delay = 2.06>
+ST_38 : Operation 319 [2/2] (2.06ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_3, i16 %conv_bias_buf_pong_V_1_3, i16 %conv_bias_buf_pong_V_2_3, i16 %conv_bias_buf_pong_V_3_3" [tiled_conv.cpp:125]   --->   Operation 319 'call' 'call_ln125' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 39 <SV = 27> <Delay = 0.00>
+ST_39 : Operation 320 [1/2] (0.00ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_3, i16 %conv_bias_buf_pong_V_1_3, i16 %conv_bias_buf_pong_V_2_3, i16 %conv_bias_buf_pong_V_3_3" [tiled_conv.cpp:125]   --->   Operation 320 'call' 'call_ln125' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 40 <SV = 28> <Delay = 7.30>
+ST_40 : Operation 321 [2/2] (7.30ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 5" [tiled_conv.cpp:133]   --->   Operation 321 'call' 'call_ln133' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_40 : Operation 322 [2/2] (6.58ns)   --->   "%call_ret7 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_3, i16 %conv_bias_buf_pong_V_1_3, i16 %conv_bias_buf_pong_V_2_3, i16 %conv_bias_buf_pong_V_3_3, i64 %layer_weights_read, i64 %layer_bias_read, i4 7" [tiled_conv.cpp:115]   --->   Operation 322 'call' 'call_ret7' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 41 <SV = 29> <Delay = 0.80>
+ST_41 : Operation 323 [1/2] (0.00ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 5" [tiled_conv.cpp:133]   --->   Operation 323 'call' 'call_ln133' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_41 : Operation 324 [1/2] (0.80ns)   --->   "%call_ret7 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_3, i16 %conv_bias_buf_pong_V_1_3, i16 %conv_bias_buf_pong_V_2_3, i16 %conv_bias_buf_pong_V_3_3, i64 %layer_weights_read, i64 %layer_bias_read, i4 7" [tiled_conv.cpp:115]   --->   Operation 324 'call' 'call_ret7' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_41 : Operation 325 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_0_4 = extractvalue i64 %call_ret7" [tiled_conv.cpp:115]   --->   Operation 325 'extractvalue' 'conv_bias_buf_pong_V_0_4' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 326 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_1_4 = extractvalue i64 %call_ret7" [tiled_conv.cpp:115]   --->   Operation 326 'extractvalue' 'conv_bias_buf_pong_V_1_4' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 327 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_2_4 = extractvalue i64 %call_ret7" [tiled_conv.cpp:115]   --->   Operation 327 'extractvalue' 'conv_bias_buf_pong_V_2_4' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 328 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_3_4 = extractvalue i64 %call_ret7" [tiled_conv.cpp:115]   --->   Operation 328 'extractvalue' 'conv_bias_buf_pong_V_3_4' <Predicate = true> <Delay = 0.00>
+
+State 42 <SV = 30> <Delay = 2.06>
+ST_42 : Operation 329 [2/2] (2.06ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_4, i16 %conv_bias_buf_ping_V_1_4, i16 %conv_bias_buf_ping_V_2_4, i16 %conv_bias_buf_ping_V_3_4" [tiled_conv.cpp:98]   --->   Operation 329 'call' 'call_ln98' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 43 <SV = 31> <Delay = 0.00>
+ST_43 : Operation 330 [1/2] (0.00ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_4, i16 %conv_bias_buf_ping_V_1_4, i16 %conv_bias_buf_ping_V_2_4, i16 %conv_bias_buf_ping_V_3_4" [tiled_conv.cpp:98]   --->   Operation 330 'call' 'call_ln98' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 44 <SV = 32> <Delay = 7.30>
+ST_44 : Operation 331 [2/2] (7.30ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 6" [tiled_conv.cpp:106]   --->   Operation 331 'call' 'call_ln106' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_44 : Operation 332 [2/2] (6.58ns)   --->   "%call_ret8 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_4, i16 %conv_bias_buf_ping_V_1_4, i16 %conv_bias_buf_ping_V_2_4, i16 %conv_bias_buf_ping_V_3_4, i64 %layer_weights_read, i64 %layer_bias_read, i4 8" [tiled_conv.cpp:142]   --->   Operation 332 'call' 'call_ret8' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 45 <SV = 33> <Delay = 0.80>
+ST_45 : Operation 333 [1/2] (0.00ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 6" [tiled_conv.cpp:106]   --->   Operation 333 'call' 'call_ln106' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_45 : Operation 334 [1/2] (0.80ns)   --->   "%call_ret8 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_4, i16 %conv_bias_buf_ping_V_1_4, i16 %conv_bias_buf_ping_V_2_4, i16 %conv_bias_buf_ping_V_3_4, i64 %layer_weights_read, i64 %layer_bias_read, i4 8" [tiled_conv.cpp:142]   --->   Operation 334 'call' 'call_ret8' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_45 : Operation 335 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_0_5 = extractvalue i64 %call_ret8" [tiled_conv.cpp:142]   --->   Operation 335 'extractvalue' 'conv_bias_buf_ping_V_0_5' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 336 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_1_5 = extractvalue i64 %call_ret8" [tiled_conv.cpp:142]   --->   Operation 336 'extractvalue' 'conv_bias_buf_ping_V_1_5' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 337 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_2_5 = extractvalue i64 %call_ret8" [tiled_conv.cpp:142]   --->   Operation 337 'extractvalue' 'conv_bias_buf_ping_V_2_5' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 338 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_3_5 = extractvalue i64 %call_ret8" [tiled_conv.cpp:142]   --->   Operation 338 'extractvalue' 'conv_bias_buf_ping_V_3_5' <Predicate = true> <Delay = 0.00>
+
+State 46 <SV = 34> <Delay = 2.06>
+ST_46 : Operation 339 [2/2] (2.06ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_4, i16 %conv_bias_buf_pong_V_1_4, i16 %conv_bias_buf_pong_V_2_4, i16 %conv_bias_buf_pong_V_3_4" [tiled_conv.cpp:125]   --->   Operation 339 'call' 'call_ln125' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 47 <SV = 35> <Delay = 0.00>
+ST_47 : Operation 340 [1/2] (0.00ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_4, i16 %conv_bias_buf_pong_V_1_4, i16 %conv_bias_buf_pong_V_2_4, i16 %conv_bias_buf_pong_V_3_4" [tiled_conv.cpp:125]   --->   Operation 340 'call' 'call_ln125' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 48 <SV = 36> <Delay = 7.30>
+ST_48 : Operation 341 [2/2] (7.30ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 7" [tiled_conv.cpp:133]   --->   Operation 341 'call' 'call_ln133' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_48 : Operation 342 [2/2] (6.58ns)   --->   "%call_ret9 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_4, i16 %conv_bias_buf_pong_V_1_4, i16 %conv_bias_buf_pong_V_2_4, i16 %conv_bias_buf_pong_V_3_4, i64 %layer_weights_read, i64 %layer_bias_read, i4 9" [tiled_conv.cpp:115]   --->   Operation 342 'call' 'call_ret9' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 49 <SV = 37> <Delay = 0.80>
+ST_49 : Operation 343 [1/2] (0.00ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 7" [tiled_conv.cpp:133]   --->   Operation 343 'call' 'call_ln133' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_49 : Operation 344 [1/2] (0.80ns)   --->   "%call_ret9 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_4, i16 %conv_bias_buf_pong_V_1_4, i16 %conv_bias_buf_pong_V_2_4, i16 %conv_bias_buf_pong_V_3_4, i64 %layer_weights_read, i64 %layer_bias_read, i4 9" [tiled_conv.cpp:115]   --->   Operation 344 'call' 'call_ret9' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_49 : Operation 345 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_0_5 = extractvalue i64 %call_ret9" [tiled_conv.cpp:115]   --->   Operation 345 'extractvalue' 'conv_bias_buf_pong_V_0_5' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 346 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_1_5 = extractvalue i64 %call_ret9" [tiled_conv.cpp:115]   --->   Operation 346 'extractvalue' 'conv_bias_buf_pong_V_1_5' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 347 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_2_5 = extractvalue i64 %call_ret9" [tiled_conv.cpp:115]   --->   Operation 347 'extractvalue' 'conv_bias_buf_pong_V_2_5' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 348 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_3_5 = extractvalue i64 %call_ret9" [tiled_conv.cpp:115]   --->   Operation 348 'extractvalue' 'conv_bias_buf_pong_V_3_5' <Predicate = true> <Delay = 0.00>
+
+State 50 <SV = 38> <Delay = 2.06>
+ST_50 : Operation 349 [2/2] (2.06ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_5, i16 %conv_bias_buf_ping_V_1_5, i16 %conv_bias_buf_ping_V_2_5, i16 %conv_bias_buf_ping_V_3_5" [tiled_conv.cpp:98]   --->   Operation 349 'call' 'call_ln98' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 51 <SV = 39> <Delay = 0.00>
+ST_51 : Operation 350 [1/2] (0.00ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_5, i16 %conv_bias_buf_ping_V_1_5, i16 %conv_bias_buf_ping_V_2_5, i16 %conv_bias_buf_ping_V_3_5" [tiled_conv.cpp:98]   --->   Operation 350 'call' 'call_ln98' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 52 <SV = 40> <Delay = 7.30>
+ST_52 : Operation 351 [2/2] (7.30ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 8" [tiled_conv.cpp:106]   --->   Operation 351 'call' 'call_ln106' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_52 : Operation 352 [2/2] (6.58ns)   --->   "%call_ret10 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_5, i16 %conv_bias_buf_ping_V_1_5, i16 %conv_bias_buf_ping_V_2_5, i16 %conv_bias_buf_ping_V_3_5, i64 %layer_weights_read, i64 %layer_bias_read, i4 10" [tiled_conv.cpp:142]   --->   Operation 352 'call' 'call_ret10' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 53 <SV = 41> <Delay = 0.80>
+ST_53 : Operation 353 [1/2] (0.00ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 8" [tiled_conv.cpp:106]   --->   Operation 353 'call' 'call_ln106' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_53 : Operation 354 [1/2] (0.80ns)   --->   "%call_ret10 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_5, i16 %conv_bias_buf_ping_V_1_5, i16 %conv_bias_buf_ping_V_2_5, i16 %conv_bias_buf_ping_V_3_5, i64 %layer_weights_read, i64 %layer_bias_read, i4 10" [tiled_conv.cpp:142]   --->   Operation 354 'call' 'call_ret10' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_53 : Operation 355 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_0_6 = extractvalue i64 %call_ret10" [tiled_conv.cpp:142]   --->   Operation 355 'extractvalue' 'conv_bias_buf_ping_V_0_6' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 356 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_1_6 = extractvalue i64 %call_ret10" [tiled_conv.cpp:142]   --->   Operation 356 'extractvalue' 'conv_bias_buf_ping_V_1_6' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 357 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_2_6 = extractvalue i64 %call_ret10" [tiled_conv.cpp:142]   --->   Operation 357 'extractvalue' 'conv_bias_buf_ping_V_2_6' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 358 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_3_6 = extractvalue i64 %call_ret10" [tiled_conv.cpp:142]   --->   Operation 358 'extractvalue' 'conv_bias_buf_ping_V_3_6' <Predicate = true> <Delay = 0.00>
+
+State 54 <SV = 42> <Delay = 2.06>
+ST_54 : Operation 359 [2/2] (2.06ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_5, i16 %conv_bias_buf_pong_V_1_5, i16 %conv_bias_buf_pong_V_2_5, i16 %conv_bias_buf_pong_V_3_5" [tiled_conv.cpp:125]   --->   Operation 359 'call' 'call_ln125' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 55 <SV = 43> <Delay = 0.00>
+ST_55 : Operation 360 [1/2] (0.00ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_5, i16 %conv_bias_buf_pong_V_1_5, i16 %conv_bias_buf_pong_V_2_5, i16 %conv_bias_buf_pong_V_3_5" [tiled_conv.cpp:125]   --->   Operation 360 'call' 'call_ln125' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 56 <SV = 44> <Delay = 7.30>
+ST_56 : Operation 361 [2/2] (7.30ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 9" [tiled_conv.cpp:133]   --->   Operation 361 'call' 'call_ln133' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_56 : Operation 362 [2/2] (6.58ns)   --->   "%call_ret11 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_5, i16 %conv_bias_buf_pong_V_1_5, i16 %conv_bias_buf_pong_V_2_5, i16 %conv_bias_buf_pong_V_3_5, i64 %layer_weights_read, i64 %layer_bias_read, i4 11" [tiled_conv.cpp:115]   --->   Operation 362 'call' 'call_ret11' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 57 <SV = 45> <Delay = 0.80>
+ST_57 : Operation 363 [1/2] (0.00ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 9" [tiled_conv.cpp:133]   --->   Operation 363 'call' 'call_ln133' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_57 : Operation 364 [1/2] (0.80ns)   --->   "%call_ret11 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_5, i16 %conv_bias_buf_pong_V_1_5, i16 %conv_bias_buf_pong_V_2_5, i16 %conv_bias_buf_pong_V_3_5, i64 %layer_weights_read, i64 %layer_bias_read, i4 11" [tiled_conv.cpp:115]   --->   Operation 364 'call' 'call_ret11' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_57 : Operation 365 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_0_6 = extractvalue i64 %call_ret11" [tiled_conv.cpp:115]   --->   Operation 365 'extractvalue' 'conv_bias_buf_pong_V_0_6' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 366 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_1_6 = extractvalue i64 %call_ret11" [tiled_conv.cpp:115]   --->   Operation 366 'extractvalue' 'conv_bias_buf_pong_V_1_6' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 367 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_2_6 = extractvalue i64 %call_ret11" [tiled_conv.cpp:115]   --->   Operation 367 'extractvalue' 'conv_bias_buf_pong_V_2_6' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 368 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_3_6 = extractvalue i64 %call_ret11" [tiled_conv.cpp:115]   --->   Operation 368 'extractvalue' 'conv_bias_buf_pong_V_3_6' <Predicate = true> <Delay = 0.00>
+
+State 58 <SV = 46> <Delay = 2.06>
+ST_58 : Operation 369 [2/2] (2.06ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_6, i16 %conv_bias_buf_ping_V_1_6, i16 %conv_bias_buf_ping_V_2_6, i16 %conv_bias_buf_ping_V_3_6" [tiled_conv.cpp:98]   --->   Operation 369 'call' 'call_ln98' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 59 <SV = 47> <Delay = 0.00>
+ST_59 : Operation 370 [1/2] (0.00ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_6, i16 %conv_bias_buf_ping_V_1_6, i16 %conv_bias_buf_ping_V_2_6, i16 %conv_bias_buf_ping_V_3_6" [tiled_conv.cpp:98]   --->   Operation 370 'call' 'call_ln98' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 60 <SV = 48> <Delay = 7.30>
+ST_60 : Operation 371 [2/2] (7.30ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 10" [tiled_conv.cpp:106]   --->   Operation 371 'call' 'call_ln106' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_60 : Operation 372 [2/2] (6.58ns)   --->   "%call_ret12 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_6, i16 %conv_bias_buf_ping_V_1_6, i16 %conv_bias_buf_ping_V_2_6, i16 %conv_bias_buf_ping_V_3_6, i64 %layer_weights_read, i64 %layer_bias_read, i4 12" [tiled_conv.cpp:142]   --->   Operation 372 'call' 'call_ret12' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 61 <SV = 49> <Delay = 0.80>
+ST_61 : Operation 373 [1/2] (0.00ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 10" [tiled_conv.cpp:106]   --->   Operation 373 'call' 'call_ln106' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_61 : Operation 374 [1/2] (0.80ns)   --->   "%call_ret12 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_6, i16 %conv_bias_buf_ping_V_1_6, i16 %conv_bias_buf_ping_V_2_6, i16 %conv_bias_buf_ping_V_3_6, i64 %layer_weights_read, i64 %layer_bias_read, i4 12" [tiled_conv.cpp:142]   --->   Operation 374 'call' 'call_ret12' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_61 : Operation 375 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_0_7 = extractvalue i64 %call_ret12" [tiled_conv.cpp:142]   --->   Operation 375 'extractvalue' 'conv_bias_buf_ping_V_0_7' <Predicate = true> <Delay = 0.00>
+ST_61 : Operation 376 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_1_7 = extractvalue i64 %call_ret12" [tiled_conv.cpp:142]   --->   Operation 376 'extractvalue' 'conv_bias_buf_ping_V_1_7' <Predicate = true> <Delay = 0.00>
+ST_61 : Operation 377 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_2_7 = extractvalue i64 %call_ret12" [tiled_conv.cpp:142]   --->   Operation 377 'extractvalue' 'conv_bias_buf_ping_V_2_7' <Predicate = true> <Delay = 0.00>
+ST_61 : Operation 378 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_3_7 = extractvalue i64 %call_ret12" [tiled_conv.cpp:142]   --->   Operation 378 'extractvalue' 'conv_bias_buf_ping_V_3_7' <Predicate = true> <Delay = 0.00>
+
+State 62 <SV = 50> <Delay = 2.06>
+ST_62 : Operation 379 [2/2] (2.06ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_6, i16 %conv_bias_buf_pong_V_1_6, i16 %conv_bias_buf_pong_V_2_6, i16 %conv_bias_buf_pong_V_3_6" [tiled_conv.cpp:125]   --->   Operation 379 'call' 'call_ln125' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 63 <SV = 51> <Delay = 0.00>
+ST_63 : Operation 380 [1/2] (0.00ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_6, i16 %conv_bias_buf_pong_V_1_6, i16 %conv_bias_buf_pong_V_2_6, i16 %conv_bias_buf_pong_V_3_6" [tiled_conv.cpp:125]   --->   Operation 380 'call' 'call_ln125' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 64 <SV = 52> <Delay = 7.30>
+ST_64 : Operation 381 [2/2] (7.30ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 11" [tiled_conv.cpp:133]   --->   Operation 381 'call' 'call_ln133' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_64 : Operation 382 [2/2] (6.58ns)   --->   "%call_ret13 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_6, i16 %conv_bias_buf_pong_V_1_6, i16 %conv_bias_buf_pong_V_2_6, i16 %conv_bias_buf_pong_V_3_6, i64 %layer_weights_read, i64 %layer_bias_read, i4 13" [tiled_conv.cpp:115]   --->   Operation 382 'call' 'call_ret13' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 65 <SV = 53> <Delay = 0.80>
+ST_65 : Operation 383 [1/2] (0.00ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 11" [tiled_conv.cpp:133]   --->   Operation 383 'call' 'call_ln133' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_65 : Operation 384 [1/2] (0.80ns)   --->   "%call_ret13 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_6, i16 %conv_bias_buf_pong_V_1_6, i16 %conv_bias_buf_pong_V_2_6, i16 %conv_bias_buf_pong_V_3_6, i64 %layer_weights_read, i64 %layer_bias_read, i4 13" [tiled_conv.cpp:115]   --->   Operation 384 'call' 'call_ret13' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_65 : Operation 385 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_0_7 = extractvalue i64 %call_ret13" [tiled_conv.cpp:115]   --->   Operation 385 'extractvalue' 'conv_bias_buf_pong_V_0_7' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 386 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_1_7 = extractvalue i64 %call_ret13" [tiled_conv.cpp:115]   --->   Operation 386 'extractvalue' 'conv_bias_buf_pong_V_1_7' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 387 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_2_7 = extractvalue i64 %call_ret13" [tiled_conv.cpp:115]   --->   Operation 387 'extractvalue' 'conv_bias_buf_pong_V_2_7' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 388 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_3_7 = extractvalue i64 %call_ret13" [tiled_conv.cpp:115]   --->   Operation 388 'extractvalue' 'conv_bias_buf_pong_V_3_7' <Predicate = true> <Delay = 0.00>
+
+State 66 <SV = 54> <Delay = 2.06>
+ST_66 : Operation 389 [2/2] (2.06ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_7, i16 %conv_bias_buf_ping_V_1_7, i16 %conv_bias_buf_ping_V_2_7, i16 %conv_bias_buf_ping_V_3_7" [tiled_conv.cpp:98]   --->   Operation 389 'call' 'call_ln98' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 67 <SV = 55> <Delay = 0.00>
+ST_67 : Operation 390 [1/2] (0.00ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_7, i16 %conv_bias_buf_ping_V_1_7, i16 %conv_bias_buf_ping_V_2_7, i16 %conv_bias_buf_ping_V_3_7" [tiled_conv.cpp:98]   --->   Operation 390 'call' 'call_ln98' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 68 <SV = 56> <Delay = 7.30>
+ST_68 : Operation 391 [2/2] (7.30ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 12" [tiled_conv.cpp:106]   --->   Operation 391 'call' 'call_ln106' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_68 : Operation 392 [2/2] (6.58ns)   --->   "%call_ret14 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_7, i16 %conv_bias_buf_ping_V_1_7, i16 %conv_bias_buf_ping_V_2_7, i16 %conv_bias_buf_ping_V_3_7, i64 %layer_weights_read, i64 %layer_bias_read, i4 14" [tiled_conv.cpp:142]   --->   Operation 392 'call' 'call_ret14' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 69 <SV = 57> <Delay = 0.80>
+ST_69 : Operation 393 [1/2] (0.00ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 12" [tiled_conv.cpp:106]   --->   Operation 393 'call' 'call_ln106' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_69 : Operation 394 [1/2] (0.80ns)   --->   "%call_ret14 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_7, i16 %conv_bias_buf_ping_V_1_7, i16 %conv_bias_buf_ping_V_2_7, i16 %conv_bias_buf_ping_V_3_7, i64 %layer_weights_read, i64 %layer_bias_read, i4 14" [tiled_conv.cpp:142]   --->   Operation 394 'call' 'call_ret14' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_69 : Operation 395 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_0_8 = extractvalue i64 %call_ret14" [tiled_conv.cpp:142]   --->   Operation 395 'extractvalue' 'conv_bias_buf_ping_V_0_8' <Predicate = true> <Delay = 0.00>
+ST_69 : Operation 396 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_1_8 = extractvalue i64 %call_ret14" [tiled_conv.cpp:142]   --->   Operation 396 'extractvalue' 'conv_bias_buf_ping_V_1_8' <Predicate = true> <Delay = 0.00>
+ST_69 : Operation 397 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_2_8 = extractvalue i64 %call_ret14" [tiled_conv.cpp:142]   --->   Operation 397 'extractvalue' 'conv_bias_buf_ping_V_2_8' <Predicate = true> <Delay = 0.00>
+ST_69 : Operation 398 [1/1] (0.00ns)   --->   "%conv_bias_buf_ping_V_3_8 = extractvalue i64 %call_ret14" [tiled_conv.cpp:142]   --->   Operation 398 'extractvalue' 'conv_bias_buf_ping_V_3_8' <Predicate = true> <Delay = 0.00>
+ST_69 : Operation 399 [1/1] (0.00ns)   --->   "%store_ln142 = store i16 %conv_bias_buf_ping_V_3_8, i16 %conv_bias_buf_ping_V_3_1" [tiled_conv.cpp:142]   --->   Operation 399 'store' 'store_ln142' <Predicate = true> <Delay = 0.00>
+ST_69 : Operation 400 [1/1] (0.00ns)   --->   "%store_ln142 = store i16 %conv_bias_buf_ping_V_2_8, i16 %conv_bias_buf_ping_V_2_1" [tiled_conv.cpp:142]   --->   Operation 400 'store' 'store_ln142' <Predicate = true> <Delay = 0.00>
+ST_69 : Operation 401 [1/1] (0.00ns)   --->   "%store_ln142 = store i16 %conv_bias_buf_ping_V_1_8, i16 %conv_bias_buf_ping_V_1_1" [tiled_conv.cpp:142]   --->   Operation 401 'store' 'store_ln142' <Predicate = true> <Delay = 0.00>
+ST_69 : Operation 402 [1/1] (0.00ns)   --->   "%store_ln142 = store i16 %conv_bias_buf_ping_V_0_8, i16 %conv_bias_buf_ping_V_0_1" [tiled_conv.cpp:142]   --->   Operation 402 'store' 'store_ln142' <Predicate = true> <Delay = 0.00>
+
+State 70 <SV = 58> <Delay = 2.06>
+ST_70 : Operation 403 [2/2] (2.06ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_7, i16 %conv_bias_buf_pong_V_1_7, i16 %conv_bias_buf_pong_V_2_7, i16 %conv_bias_buf_pong_V_3_7" [tiled_conv.cpp:125]   --->   Operation 403 'call' 'call_ln125' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 71 <SV = 59> <Delay = 0.00>
+ST_71 : Operation 404 [1/2] (0.00ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_7, i16 %conv_bias_buf_pong_V_1_7, i16 %conv_bias_buf_pong_V_2_7, i16 %conv_bias_buf_pong_V_3_7" [tiled_conv.cpp:125]   --->   Operation 404 'call' 'call_ln125' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 72 <SV = 60> <Delay = 7.30>
+ST_72 : Operation 405 [2/2] (7.30ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 13" [tiled_conv.cpp:133]   --->   Operation 405 'call' 'call_ln133' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_72 : Operation 406 [2/2] (6.58ns)   --->   "%call_ret15 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_7, i16 %conv_bias_buf_pong_V_1_7, i16 %conv_bias_buf_pong_V_2_7, i16 %conv_bias_buf_pong_V_3_7, i64 %layer_weights_read, i64 %layer_bias_read, i4 15" [tiled_conv.cpp:115]   --->   Operation 406 'call' 'call_ret15' <Predicate = true> <Delay = 6.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 73 <SV = 61> <Delay = 0.80>
+ST_73 : Operation 407 [1/2] (0.00ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 13" [tiled_conv.cpp:133]   --->   Operation 407 'call' 'call_ln133' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_73 : Operation 408 [1/2] (0.80ns)   --->   "%call_ret15 = call i64 @load_layer_params_from_DRAM, i16 %wt, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_7, i16 %conv_bias_buf_pong_V_1_7, i16 %conv_bias_buf_pong_V_2_7, i16 %conv_bias_buf_pong_V_3_7, i64 %layer_weights_read, i64 %layer_bias_read, i4 15" [tiled_conv.cpp:115]   --->   Operation 408 'call' 'call_ret15' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_73 : Operation 409 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_0_8 = extractvalue i64 %call_ret15" [tiled_conv.cpp:115]   --->   Operation 409 'extractvalue' 'conv_bias_buf_pong_V_0_8' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 410 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_1_8 = extractvalue i64 %call_ret15" [tiled_conv.cpp:115]   --->   Operation 410 'extractvalue' 'conv_bias_buf_pong_V_1_8' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 411 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_2_8 = extractvalue i64 %call_ret15" [tiled_conv.cpp:115]   --->   Operation 411 'extractvalue' 'conv_bias_buf_pong_V_2_8' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 412 [1/1] (0.00ns)   --->   "%conv_bias_buf_pong_V_3_8 = extractvalue i64 %call_ret15" [tiled_conv.cpp:115]   --->   Operation 412 'extractvalue' 'conv_bias_buf_pong_V_3_8' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 413 [1/1] (0.00ns)   --->   "%store_ln115 = store i16 %conv_bias_buf_pong_V_3_8, i16 %conv_bias_buf_pong_V_3_1" [tiled_conv.cpp:115]   --->   Operation 413 'store' 'store_ln115' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 414 [1/1] (0.00ns)   --->   "%store_ln115 = store i16 %conv_bias_buf_pong_V_2_8, i16 %conv_bias_buf_pong_V_2_1" [tiled_conv.cpp:115]   --->   Operation 414 'store' 'store_ln115' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 415 [1/1] (0.00ns)   --->   "%store_ln115 = store i16 %conv_bias_buf_pong_V_1_8, i16 %conv_bias_buf_pong_V_1_1" [tiled_conv.cpp:115]   --->   Operation 415 'store' 'store_ln115' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 416 [1/1] (0.00ns)   --->   "%store_ln115 = store i16 %conv_bias_buf_pong_V_0_8, i16 %conv_bias_buf_pong_V_0_1" [tiled_conv.cpp:115]   --->   Operation 416 'store' 'store_ln115' <Predicate = true> <Delay = 0.00>
+
+State 74 <SV = 62> <Delay = 2.06>
+ST_74 : Operation 417 [2/2] (2.06ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_8, i16 %conv_bias_buf_ping_V_1_8, i16 %conv_bias_buf_ping_V_2_8, i16 %conv_bias_buf_ping_V_3_8" [tiled_conv.cpp:98]   --->   Operation 417 'call' 'call_ln98' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 75 <SV = 63> <Delay = 0.00>
+ST_75 : Operation 418 [1/2] (0.00ns)   --->   "%call_ln98 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_ping_V_0, i16 %conv_wt_buf_ping_V_1, i16 %conv_wt_buf_ping_V_2, i16 %conv_wt_buf_ping_V_3, i16 %conv_wt_buf_ping_V_4, i16 %conv_wt_buf_ping_V_5, i16 %conv_wt_buf_ping_V_6, i16 %conv_bias_buf_ping_V_0_8, i16 %conv_bias_buf_ping_V_1_8, i16 %conv_bias_buf_ping_V_2_8, i16 %conv_bias_buf_ping_V_3_8" [tiled_conv.cpp:98]   --->   Operation 418 'call' 'call_ln98' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 76 <SV = 64> <Delay = 7.30>
+ST_76 : Operation 419 [2/2] (7.30ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 14" [tiled_conv.cpp:106]   --->   Operation 419 'call' 'call_ln106' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 77 <SV = 65> <Delay = 0.00>
+ST_77 : Operation 420 [1/2] (0.00ns)   --->   "%call_ln106 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 14" [tiled_conv.cpp:106]   --->   Operation 420 'call' 'call_ln106' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 78 <SV = 66> <Delay = 2.06>
+ST_78 : Operation 421 [2/2] (2.06ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_8, i16 %conv_bias_buf_pong_V_1_8, i16 %conv_bias_buf_pong_V_2_8, i16 %conv_bias_buf_pong_V_3_8" [tiled_conv.cpp:125]   --->   Operation 421 'call' 'call_ln125' <Predicate = true> <Delay = 2.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 79 <SV = 67> <Delay = 0.00>
+ST_79 : Operation 422 [1/2] (0.00ns)   --->   "%call_ln125 = call void @conv_7x7, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i16 %conv_in_buf_V_0, i16 %conv_in_buf_V_1, i16 %conv_in_buf_V_2, i16 %conv_wt_buf_pong_V_0, i16 %conv_wt_buf_pong_V_1, i16 %conv_wt_buf_pong_V_2, i16 %conv_wt_buf_pong_V_3, i16 %conv_wt_buf_pong_V_4, i16 %conv_wt_buf_pong_V_5, i16 %conv_wt_buf_pong_V_6, i16 %conv_bias_buf_pong_V_0_8, i16 %conv_bias_buf_pong_V_1_8, i16 %conv_bias_buf_pong_V_2_8, i16 %conv_bias_buf_pong_V_3_8" [tiled_conv.cpp:125]   --->   Operation 422 'call' 'call_ln125' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 80 <SV = 68> <Delay = 7.30>
+ST_80 : Operation 423 [2/2] (7.30ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 15" [tiled_conv.cpp:133]   --->   Operation 423 'call' 'call_ln133' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 81 <SV = 69> <Delay = 0.00>
+ST_81 : Operation 424 [1/2] (0.00ns)   --->   "%call_ln133 = call void @store_output_tile_to_DRAM, i16 %fm, i64 %output_feature_map_read, i16 %conv_out_buf_0_V, i16 %conv_out_buf_1_V, i16 %conv_out_buf_2_V, i16 %conv_out_buf_3_V, i4 %trunc_ln62, i5 %trunc_ln28, i4 15" [tiled_conv.cpp:133]   --->   Operation 424 'call' 'call_ln133' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_81 : Operation 425 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 425 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.25ns
+The critical path consists of the following:
+	'alloca' operation ('conv_out_buf[0].V', tiled_conv.cpp:42) [50]  (0 ns)
+	'getelementptr' operation ('conv_out_buf_0_V_addr') [51]  (0 ns)
+	'store' operation ('store_ln731') of constant 0 on array 'conv_out_buf[0].V', tiled_conv.cpp:42 [55]  (3.25 ns)
+
+ <State 2>: 3ns
+The critical path consists of the following:
+	'phi' operation ('ti', tiled_conv.cpp:62) with incoming values : ('select_ln62_1', tiled_conv.cpp:62) [59]  (0 ns)
+	'add' operation ('add_ln62', tiled_conv.cpp:62) [65]  (1.78 ns)
+	'select' operation ('select_ln62_1', tiled_conv.cpp:62) [70]  (1.22 ns)
+
+ <State 3>: 8.26ns
+The critical path consists of the following:
+	'mul' operation of DSP[74] ('mul_ln62', tiled_conv.cpp:62) [73]  (3.36 ns)
+	'add' operation of DSP[74] ('add_ln62_1', tiled_conv.cpp:62) [74]  (3.02 ns)
+	'icmp' operation ('p_mid126', tiled_conv.cpp:62) [83]  (1.88 ns)
+
+ <State 4>: 6.19ns
+The critical path consists of the following:
+	'phi' operation ('indvar_flatten', utils.cpp:37) with incoming values : ('select_ln37_4', utils.cpp:37) [88]  (0 ns)
+	'icmp' operation ('icmp_ln37', utils.cpp:37) [102]  (1.99 ns)
+	'select' operation ('select_ln34', utils.cpp:34) [103]  (1.19 ns)
+	'add' operation ('add_ln37', utils.cpp:37) [115]  (1.83 ns)
+	'select' operation ('select_ln37_1', utils.cpp:37) [119]  (1.19 ns)
+
+ <State 5>: 6.44ns
+The critical path consists of the following:
+	'add' operation ('add_ln39_1', utils.cpp:39) [123]  (1.64 ns)
+	'select' operation ('select_ln37_3', utils.cpp:37) [126]  (0.692 ns)
+	'add' operation ('add_ln49_1', utils.cpp:49) [150]  (4.11 ns)
+
+ <State 6>: 7.04ns
+The critical path consists of the following:
+	'add' operation ('add_ln34_1', utils.cpp:34) [108]  (3.52 ns)
+	'add' operation ('add_ln49_2', utils.cpp:49) [152]  (3.52 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	bus request on port 'fm' (utils.cpp:49) [156]  (7.3 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	bus request on port 'fm' (utils.cpp:49) [156]  (7.3 ns)
+
+ <State 9>: 7.3ns
+The critical path consists of the following:
+	bus request on port 'fm' (utils.cpp:49) [156]  (7.3 ns)
+
+ <State 10>: 7.3ns
+The critical path consists of the following:
+	bus request on port 'fm' (utils.cpp:49) [156]  (7.3 ns)
+
+ <State 11>: 7.3ns
+The critical path consists of the following:
+	bus request on port 'fm' (utils.cpp:49) [156]  (7.3 ns)
+
+ <State 12>: 7.3ns
+The critical path consists of the following:
+	bus request on port 'fm' (utils.cpp:49) [156]  (7.3 ns)
+
+ <State 13>: 7.3ns
+The critical path consists of the following:
+	bus request on port 'fm' (utils.cpp:49) [156]  (7.3 ns)
+
+ <State 14>: 7.3ns
+The critical path consists of the following:
+	bus read on port 'fm' (utils.cpp:49) [157]  (7.3 ns)
+
+ <State 15>: 4.84ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('storemerge', utils.cpp:49) with incoming values : ('fm_addr_read', utils.cpp:49) [160]  (1.59 ns)
+	'phi' operation ('storemerge', utils.cpp:49) with incoming values : ('fm_addr_read', utils.cpp:49) [160]  (0 ns)
+	'store' operation ('store_ln47', utils.cpp:47) of variable 'storemerge', utils.cpp:49 on array 'conv_in_buf.V[2]', tiled_conv.cpp:34 [169]  (3.25 ns)
+
+ <State 16>: 6.58ns
+The critical path consists of the following:
+	'load' operation ('conv_bias_buf_ping_V_0_1_load', tiled_conv.cpp:87) on local variable 'conv_bias_buf_ping.V[0]' [177]  (0 ns)
+	'call' operation ('call_ret', tiled_conv.cpp:87) to 'load_layer_params_from_DRAM' [185]  (6.58 ns)
+
+ <State 17>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret', tiled_conv.cpp:87) to 'load_layer_params_from_DRAM' [185]  (0.805 ns)
+
+ <State 18>: 6.58ns
+The critical path consists of the following:
+	'load' operation ('conv_bias_buf_pong_V_0_1_load', tiled_conv.cpp:115) on local variable 'conv_bias_buf_pong.V[0]' [181]  (0 ns)
+	'call' operation ('call_ret1', tiled_conv.cpp:115) to 'load_layer_params_from_DRAM' [192]  (6.58 ns)
+
+ <State 19>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', tiled_conv.cpp:115) to 'load_layer_params_from_DRAM' [192]  (0.805 ns)
+
+ <State 20>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln106', tiled_conv.cpp:106) to 'store_output_tile_to_DRAM' [191]  (7.3 ns)
+
+ <State 21>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', tiled_conv.cpp:142) to 'load_layer_params_from_DRAM' [199]  (0.805 ns)
+
+ <State 22>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln125', tiled_conv.cpp:125) to 'conv_7x7' [197]  (2.06 ns)
+
+ <State 23>: 0ns
+The critical path consists of the following:
+
+ <State 24>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln133', tiled_conv.cpp:133) to 'store_output_tile_to_DRAM' [198]  (7.3 ns)
+
+ <State 25>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret3', tiled_conv.cpp:115) to 'load_layer_params_from_DRAM' [206]  (0.805 ns)
+
+ <State 26>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln98', tiled_conv.cpp:98) to 'conv_7x7' [204]  (2.06 ns)
+
+ <State 27>: 0ns
+The critical path consists of the following:
+
+ <State 28>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln106', tiled_conv.cpp:106) to 'store_output_tile_to_DRAM' [205]  (7.3 ns)
+
+ <State 29>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret4', tiled_conv.cpp:142) to 'load_layer_params_from_DRAM' [213]  (0.805 ns)
+
+ <State 30>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln125', tiled_conv.cpp:125) to 'conv_7x7' [211]  (2.06 ns)
+
+ <State 31>: 0ns
+The critical path consists of the following:
+
+ <State 32>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln133', tiled_conv.cpp:133) to 'store_output_tile_to_DRAM' [212]  (7.3 ns)
+
+ <State 33>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret5', tiled_conv.cpp:115) to 'load_layer_params_from_DRAM' [220]  (0.805 ns)
+
+ <State 34>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln98', tiled_conv.cpp:98) to 'conv_7x7' [218]  (2.06 ns)
+
+ <State 35>: 0ns
+The critical path consists of the following:
+
+ <State 36>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln106', tiled_conv.cpp:106) to 'store_output_tile_to_DRAM' [219]  (7.3 ns)
+
+ <State 37>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret6', tiled_conv.cpp:142) to 'load_layer_params_from_DRAM' [227]  (0.805 ns)
+
+ <State 38>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln125', tiled_conv.cpp:125) to 'conv_7x7' [225]  (2.06 ns)
+
+ <State 39>: 0ns
+The critical path consists of the following:
+
+ <State 40>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln133', tiled_conv.cpp:133) to 'store_output_tile_to_DRAM' [226]  (7.3 ns)
+
+ <State 41>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret7', tiled_conv.cpp:115) to 'load_layer_params_from_DRAM' [234]  (0.805 ns)
+
+ <State 42>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln98', tiled_conv.cpp:98) to 'conv_7x7' [232]  (2.06 ns)
+
+ <State 43>: 0ns
+The critical path consists of the following:
+
+ <State 44>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln106', tiled_conv.cpp:106) to 'store_output_tile_to_DRAM' [233]  (7.3 ns)
+
+ <State 45>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret8', tiled_conv.cpp:142) to 'load_layer_params_from_DRAM' [241]  (0.805 ns)
+
+ <State 46>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln125', tiled_conv.cpp:125) to 'conv_7x7' [239]  (2.06 ns)
+
+ <State 47>: 0ns
+The critical path consists of the following:
+
+ <State 48>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln133', tiled_conv.cpp:133) to 'store_output_tile_to_DRAM' [240]  (7.3 ns)
+
+ <State 49>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret9', tiled_conv.cpp:115) to 'load_layer_params_from_DRAM' [248]  (0.805 ns)
+
+ <State 50>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln98', tiled_conv.cpp:98) to 'conv_7x7' [246]  (2.06 ns)
+
+ <State 51>: 0ns
+The critical path consists of the following:
+
+ <State 52>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln106', tiled_conv.cpp:106) to 'store_output_tile_to_DRAM' [247]  (7.3 ns)
+
+ <State 53>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret10', tiled_conv.cpp:142) to 'load_layer_params_from_DRAM' [255]  (0.805 ns)
+
+ <State 54>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln125', tiled_conv.cpp:125) to 'conv_7x7' [253]  (2.06 ns)
+
+ <State 55>: 0ns
+The critical path consists of the following:
+
+ <State 56>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln133', tiled_conv.cpp:133) to 'store_output_tile_to_DRAM' [254]  (7.3 ns)
+
+ <State 57>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret11', tiled_conv.cpp:115) to 'load_layer_params_from_DRAM' [262]  (0.805 ns)
+
+ <State 58>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln98', tiled_conv.cpp:98) to 'conv_7x7' [260]  (2.06 ns)
+
+ <State 59>: 0ns
+The critical path consists of the following:
+
+ <State 60>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln106', tiled_conv.cpp:106) to 'store_output_tile_to_DRAM' [261]  (7.3 ns)
+
+ <State 61>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret12', tiled_conv.cpp:142) to 'load_layer_params_from_DRAM' [269]  (0.805 ns)
+
+ <State 62>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln125', tiled_conv.cpp:125) to 'conv_7x7' [267]  (2.06 ns)
+
+ <State 63>: 0ns
+The critical path consists of the following:
+
+ <State 64>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln133', tiled_conv.cpp:133) to 'store_output_tile_to_DRAM' [268]  (7.3 ns)
+
+ <State 65>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret13', tiled_conv.cpp:115) to 'load_layer_params_from_DRAM' [276]  (0.805 ns)
+
+ <State 66>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln98', tiled_conv.cpp:98) to 'conv_7x7' [274]  (2.06 ns)
+
+ <State 67>: 0ns
+The critical path consists of the following:
+
+ <State 68>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln106', tiled_conv.cpp:106) to 'store_output_tile_to_DRAM' [275]  (7.3 ns)
+
+ <State 69>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret14', tiled_conv.cpp:142) to 'load_layer_params_from_DRAM' [283]  (0.805 ns)
+
+ <State 70>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln125', tiled_conv.cpp:125) to 'conv_7x7' [281]  (2.06 ns)
+
+ <State 71>: 0ns
+The critical path consists of the following:
+
+ <State 72>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln133', tiled_conv.cpp:133) to 'store_output_tile_to_DRAM' [282]  (7.3 ns)
+
+ <State 73>: 0.805ns
+The critical path consists of the following:
+	'call' operation ('call_ret15', tiled_conv.cpp:115) to 'load_layer_params_from_DRAM' [290]  (0.805 ns)
+
+ <State 74>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln98', tiled_conv.cpp:98) to 'conv_7x7' [288]  (2.06 ns)
+
+ <State 75>: 0ns
+The critical path consists of the following:
+
+ <State 76>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln106', tiled_conv.cpp:106) to 'store_output_tile_to_DRAM' [289]  (7.3 ns)
+
+ <State 77>: 0ns
+The critical path consists of the following:
+
+ <State 78>: 2.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln125', tiled_conv.cpp:125) to 'conv_7x7' [295]  (2.06 ns)
+
+ <State 79>: 0ns
+The critical path consists of the following:
+
+ <State 80>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln133', tiled_conv.cpp:133) to 'store_output_tile_to_DRAM' [296]  (7.3 ns)
+
+ <State 81>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
