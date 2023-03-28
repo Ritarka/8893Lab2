@@ -4,9 +4,9 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
 `timescale 1 ns / 1 ps
-module tiled_conv_conv_in_buf_V_RAM_AUTO_1R1W (address0, ce0, d0, we0, q0, address1, ce1, q1,  reset,clk);
+module tiled_conv_conv_in_buf_V_RAM_AUTO_1R1W (address0, ce0, d0, we0, q0,  reset,clk);
 
-parameter DataWidth = 736;
+parameter DataWidth = 16;
 parameter AddressWidth = 8;
 parameter AddressRange = 156;
 
@@ -15,9 +15,6 @@ input ce0;
 input[DataWidth-1:0] d0;
 input we0;
 output reg[DataWidth-1:0] q0;
-input[AddressWidth-1:0] address1;
-input ce1;
-output reg[DataWidth-1:0] q1;
 input reset;
 input clk;
 
@@ -32,14 +29,6 @@ begin
         if (we0) 
             ram[address0] <= d0; 
         q0 <= ram[address0];
-    end
-end
-
-
-always @(posedge clk)  
-begin 
-    if (ce1) begin
-        q1 <= ram[address1];
     end
 end
 

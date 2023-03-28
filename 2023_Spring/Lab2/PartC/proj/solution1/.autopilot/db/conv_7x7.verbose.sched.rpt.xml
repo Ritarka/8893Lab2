@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv_7x7'" level="0">
-<item name = "Date">Wed Mar 22 11:02:36 2023
+<item name = "Date">Sat Mar 25 14:07:31 2023
 </item>
 <item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">proj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.949 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.289 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">31649, 31649, 0.316 ms, 0.316 ms, 31649, 31649, no</column>
+<column name="">5527, 5527, 55.270 us, 55.270 us, 5527, 5527, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- KERNEL_HEIGHT">31648, 31648, 344, -, -, 92, no</column>
-<column name=" + WIDTH">340, 340, 17, -, -, 20, no</column>
+<column name="- HEIGHT_WIDTH_KERNEL">5525, 5525, 9, 3, 1, 1840, yes</column>
 </table>
 </item>
 </section>

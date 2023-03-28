@@ -196,7 +196,7 @@ newFuncRoot:10 %sext_ln94_cast = sext i63 %sext_ln94_read
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:11 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %wt, void @empty_15, i32 0, i32 0, void @empty_3, i32 0, i32 1, void @empty_18, void @empty_17, void @empty_3, i32 16, i32 16, i32 16, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0
+newFuncRoot:11 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %wt, void @empty_5, i32 0, i32 0, void @empty_14, i32 0, i32 1, void @empty_16, void @empty, void @empty_14, i32 16, i32 16, i32 16, i32 16, void @empty_14, void @empty_14, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -406,7 +406,7 @@ for.inc46.i:6 %add_ln94 = add i3 %f_1, i3 1
 
 <Node id="37" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-for.inc46.i:7 %br_ln94 = br i1 %icmp_ln94, void %for.inc46.i.split, void %_Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S6_S7_i.exit.exitStub
+for.inc46.i:7 %br_ln94 = br i1 %icmp_ln94, void %for.inc46.i.split, void %for.body8.i.preheader.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln94"/></StgValue>
@@ -488,7 +488,7 @@ for.inc46.i.split19:1 %br_ln94 = br void %for.inc46.i
 
 <Node id="39" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc46.i.split:0 %specloopname_ln94 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11
+for.inc46.i.split:0 %specloopname_ln94 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln94"/></StgValue>
@@ -519,7 +519,7 @@ for.inc46.i.split:1 %conv_bias_buf_V_1_6 = read i16 @_ssdm_op_Read.m_axi.p1i16, 
 
 <Node id="59" bw="16" op_0_bw="16" op_1_bw="0">
 <![CDATA[
-_Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S6_S7_i.exit.exitStub:0 %conv_bias_buf_V_1_load = load i16 %conv_bias_buf_V_1
+for.body8.i.preheader.exitStub:0 %conv_bias_buf_V_1_load = load i16 %conv_bias_buf_V_1
 
 ]]></Node>
 <StgValue><ssdm name="conv_bias_buf_V_1_load"/></StgValue>
@@ -535,7 +535,7 @@ _Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_
 
 <Node id="60" bw="16" op_0_bw="16" op_1_bw="0">
 <![CDATA[
-_Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S6_S7_i.exit.exitStub:1 %conv_bias_buf_V_1_1_load = load i16 %conv_bias_buf_V_1_1
+for.body8.i.preheader.exitStub:1 %conv_bias_buf_V_1_1_load = load i16 %conv_bias_buf_V_1_1
 
 ]]></Node>
 <StgValue><ssdm name="conv_bias_buf_V_1_1_load"/></StgValue>
@@ -551,7 +551,7 @@ _Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_
 
 <Node id="61" bw="16" op_0_bw="16" op_1_bw="0">
 <![CDATA[
-_Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S6_S7_i.exit.exitStub:2 %conv_bias_buf_V_1_3_load = load i16 %conv_bias_buf_V_1_3
+for.body8.i.preheader.exitStub:2 %conv_bias_buf_V_1_3_load = load i16 %conv_bias_buf_V_1_3
 
 ]]></Node>
 <StgValue><ssdm name="conv_bias_buf_V_1_3_load"/></StgValue>
@@ -567,7 +567,7 @@ _Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_
 
 <Node id="62" bw="16" op_0_bw="16" op_1_bw="0">
 <![CDATA[
-_Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S6_S7_i.exit.exitStub:3 %conv_bias_buf_V_1_4_load = load i16 %conv_bias_buf_V_1_4
+for.body8.i.preheader.exitStub:3 %conv_bias_buf_V_1_4_load = load i16 %conv_bias_buf_V_1_4
 
 ]]></Node>
 <StgValue><ssdm name="conv_bias_buf_V_1_4_load"/></StgValue>
@@ -583,7 +583,7 @@ _Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_
 
 <Node id="63" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16">
 <![CDATA[
-_Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S6_S7_i.exit.exitStub:4 %write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_bias_buf_V_3_3_out, i16 %conv_bias_buf_V_1_4_load
+for.body8.i.preheader.exitStub:4 %write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_bias_buf_V_3_3_out, i16 %conv_bias_buf_V_1_4_load
 
 ]]></Node>
 <StgValue><ssdm name="write_ln0"/></StgValue>
@@ -599,7 +599,7 @@ _Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_
 
 <Node id="64" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16">
 <![CDATA[
-_Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S6_S7_i.exit.exitStub:5 %write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_bias_buf_V_2_3_out, i16 %conv_bias_buf_V_1_3_load
+for.body8.i.preheader.exitStub:5 %write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_bias_buf_V_2_3_out, i16 %conv_bias_buf_V_1_3_load
 
 ]]></Node>
 <StgValue><ssdm name="write_ln0"/></StgValue>
@@ -615,7 +615,7 @@ _Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_
 
 <Node id="65" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16">
 <![CDATA[
-_Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S6_S7_i.exit.exitStub:6 %write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_bias_buf_V_1_3_out, i16 %conv_bias_buf_V_1_1_load
+for.body8.i.preheader.exitStub:6 %write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_bias_buf_V_1_3_out, i16 %conv_bias_buf_V_1_1_load
 
 ]]></Node>
 <StgValue><ssdm name="write_ln0"/></StgValue>
@@ -631,7 +631,7 @@ _Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_
 
 <Node id="66" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16">
 <![CDATA[
-_Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S6_S7_i.exit.exitStub:7 %write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_bias_buf_V_0_3_out, i16 %conv_bias_buf_V_1_load
+for.body8.i.preheader.exitStub:7 %write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %conv_bias_buf_V_0_3_out, i16 %conv_bias_buf_V_1_load
 
 ]]></Node>
 <StgValue><ssdm name="write_ln0"/></StgValue>
@@ -647,7 +647,7 @@ _Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_
 
 <Node id="67" bw="0">
 <![CDATA[
-_Z27load_layer_params_from_DRAMPA3_A7_A7_8ap_fixedILi16ELi3EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_S6_S7_i.exit.exitStub:8 %ret_ln0 = ret
+for.body8.i.preheader.exitStub:8 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>
@@ -858,23 +858,23 @@ branch3:1 %br_ln96 = br void %for.inc46.i.split19
 </dataflow>
 <dataflow id="97" from="wt" to="specinterface_ln0" fromId="70" toId="17">
 </dataflow>
-<dataflow id="99" from="empty_15" to="specinterface_ln0" fromId="98" toId="17">
+<dataflow id="99" from="empty_5" to="specinterface_ln0" fromId="98" toId="17">
 </dataflow>
 <dataflow id="101" from="StgValue_100" to="specinterface_ln0" fromId="100" toId="17">
 </dataflow>
 <dataflow id="102" from="StgValue_100" to="specinterface_ln0" fromId="100" toId="17">
 </dataflow>
-<dataflow id="104" from="empty_3" to="specinterface_ln0" fromId="103" toId="17">
+<dataflow id="104" from="empty_14" to="specinterface_ln0" fromId="103" toId="17">
 </dataflow>
 <dataflow id="105" from="StgValue_100" to="specinterface_ln0" fromId="100" toId="17">
 </dataflow>
 <dataflow id="106" from="StgValue_76" to="specinterface_ln0" fromId="76" toId="17">
 </dataflow>
-<dataflow id="108" from="empty_18" to="specinterface_ln0" fromId="107" toId="17">
+<dataflow id="108" from="empty_16" to="specinterface_ln0" fromId="107" toId="17">
 </dataflow>
-<dataflow id="110" from="empty_17" to="specinterface_ln0" fromId="109" toId="17">
+<dataflow id="110" from="empty" to="specinterface_ln0" fromId="109" toId="17">
 </dataflow>
-<dataflow id="111" from="empty_3" to="specinterface_ln0" fromId="103" toId="17">
+<dataflow id="111" from="empty_14" to="specinterface_ln0" fromId="103" toId="17">
 </dataflow>
 <dataflow id="113" from="StgValue_112" to="specinterface_ln0" fromId="112" toId="17">
 </dataflow>
@@ -884,9 +884,9 @@ branch3:1 %br_ln96 = br void %for.inc46.i.split19
 </dataflow>
 <dataflow id="116" from="StgValue_112" to="specinterface_ln0" fromId="112" toId="17">
 </dataflow>
-<dataflow id="117" from="empty_3" to="specinterface_ln0" fromId="103" toId="17">
+<dataflow id="117" from="empty_14" to="specinterface_ln0" fromId="103" toId="17">
 </dataflow>
-<dataflow id="118" from="empty_3" to="specinterface_ln0" fromId="103" toId="17">
+<dataflow id="118" from="empty_14" to="specinterface_ln0" fromId="103" toId="17">
 </dataflow>
 <dataflow id="120" from="StgValue_119" to="specinterface_ln0" fromId="119" toId="17">
 </dataflow>
@@ -968,7 +968,7 @@ branch3:1 %br_ln96 = br void %for.inc46.i.split19
 </dataflow>
 <dataflow id="171" from="_ssdm_op_SpecLoopName" to="specloopname_ln94" fromId="170" toId="36">
 </dataflow>
-<dataflow id="173" from="empty_11" to="specloopname_ln94" fromId="172" toId="36">
+<dataflow id="173" from="empty_6" to="specloopname_ln94" fromId="172" toId="36">
 </dataflow>
 <dataflow id="175" from="_ssdm_op_Read.m_axi.p1i16" to="conv_bias_buf_V_1_6" fromId="174" toId="37">
 </dataflow>

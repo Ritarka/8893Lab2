@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'tiled_conv_Pipeline_CHANNEL_KERN_I'" level="0">
-<item name = "Date">Wed Mar 22 12:24:22 2023
+<item name = "Date">Fri Mar 24 23:26:04 2023
 </item>
 <item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">proj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">28, 28, 0.280 us, 0.280 us, 28, 28, no</column>
+<column name="">27, 27, 0.270 us, 0.270 us, 27, 27, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- CHANNEL_KERN_I">26, 26, 7, 1, 1, 21, yes</column>
+<column name="- CHANNEL_KERN_I">25, 25, 6, 1, 1, 21, yes</column>
 </table>
 </item>
 </section>

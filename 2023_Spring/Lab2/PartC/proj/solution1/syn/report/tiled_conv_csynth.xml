@@ -22,64 +22,41 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>490545153</Best-caseLatency>
-<Average-caseLatency>549388289</Average-caseLatency>
-<Worst-caseLatency>608231425</Worst-caseLatency>
-<Best-caseRealTimeLatency>4.905 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>5.494 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>6.082 sec</Worst-caseRealTimeLatency>
-<Interval-min>490545154</Interval-min>
-<Interval-max>608231426</Interval-max>
+<Best-caseLatency>64262177</Best-caseLatency>
+<Average-caseLatency>64262177</Average-caseLatency>
+<Worst-caseLatency>64262177</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.643 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.643 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.643 sec</Worst-caseRealTimeLatency>
+<Interval-min>64262178</Interval-min>
+<Interval-max>64262178</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<TILE_ROW_TILE_COL_TILE_DEPTH>
-<TripCount>8192</TripCount>
-<Latency>
-<range>
-<min>490545152</min>
-<max>608231424</max>
-</range>
-</Latency>
-<AbsoluteTimeLatency>
-<range>
-<min>4905451520</min>
-<max>6082314240</max>
-</range>
-</AbsoluteTimeLatency>
-<IterationLatency>
-<range>
-<min>59881</min>
-<max>74247</max>
-</range>
-</IterationLatency>
+<TILE_ROW>
+<TripCount>16</TripCount>
+<Latency>64262176</Latency>
+<AbsoluteTimeLatency>642621760</AbsoluteTimeLatency>
+<IterationLatency>4016386</IterationLatency>
 <InstanceList>
 </InstanceList>
-<KERNEL_HEIGHT>
-<TripCount>92</TripCount>
-<Latency>57408</Latency>
-<AbsoluteTimeLatency>574080</AbsoluteTimeLatency>
-<IterationLatency>624</IterationLatency>
+<TILE_COL>
+<TripCount>32</TripCount>
+<Latency>4016384</Latency>
+<AbsoluteTimeLatency>40163840</AbsoluteTimeLatency>
+<IterationLatency>125512</IterationLatency>
 <InstanceList>
 </InstanceList>
-<WIDTH>
-<TripCount>20</TripCount>
-<Latency>620</Latency>
-<AbsoluteTimeLatency>6200</AbsoluteTimeLatency>
-<IterationLatency>31</IterationLatency>
-<InstanceList>
-</InstanceList>
-</WIDTH>
-</KERNEL_HEIGHT>
-</TILE_ROW_TILE_COL_TILE_DEPTH>
+</TILE_COL>
+</TILE_ROW>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>72</BRAM_18K>
-<DSP>13</DSP>
-<FF>10959</FF>
-<LUT>42500</LUT>
+<BRAM_18K>58</BRAM_18K>
+<DSP>10</DSP>
+<FF>12276</FF>
+<LUT>21821</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

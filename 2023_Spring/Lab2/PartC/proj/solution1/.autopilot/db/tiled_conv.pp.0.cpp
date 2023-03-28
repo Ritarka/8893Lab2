@@ -33825,10 +33825,12 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv (
     fm_t conv_out_buf[4][46 / 2][40 / 2] = {0};
 
 
-#pragma HLS array_reshape variable=conv_in_buf complete dim=3
-#pragma HLS array_reshape variable=conv_out_buf complete dim=3
+#pragma HLS array_partition variable=conv_out_buf type=complete dim=1
 
-#pragma HLS array_reshape variable=conv_wt_buf complete dim=3
+#pragma HLS array_partition variable=conv_in_buf type=complete dim=3
+#pragma HLS array_partition variable=conv_wt_buf type=complete dim=3
+
+#pragma HLS array_partition variable=conv_bias_buf type=complete dim=1
 
 
 
@@ -33840,22 +33842,27 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv (
         TILE_COL:
         for(int tj = 0; tj < (int) 1280 / 40; tj++)
         {
+
+
+
             std::cout << "Processing Tile " << ti*(int) 1280 / 40 + tj + 1;
             std::cout << "/" << (int) 736 / 46 * (int) 1280 / 40 << std::endl;
-# 65 "tiled_conv.cpp"
+
+            load_input_tile_block_from_DRAM(
+                conv_in_buf,
+                input_feature_map,
+                ti,
+                tj
+            );
+
+
             TILE_DEPTH:
             for(int tk = 0; tk < 64 / 4; tk++) {
 
-                if (tk == 0) {
-                    load_input_tile_block_from_DRAM(
-                        conv_in_buf,
-                        input_feature_map,
-                        ti,
-                        tj
-                    );
-                }
+#pragma HLS unroll
 
-                load_layer_params_from_DRAM(
+
+ load_layer_params_from_DRAM(
                     conv_wt_buf,
                     conv_bias_buf,
                     layer_weights,

@@ -19,7 +19,7 @@ using namespace sc_dt;
 
 struct tiled_conv_conv_in_buf_V_RAM_AUTO_1R1W_ram : public sc_core::sc_module {
 
-  static const unsigned DataWidth = 736;
+  static const unsigned DataWidth = 16;
   static const unsigned AddressRange = 156;
   static const unsigned AddressWidth = 8;
 
@@ -76,7 +76,7 @@ void prc_write_0()
 SC_MODULE(tiled_conv_conv_in_buf_V_RAM_AUTO_1R1W) {
 
 
-static const unsigned DataWidth = 736;
+static const unsigned DataWidth = 16;
 static const unsigned AddressRange = 156;
 static const unsigned AddressWidth = 8;
 

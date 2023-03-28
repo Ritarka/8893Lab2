@@ -1,0 +1,148 @@
+
+
+================================================================
+== Vitis HLS Report for 'store_output_tile_to_DRAM'
+================================================================
+* Date:           Sat Mar 25 14:07:32 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        proj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     1864|     1864|  18.640 us|  18.640 us|  1864|  1864|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.74>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%ti_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %ti" [utils.cpp:119]   --->   Operation 4 'read' 'ti_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%zext_ln119 = zext i5 %ti_read" [utils.cpp:119]   --->   Operation 5 'zext' 'zext_ln119' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (3.74ns)   --->   "%mul_ln119 = mul i10 %zext_ln119, i10 46" [utils.cpp:119]   --->   Operation 6 'mul' 'mul_ln119' <Predicate = true> <Delay = 3.74> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.74> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%height_offset = partselect i9 @_ssdm_op_PartSelect.i9.i10.i32.i32, i10 %mul_ln119, i32 1, i32 9" [utils.cpp:119]   --->   Operation 7 'partselect' 'height_offset' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 5.72>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%kernel_group_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %kernel_group" [utils.cpp:119]   --->   Operation 8 'read' 'kernel_group_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%tj_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %tj" [utils.cpp:119]   --->   Operation 9 'read' 'tj_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%out_fm_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %out_fm" [utils.cpp:119]   --->   Operation 10 'read' 'out_fm_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%depth_offset = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i4.i2, i4 %kernel_group_read, i2 0" [utils.cpp:118]   --->   Operation 11 'bitconcatenate' 'depth_offset' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i5.i5, i5 %tj_read, i5 0" [utils.cpp:120]   --->   Operation 12 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln120 = zext i10 %shl_ln" [utils.cpp:120]   --->   Operation 13 'zext' 'zext_ln120' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%shl_ln120_1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %tj_read, i3 0" [utils.cpp:120]   --->   Operation 14 'bitconcatenate' 'shl_ln120_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln120_1 = zext i8 %shl_ln120_1" [utils.cpp:120]   --->   Operation 15 'zext' 'zext_ln120_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (1.73ns)   --->   "%add_ln120 = add i11 %zext_ln120, i11 %zext_ln120_1" [utils.cpp:120]   --->   Operation 16 'add' 'add_ln120' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%width_offset = partselect i10 @_ssdm_op_PartSelect.i10.i11.i32.i32, i11 %add_ln120, i32 1, i32 10" [utils.cpp:120]   --->   Operation 17 'partselect' 'width_offset' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%shl_ln138_3 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i10.i1, i10 %width_offset, i1 0" [utils.cpp:138]   --->   Operation 18 'bitconcatenate' 'shl_ln138_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln138_1 = zext i11 %shl_ln138_3" [utils.cpp:138]   --->   Operation 19 'zext' 'zext_ln138_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%shl_ln138_mid = bitconcatenate i19 @_ssdm_op_BitConcatenate.i19.i9.i10, i9 %height_offset, i10 0" [utils.cpp:138]   --->   Operation 20 'bitconcatenate' 'shl_ln138_mid' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%shl_ln138_1_mid = bitconcatenate i17 @_ssdm_op_BitConcatenate.i17.i9.i8, i9 %height_offset, i8 0" [utils.cpp:138]   --->   Operation 21 'bitconcatenate' 'shl_ln138_1_mid' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln129_1 = zext i17 %shl_ln138_1_mid" [utils.cpp:129]   --->   Operation 22 'zext' 'zext_ln129_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln138 = add i19 %shl_ln138_mid, i19 %zext_ln138_1" [utils.cpp:138]   --->   Operation 23 'add' 'add_ln138' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.99> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 24 [1/1] (3.99ns) (root node of TernaryAdder)   --->   "%add_ln138_7 = add i19 %add_ln138, i19 %zext_ln129_1" [utils.cpp:138]   --->   Operation 24 'add' 'add_ln138_7' <Predicate = true> <Delay = 3.99> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.99> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 25 [2/2] (0.00ns)   --->   "%call_ln118 = call void @store_output_tile_to_DRAM_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTP, i6 %depth_offset, i64 %out_fm_read, i9 %height_offset, i11 %shl_ln138_3, i19 %shl_ln138_mid, i17 %shl_ln138_1_mid, i19 %add_ln138_7, i16 %out_fm_buf_0, i16 %out_fm_buf_1, i16 %out_fm_buf_2, i16 %out_fm_buf_3, i10 %width_offset, i16 %fm" [utils.cpp:118]   --->   Operation 25 'call' 'call_ln118' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %fm, void @empty_17, i32 0, i32 0, void @empty_18, i32 0, i32 1, void @empty_19, void @empty_16, void @empty_18, i32 16, i32 16, i32 16, i32 16, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln118 = call void @store_output_tile_to_DRAM_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTP, i6 %depth_offset, i64 %out_fm_read, i9 %height_offset, i11 %shl_ln138_3, i19 %shl_ln138_mid, i17 %shl_ln138_1_mid, i19 %add_ln138_7, i16 %out_fm_buf_0, i16 %out_fm_buf_1, i16 %out_fm_buf_2, i16 %out_fm_buf_3, i10 %width_offset, i16 %fm" [utils.cpp:118]   --->   Operation 27 'call' 'call_ln118' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln143 = ret" [utils.cpp:143]   --->   Operation 28 'ret' 'ret_ln143' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.74ns
+The critical path consists of the following:
+	wire read operation ('ti_read', utils.cpp:119) on port 'ti' (utils.cpp:119) [12]  (0 ns)
+	'mul' operation ('mul_ln119', utils.cpp:119) [17]  (3.74 ns)
+
+ <State 2>: 5.72ns
+The critical path consists of the following:
+	wire read operation ('tj_read', utils.cpp:119) on port 'tj' (utils.cpp:119) [11]  (0 ns)
+	'add' operation ('add_ln120', utils.cpp:120) [23]  (1.73 ns)
+	'add' operation ('add_ln138', utils.cpp:138) [30]  (0 ns)
+	'add' operation ('add_ln138_7', utils.cpp:138) [31]  (3.99 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

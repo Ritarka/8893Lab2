@@ -12,8 +12,8 @@ entity tiled_conv_conv_out_buf_V_RAM_AUTO_1R1W is
     generic(
             MEM_TYPE    : string := "auto"; 
             DataWidth     : integer := 16; 
-            AddressWidth     : integer := 11; 
-            AddressRange    : integer := 1840
+            AddressWidth     : integer := 9; 
+            AddressRange    : integer := 460
     ); 
     port (
           address0     : in std_logic_vector(AddressWidth-1 downto 0); 

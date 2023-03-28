@@ -1,0 +1,209 @@
+
+
+================================================================
+== Vitis HLS Report for 'store_output_tile_to_DRAM'
+================================================================
+* Date:           Sat Mar 25 14:07:43 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        proj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     1864|     1864|  18.640 us|  18.640 us|  1864|  1864|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                                                                             |                                                                                  |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                                           Instance                                          |                                      Module                                      |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_store_output_tile_to_DRAM_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTP_fu_102  |store_output_tile_to_DRAM_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTP  |     1862|     1862|  18.620 us|  18.620 us|  1862|  1862|       no|
+        +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     50|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    2|    1388|   1633|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     47|    -|
+|Register         |        -|    -|      67|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    2|    1455|   1730|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|   ~0|       1|      3|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+----+------+------+-----+
+    |                                           Instance                                          |                                      Module                                      | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+----+------+------+-----+
+    |mul_5ns_7ns_10_1_1_U296                                                                      |mul_5ns_7ns_10_1_1                                                                |        0|   0|     0|    33|    0|
+    |grp_store_output_tile_to_DRAM_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTP_fu_102  |store_output_tile_to_DRAM_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTP  |        0|   2|  1388|  1600|    0|
+    +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+----+------+------+-----+
+    |Total                                                                                        |                                                                                  |        0|   2|  1388|  1633|    0|
+    +---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |add_ln120_fu_178_p2    |         +|   0|  0|  12|          11|          11|
+    |add_ln138_7_fu_234_p2  |         +|   0|  0|  19|          19|          19|
+    |add_ln138_fu_228_p2    |         +|   0|  0|  19|          19|          19|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0|  50|          49|          49|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------+----+-----------+-----+-----------+
+    |       Name       | LUT| Input Size| Bits| Total Bits|
+    +------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm         |  20|          4|    1|          4|
+    |m_axi_fm_AWVALID  |   9|          2|    1|          2|
+    |m_axi_fm_BREADY   |   9|          2|    1|          2|
+    |m_axi_fm_WVALID   |   9|          2|    1|          2|
+    +------------------+----+-----------+-----+-----------+
+    |Total             |  47|         10|    4|         10|
+    +------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                                   Name                                                   | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |add_ln138_7_reg_278                                                                                       |  16|   0|   19|          3|
+    |ap_CS_fsm                                                                                                 |   3|   0|    3|          0|
+    |depth_offset_reg_253                                                                                      |   4|   0|    6|          2|
+    |grp_store_output_tile_to_DRAM_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTP_fu_102_ap_start_reg  |   1|   0|    1|          0|
+    |height_offset_reg_241                                                                                     |   9|   0|    9|          0|
+    |shl_ln138_1_mid_reg_273                                                                                   |   9|   0|   17|          8|
+    |shl_ln138_3_reg_263                                                                                       |   8|   0|   11|          3|
+    |shl_ln138_mid_reg_268                                                                                     |   9|   0|   19|         10|
+    |width_offset_reg_258                                                                                      |   8|   0|   10|          2|
+    +----------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                                     |  67|   0|   95|         28|
+    +----------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+---------------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |       Source Object       |    C Type    |
++-----------------------+-----+-----+------------+---------------------------+--------------+
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  store_output_tile_to_DRAM|  return value|
+|ap_rst                 |   in|    1|  ap_ctrl_hs|  store_output_tile_to_DRAM|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|  store_output_tile_to_DRAM|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|  store_output_tile_to_DRAM|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|  store_output_tile_to_DRAM|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|  store_output_tile_to_DRAM|  return value|
+|m_axi_fm_AWVALID       |  out|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_AWREADY       |   in|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_AWADDR        |  out|   64|       m_axi|                         fm|       pointer|
+|m_axi_fm_AWID          |  out|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_AWLEN         |  out|   32|       m_axi|                         fm|       pointer|
+|m_axi_fm_AWSIZE        |  out|    3|       m_axi|                         fm|       pointer|
+|m_axi_fm_AWBURST       |  out|    2|       m_axi|                         fm|       pointer|
+|m_axi_fm_AWLOCK        |  out|    2|       m_axi|                         fm|       pointer|
+|m_axi_fm_AWCACHE       |  out|    4|       m_axi|                         fm|       pointer|
+|m_axi_fm_AWPROT        |  out|    3|       m_axi|                         fm|       pointer|
+|m_axi_fm_AWQOS         |  out|    4|       m_axi|                         fm|       pointer|
+|m_axi_fm_AWREGION      |  out|    4|       m_axi|                         fm|       pointer|
+|m_axi_fm_AWUSER        |  out|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_WVALID        |  out|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_WREADY        |   in|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_WDATA         |  out|   16|       m_axi|                         fm|       pointer|
+|m_axi_fm_WSTRB         |  out|    2|       m_axi|                         fm|       pointer|
+|m_axi_fm_WLAST         |  out|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_WID           |  out|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_WUSER         |  out|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_ARVALID       |  out|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_ARREADY       |   in|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_ARADDR        |  out|   64|       m_axi|                         fm|       pointer|
+|m_axi_fm_ARID          |  out|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_ARLEN         |  out|   32|       m_axi|                         fm|       pointer|
+|m_axi_fm_ARSIZE        |  out|    3|       m_axi|                         fm|       pointer|
+|m_axi_fm_ARBURST       |  out|    2|       m_axi|                         fm|       pointer|
+|m_axi_fm_ARLOCK        |  out|    2|       m_axi|                         fm|       pointer|
+|m_axi_fm_ARCACHE       |  out|    4|       m_axi|                         fm|       pointer|
+|m_axi_fm_ARPROT        |  out|    3|       m_axi|                         fm|       pointer|
+|m_axi_fm_ARQOS         |  out|    4|       m_axi|                         fm|       pointer|
+|m_axi_fm_ARREGION      |  out|    4|       m_axi|                         fm|       pointer|
+|m_axi_fm_ARUSER        |  out|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_RVALID        |   in|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_RREADY        |  out|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_RDATA         |   in|   16|       m_axi|                         fm|       pointer|
+|m_axi_fm_RLAST         |   in|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_RID           |   in|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_RFIFONUM      |   in|   10|       m_axi|                         fm|       pointer|
+|m_axi_fm_RUSER         |   in|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_RRESP         |   in|    2|       m_axi|                         fm|       pointer|
+|m_axi_fm_BVALID        |   in|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_BREADY        |  out|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_BRESP         |   in|    2|       m_axi|                         fm|       pointer|
+|m_axi_fm_BID           |   in|    1|       m_axi|                         fm|       pointer|
+|m_axi_fm_BUSER         |   in|    1|       m_axi|                         fm|       pointer|
+|out_fm                 |   in|   64|     ap_none|                     out_fm|        scalar|
+|out_fm_buf_0_address0  |  out|    9|   ap_memory|               out_fm_buf_0|         array|
+|out_fm_buf_0_ce0       |  out|    1|   ap_memory|               out_fm_buf_0|         array|
+|out_fm_buf_0_q0        |   in|   16|   ap_memory|               out_fm_buf_0|         array|
+|out_fm_buf_1_address0  |  out|    9|   ap_memory|               out_fm_buf_1|         array|
+|out_fm_buf_1_ce0       |  out|    1|   ap_memory|               out_fm_buf_1|         array|
+|out_fm_buf_1_q0        |   in|   16|   ap_memory|               out_fm_buf_1|         array|
+|out_fm_buf_2_address0  |  out|    9|   ap_memory|               out_fm_buf_2|         array|
+|out_fm_buf_2_ce0       |  out|    1|   ap_memory|               out_fm_buf_2|         array|
+|out_fm_buf_2_q0        |   in|   16|   ap_memory|               out_fm_buf_2|         array|
+|out_fm_buf_3_address0  |  out|    9|   ap_memory|               out_fm_buf_3|         array|
+|out_fm_buf_3_ce0       |  out|    1|   ap_memory|               out_fm_buf_3|         array|
+|out_fm_buf_3_q0        |   in|   16|   ap_memory|               out_fm_buf_3|         array|
+|ti                     |   in|    5|     ap_none|                         ti|        scalar|
+|tj                     |   in|    5|     ap_none|                         tj|        scalar|
+|kernel_group           |   in|    4|     ap_none|               kernel_group|        scalar|
++-----------------------+-----+-----+------------+---------------------------+--------------+
+

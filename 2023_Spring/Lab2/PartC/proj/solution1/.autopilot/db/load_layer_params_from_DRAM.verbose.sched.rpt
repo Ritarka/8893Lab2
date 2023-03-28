@@ -1,0 +1,333 @@
+
+
+================================================================
+== Vitis HLS Report for 'load_layer_params_from_DRAM'
+================================================================
+* Date:           Sat Mar 25 14:07:30 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        proj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      617|      617|  6.170 us|  6.170 us|  617|  617|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 21
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.52>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%kernel_group_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %kernel_group"   --->   Operation 22 'read' 'kernel_group_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%bias_buf_3_04_loc = alloca i64 1"   --->   Operation 23 'alloca' 'bias_buf_3_04_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%write_flag_0_loc = alloca i64 1"   --->   Operation 24 'alloca' 'write_flag_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%write_flag9_0_loc = alloca i64 1"   --->   Operation 25 'alloca' 'write_flag9_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%bias_buf_2_05_loc = alloca i64 1"   --->   Operation 26 'alloca' 'bias_buf_2_05_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%bias_buf_0_06_loc = alloca i64 1"   --->   Operation 27 'alloca' 'bias_buf_0_06_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%write_flag6_0_loc = alloca i64 1"   --->   Operation 28 'alloca' 'write_flag6_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%bias_buf_1_07_loc = alloca i64 1"   --->   Operation 29 'alloca' 'bias_buf_1_07_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%write_flag3_0_loc = alloca i64 1"   --->   Operation 30 'alloca' 'write_flag3_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%kernel_offset = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i4.i2, i4 %kernel_group_read, i2 0" [utils.cpp:74]   --->   Operation 31 'bitconcatenate' 'kernel_offset' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln77 = zext i6 %kernel_offset" [utils.cpp:77]   --->   Operation 32 'zext' 'zext_ln77' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (4.52ns)   --->   "%mul_ln77 = mul i15 %zext_ln77, i15 294" [utils.cpp:77]   --->   Operation 33 'mul' 'mul_ln77' <Predicate = true> <Delay = 4.52> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 4.52> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 3.52>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%weights_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %weights"   --->   Operation 34 'read' 'weights_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln77_1 = zext i15 %mul_ln77" [utils.cpp:77]   --->   Operation 35 'zext' 'zext_ln77_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (3.52ns)   --->   "%add_ln77 = add i64 %zext_ln77_1, i64 %weights_read" [utils.cpp:77]   --->   Operation 36 'add' 'add_ln77' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %add_ln77, i32 1, i32 63" [utils.cpp:77]   --->   Operation 37 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%sext_ln77 = sext i63 %trunc_ln" [utils.cpp:77]   --->   Operation 38 'sext' 'sext_ln77' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%wt_addr = getelementptr i16 %wt, i64 %sext_ln77" [utils.cpp:77]   --->   Operation 39 'getelementptr' 'wt_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [7/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr, i32 588" [utils.cpp:77]   --->   Operation 40 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 41 [6/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr, i32 588" [utils.cpp:77]   --->   Operation 41 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 42 [5/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr, i32 588" [utils.cpp:77]   --->   Operation 42 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 43 [4/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr, i32 588" [utils.cpp:77]   --->   Operation 43 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 44 [3/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr, i32 588" [utils.cpp:77]   --->   Operation 44 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 45 [2/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr, i32 588" [utils.cpp:77]   --->   Operation 45 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 46 [1/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr, i32 588" [utils.cpp:77]   --->   Operation 46 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 47 [2/2] (0.00ns)   --->   "%call_ln77 = call void @load_layer_params_from_DRAM_Pipeline_WEIGHT_KERNEL_NUM_WEIGHT_KERNEL_HEIGHT_WEIG, i16 %wt, i63 %trunc_ln, i16 %weight_buf_0, i16 %weight_buf_1, i16 %weight_buf_2, i16 %weight_buf_3, i16 %weight_buf_4, i16 %weight_buf_5, i16 %weight_buf_6" [utils.cpp:77]   --->   Operation 47 'call' 'call_ln77' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 3.52>
+ST_11 : Operation 48 [1/1] (0.00ns)   --->   "%bias_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %bias"   --->   Operation 48 'read' 'bias_read' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 49 [1/2] (0.00ns)   --->   "%call_ln77 = call void @load_layer_params_from_DRAM_Pipeline_WEIGHT_KERNEL_NUM_WEIGHT_KERNEL_HEIGHT_WEIG, i16 %wt, i63 %trunc_ln, i16 %weight_buf_0, i16 %weight_buf_1, i16 %weight_buf_2, i16 %weight_buf_3, i16 %weight_buf_4, i16 %weight_buf_5, i16 %weight_buf_6" [utils.cpp:77]   --->   Operation 49 'call' 'call_ln77' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 50 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %kernel_group_read, i3 0" [utils.cpp:95]   --->   Operation 50 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 51 [1/1] (0.00ns)   --->   "%zext_ln95 = zext i7 %shl_ln" [utils.cpp:95]   --->   Operation 51 'zext' 'zext_ln95' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 52 [1/1] (3.52ns)   --->   "%add_ln95 = add i64 %zext_ln95, i64 %bias_read" [utils.cpp:95]   --->   Operation 52 'add' 'add_ln95' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 53 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %add_ln95, i32 1, i32 63" [utils.cpp:95]   --->   Operation 53 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 11> <Delay = 7.30>
+ST_12 : Operation 54 [1/1] (0.00ns)   --->   "%sext_ln95 = sext i63 %trunc_ln1" [utils.cpp:95]   --->   Operation 54 'sext' 'sext_ln95' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 55 [1/1] (0.00ns)   --->   "%wt_addr_1 = getelementptr i16 %wt, i64 %sext_ln95" [utils.cpp:95]   --->   Operation 55 'getelementptr' 'wt_addr_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 56 [7/7] (7.30ns)   --->   "%empty_52 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr_1, i32 4" [utils.cpp:95]   --->   Operation 56 'readreq' 'empty_52' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 12> <Delay = 7.30>
+ST_13 : Operation 57 [6/7] (7.30ns)   --->   "%empty_52 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr_1, i32 4" [utils.cpp:95]   --->   Operation 57 'readreq' 'empty_52' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 13> <Delay = 7.30>
+ST_14 : Operation 58 [5/7] (7.30ns)   --->   "%empty_52 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr_1, i32 4" [utils.cpp:95]   --->   Operation 58 'readreq' 'empty_52' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 14> <Delay = 7.30>
+ST_15 : Operation 59 [4/7] (7.30ns)   --->   "%empty_52 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr_1, i32 4" [utils.cpp:95]   --->   Operation 59 'readreq' 'empty_52' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 15> <Delay = 7.30>
+ST_16 : Operation 60 [3/7] (7.30ns)   --->   "%empty_52 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr_1, i32 4" [utils.cpp:95]   --->   Operation 60 'readreq' 'empty_52' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 17 <SV = 16> <Delay = 7.30>
+ST_17 : Operation 61 [2/7] (7.30ns)   --->   "%empty_52 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr_1, i32 4" [utils.cpp:95]   --->   Operation 61 'readreq' 'empty_52' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 18 <SV = 17> <Delay = 7.30>
+ST_18 : Operation 62 [1/7] (7.30ns)   --->   "%empty_52 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i16, i16 %wt_addr_1, i32 4" [utils.cpp:95]   --->   Operation 62 'readreq' 'empty_52' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 19 <SV = 18> <Delay = 0.00>
+ST_19 : Operation 63 [2/2] (0.00ns)   --->   "%call_ln95 = call void @load_layer_params_from_DRAM_Pipeline_BIAS, i16 %wt, i63 %trunc_ln1, i1 %write_flag3_0_loc, i16 %bias_buf_1_07_loc, i1 %write_flag6_0_loc, i16 %bias_buf_0_06_loc, i16 %bias_buf_2_05_loc, i1 %write_flag9_0_loc, i1 %write_flag_0_loc, i16 %bias_buf_3_04_loc" [utils.cpp:95]   --->   Operation 63 'call' 'call_ln95' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 2.71>
+ST_20 : Operation 64 [1/2] (2.71ns)   --->   "%call_ln95 = call void @load_layer_params_from_DRAM_Pipeline_BIAS, i16 %wt, i63 %trunc_ln1, i1 %write_flag3_0_loc, i16 %bias_buf_1_07_loc, i1 %write_flag6_0_loc, i16 %bias_buf_0_06_loc, i16 %bias_buf_2_05_loc, i1 %write_flag9_0_loc, i1 %write_flag_0_loc, i16 %bias_buf_3_04_loc" [utils.cpp:95]   --->   Operation 64 'call' 'call_ln95' <Predicate = true> <Delay = 2.71> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 20> <Delay = 0.80>
+ST_21 : Operation 65 [1/1] (0.00ns)   --->   "%p_read_1 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read3"   --->   Operation 65 'read' 'p_read_1' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 66 [1/1] (0.00ns)   --->   "%p_read_2 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read2"   --->   Operation 66 'read' 'p_read_2' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 67 [1/1] (0.00ns)   --->   "%p_read_3 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read1"   --->   Operation 67 'read' 'p_read_3' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 68 [1/1] (0.00ns)   --->   "%p_read61 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read"   --->   Operation 68 'read' 'p_read61' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %wt, void @empty_17, i32 0, i32 0, void @empty_18, i32 0, i32 1, void @empty_14, void @empty_16, void @empty_18, i32 16, i32 16, i32 16, i32 16, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 70 [1/1] (0.00ns)   --->   "%write_flag3_0_loc_load = load i1 %write_flag3_0_loc"   --->   Operation 70 'load' 'write_flag3_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 71 [1/1] (0.00ns)   --->   "%bias_buf_1_07_loc_load = load i16 %bias_buf_1_07_loc"   --->   Operation 71 'load' 'bias_buf_1_07_loc_load' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 72 [1/1] (0.00ns)   --->   "%write_flag6_0_loc_load = load i1 %write_flag6_0_loc"   --->   Operation 72 'load' 'write_flag6_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 73 [1/1] (0.00ns)   --->   "%bias_buf_0_06_loc_load = load i16 %bias_buf_0_06_loc"   --->   Operation 73 'load' 'bias_buf_0_06_loc_load' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 74 [1/1] (0.00ns)   --->   "%bias_buf_2_05_loc_load = load i16 %bias_buf_2_05_loc"   --->   Operation 74 'load' 'bias_buf_2_05_loc_load' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 75 [1/1] (0.00ns)   --->   "%write_flag9_0_loc_load = load i1 %write_flag9_0_loc"   --->   Operation 75 'load' 'write_flag9_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 76 [1/1] (0.00ns)   --->   "%write_flag_0_loc_load = load i1 %write_flag_0_loc"   --->   Operation 76 'load' 'write_flag_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 77 [1/1] (0.00ns)   --->   "%bias_buf_3_04_loc_load = load i16 %bias_buf_3_04_loc"   --->   Operation 77 'load' 'bias_buf_3_04_loc_load' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 78 [1/1] (0.80ns)   --->   "%select_ln100 = select i1 %write_flag_0_loc_load, i16 %bias_buf_0_06_loc_load, i16 %p_read61" [utils.cpp:100]   --->   Operation 78 'select' 'select_ln100' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 79 [1/1] (0.80ns)   --->   "%select_ln100_1 = select i1 %write_flag3_0_loc_load, i16 %bias_buf_1_07_loc_load, i16 %p_read_3" [utils.cpp:100]   --->   Operation 79 'select' 'select_ln100_1' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 80 [1/1] (0.80ns)   --->   "%select_ln100_2 = select i1 %write_flag6_0_loc_load, i16 %bias_buf_2_05_loc_load, i16 %p_read_2" [utils.cpp:100]   --->   Operation 80 'select' 'select_ln100_2' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 81 [1/1] (0.80ns)   --->   "%select_ln100_3 = select i1 %write_flag9_0_loc_load, i16 %bias_buf_3_04_loc_load, i16 %p_read_1" [utils.cpp:100]   --->   Operation 81 'select' 'select_ln100_3' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 82 [1/1] (0.00ns)   --->   "%mrv = insertvalue i64 <undef>, i16 %select_ln100" [utils.cpp:100]   --->   Operation 82 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 83 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i64 %mrv, i16 %select_ln100_1" [utils.cpp:100]   --->   Operation 83 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 84 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i64 %mrv_1, i16 %select_ln100_2" [utils.cpp:100]   --->   Operation 84 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 85 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i64 %mrv_2, i16 %select_ln100_3" [utils.cpp:100]   --->   Operation 85 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 86 [1/1] (0.00ns)   --->   "%ret_ln100 = ret i64 %mrv_3" [utils.cpp:100]   --->   Operation 86 'ret' 'ret_ln100' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 4.52ns
+The critical path consists of the following:
+	wire read operation ('kernel_group_read') on port 'kernel_group' [16]  (0 ns)
+	'mul' operation ('mul_ln77', utils.cpp:77) [34]  (4.52 ns)
+
+ <State 2>: 3.52ns
+The critical path consists of the following:
+	wire read operation ('weights_read') on port 'weights' [18]  (0 ns)
+	'add' operation ('add_ln77', utils.cpp:77) [36]  (3.52 ns)
+
+ <State 3>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('wt_addr', utils.cpp:77) [39]  (0 ns)
+	bus request operation ('empty', utils.cpp:77) on port 'wt' (utils.cpp:77) [40]  (7.3 ns)
+
+ <State 4>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', utils.cpp:77) on port 'wt' (utils.cpp:77) [40]  (7.3 ns)
+
+ <State 5>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', utils.cpp:77) on port 'wt' (utils.cpp:77) [40]  (7.3 ns)
+
+ <State 6>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', utils.cpp:77) on port 'wt' (utils.cpp:77) [40]  (7.3 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', utils.cpp:77) on port 'wt' (utils.cpp:77) [40]  (7.3 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', utils.cpp:77) on port 'wt' (utils.cpp:77) [40]  (7.3 ns)
+
+ <State 9>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', utils.cpp:77) on port 'wt' (utils.cpp:77) [40]  (7.3 ns)
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 3.52ns
+The critical path consists of the following:
+	wire read operation ('bias_read') on port 'bias' [17]  (0 ns)
+	'add' operation ('add_ln95', utils.cpp:95) [44]  (3.52 ns)
+
+ <State 12>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('wt_addr_1', utils.cpp:95) [47]  (0 ns)
+	bus request operation ('empty_52', utils.cpp:95) on port 'wt' (utils.cpp:95) [48]  (7.3 ns)
+
+ <State 13>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_52', utils.cpp:95) on port 'wt' (utils.cpp:95) [48]  (7.3 ns)
+
+ <State 14>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_52', utils.cpp:95) on port 'wt' (utils.cpp:95) [48]  (7.3 ns)
+
+ <State 15>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_52', utils.cpp:95) on port 'wt' (utils.cpp:95) [48]  (7.3 ns)
+
+ <State 16>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_52', utils.cpp:95) on port 'wt' (utils.cpp:95) [48]  (7.3 ns)
+
+ <State 17>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_52', utils.cpp:95) on port 'wt' (utils.cpp:95) [48]  (7.3 ns)
+
+ <State 18>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_52', utils.cpp:95) on port 'wt' (utils.cpp:95) [48]  (7.3 ns)
+
+ <State 19>: 0ns
+The critical path consists of the following:
+
+ <State 20>: 2.72ns
+The critical path consists of the following:
+	'call' operation ('call_ln95', utils.cpp:95) to 'load_layer_params_from_DRAM_Pipeline_BIAS' [49]  (2.72 ns)
+
+ <State 21>: 0.805ns
+The critical path consists of the following:
+	wire read operation ('p_read61') on port 'p_read' [22]  (0 ns)
+	'select' operation ('select_ln100', utils.cpp:100) [58]  (0.805 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

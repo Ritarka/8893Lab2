@@ -11,7 +11,7 @@ use ieee.std_logic_unsigned.all;
 entity tiled_conv_conv_in_buf_V_RAM_AUTO_1R1W is 
     generic(
             MEM_TYPE    : string := "auto"; 
-            DataWidth     : integer := 736; 
+            DataWidth     : integer := 16; 
             AddressWidth     : integer := 8; 
             AddressRange    : integer := 156
     ); 

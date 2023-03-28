@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv_7x7_Pipeline_CHANNEL_KERN_I'" level="0">
-<item name = "Date">Sat Mar 18 14:01:40 2023
+<item name = "Date">Sat Mar 25 13:27:29 2023
 </item>
 <item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">proj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 5.491 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 6.614 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">31, 31, 0.310 us, 0.310 us, 31, 31, no</column>
+<column name="">25, 25, 0.250 us, 0.250 us, 25, 25, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- CHANNEL_KERN_I">29, 29, 10, 1, 1, 21, yes</column>
+<column name="- CHANNEL_KERN_I">23, 23, 4, 1, 1, 21, yes</column>
 </table>
 </item>
 </section>

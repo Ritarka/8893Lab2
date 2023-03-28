@@ -33808,10 +33808,10 @@ void load_input_tile_block_from_DRAM (
     int tj
 )
 {
-#pragma HLS FUNCTION_INSTANTIATE variable=ti
-#pragma HLS FUNCTION_INSTANTIATE variable=tj
 
- const int height_offset = ti * 46;
+
+
+    const int height_offset = ti * 46;
     const int width_offset = tj * 40;
 
     const int P = 3;
@@ -33828,7 +33828,8 @@ void load_input_tile_block_from_DRAM (
             INPUT_BUFFER_WIDTH:
             for(int j = 0; j < 40 + 6; j++)
             {
-                int input_x = j + width_offset - S;
+#pragma HLS unroll
+ int input_x = j + width_offset - S;
 
                 if (input_y < 0 || input_y >= 736 || input_x < 0 || input_x >= 1280) {
                     in_fm_buf[c][i][j] = (fm_t) 0;
@@ -33881,7 +33882,7 @@ void load_layer_params_from_DRAM (
     }
 
 }
-# 109 "utils.cpp"
+# 110 "utils.cpp"
 void store_output_tile_to_DRAM (
     fm_t out_fm[64][368][640],
     fm_t out_fm_buf[4][46 / 2][40 / 2],

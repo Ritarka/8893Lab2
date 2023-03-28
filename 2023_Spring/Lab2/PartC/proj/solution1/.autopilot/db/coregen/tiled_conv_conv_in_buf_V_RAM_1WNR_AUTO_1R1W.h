@@ -19,9 +19,9 @@ using namespace sc_dt;
 
 struct tiled_conv_conv_in_buf_V_RAM_1WNR_AUTO_1R1W_ram : public sc_core::sc_module {
 
-  static const unsigned DataWidth = 736;
-  static const unsigned AddressRange = 156;
-  static const unsigned AddressWidth = 8;
+  static const unsigned DataWidth = 16;
+  static const unsigned AddressRange = 7176;
+  static const unsigned AddressWidth = 13;
 
 //latency = 1
 //input_reg = 1
@@ -49,6 +49,36 @@ sc_core::sc_out <sc_lv<DataWidth> > q5;
 sc_core::sc_in <sc_lv<AddressWidth> > address6;
 sc_core::sc_in <sc_logic> ce6;
 sc_core::sc_out <sc_lv<DataWidth> > q6;
+sc_core::sc_in <sc_lv<AddressWidth> > address7;
+sc_core::sc_in <sc_logic> ce7;
+sc_core::sc_out <sc_lv<DataWidth> > q7;
+sc_core::sc_in <sc_lv<AddressWidth> > address8;
+sc_core::sc_in <sc_logic> ce8;
+sc_core::sc_out <sc_lv<DataWidth> > q8;
+sc_core::sc_in <sc_lv<AddressWidth> > address9;
+sc_core::sc_in <sc_logic> ce9;
+sc_core::sc_out <sc_lv<DataWidth> > q9;
+sc_core::sc_in <sc_lv<AddressWidth> > address10;
+sc_core::sc_in <sc_logic> ce10;
+sc_core::sc_out <sc_lv<DataWidth> > q10;
+sc_core::sc_in <sc_lv<AddressWidth> > address11;
+sc_core::sc_in <sc_logic> ce11;
+sc_core::sc_out <sc_lv<DataWidth> > q11;
+sc_core::sc_in <sc_lv<AddressWidth> > address12;
+sc_core::sc_in <sc_logic> ce12;
+sc_core::sc_out <sc_lv<DataWidth> > q12;
+sc_core::sc_in <sc_lv<AddressWidth> > address13;
+sc_core::sc_in <sc_logic> ce13;
+sc_core::sc_out <sc_lv<DataWidth> > q13;
+sc_core::sc_in <sc_lv<AddressWidth> > address14;
+sc_core::sc_in <sc_logic> ce14;
+sc_core::sc_out <sc_lv<DataWidth> > q14;
+sc_core::sc_in <sc_lv<AddressWidth> > address15;
+sc_core::sc_in <sc_logic> ce15;
+sc_core::sc_out <sc_lv<DataWidth> > q15;
+sc_core::sc_in <sc_lv<AddressWidth> > address16;
+sc_core::sc_in <sc_logic> ce16;
+sc_core::sc_out <sc_lv<DataWidth> > q16;
 sc_core::sc_in<sc_logic> reset;
 sc_core::sc_in<bool> clk;
 
@@ -84,6 +114,46 @@ SC_METHOD(prc_write_5);
 
 
 SC_METHOD(prc_write_6);
+  sensitive<<clk.pos();
+
+
+SC_METHOD(prc_write_7);
+  sensitive<<clk.pos();
+
+
+SC_METHOD(prc_write_8);
+  sensitive<<clk.pos();
+
+
+SC_METHOD(prc_write_9);
+  sensitive<<clk.pos();
+
+
+SC_METHOD(prc_write_10);
+  sensitive<<clk.pos();
+
+
+SC_METHOD(prc_write_11);
+  sensitive<<clk.pos();
+
+
+SC_METHOD(prc_write_12);
+  sensitive<<clk.pos();
+
+
+SC_METHOD(prc_write_13);
+  sensitive<<clk.pos();
+
+
+SC_METHOD(prc_write_14);
+  sensitive<<clk.pos();
+
+
+SC_METHOD(prc_write_15);
+  sensitive<<clk.pos();
+
+
+SC_METHOD(prc_write_16);
   sensitive<<clk.pos();
    }
 
@@ -184,15 +254,135 @@ void prc_write_6()
 }
 
 
+void prc_write_7()
+{
+    if (ce7.read() == sc_dt::Log_1) 
+    {
+            if(address7.read().is_01() && address7.read().to_uint()<AddressRange)
+              q7 = ram[address7.read().to_uint()];
+            else
+              q7 = sc_lv<DataWidth>();
+    }
+}
+
+
+void prc_write_8()
+{
+    if (ce8.read() == sc_dt::Log_1) 
+    {
+            if(address8.read().is_01() && address8.read().to_uint()<AddressRange)
+              q8 = ram[address8.read().to_uint()];
+            else
+              q8 = sc_lv<DataWidth>();
+    }
+}
+
+
+void prc_write_9()
+{
+    if (ce9.read() == sc_dt::Log_1) 
+    {
+            if(address9.read().is_01() && address9.read().to_uint()<AddressRange)
+              q9 = ram[address9.read().to_uint()];
+            else
+              q9 = sc_lv<DataWidth>();
+    }
+}
+
+
+void prc_write_10()
+{
+    if (ce10.read() == sc_dt::Log_1) 
+    {
+            if(address10.read().is_01() && address10.read().to_uint()<AddressRange)
+              q10 = ram[address10.read().to_uint()];
+            else
+              q10 = sc_lv<DataWidth>();
+    }
+}
+
+
+void prc_write_11()
+{
+    if (ce11.read() == sc_dt::Log_1) 
+    {
+            if(address11.read().is_01() && address11.read().to_uint()<AddressRange)
+              q11 = ram[address11.read().to_uint()];
+            else
+              q11 = sc_lv<DataWidth>();
+    }
+}
+
+
+void prc_write_12()
+{
+    if (ce12.read() == sc_dt::Log_1) 
+    {
+            if(address12.read().is_01() && address12.read().to_uint()<AddressRange)
+              q12 = ram[address12.read().to_uint()];
+            else
+              q12 = sc_lv<DataWidth>();
+    }
+}
+
+
+void prc_write_13()
+{
+    if (ce13.read() == sc_dt::Log_1) 
+    {
+            if(address13.read().is_01() && address13.read().to_uint()<AddressRange)
+              q13 = ram[address13.read().to_uint()];
+            else
+              q13 = sc_lv<DataWidth>();
+    }
+}
+
+
+void prc_write_14()
+{
+    if (ce14.read() == sc_dt::Log_1) 
+    {
+            if(address14.read().is_01() && address14.read().to_uint()<AddressRange)
+              q14 = ram[address14.read().to_uint()];
+            else
+              q14 = sc_lv<DataWidth>();
+    }
+}
+
+
+void prc_write_15()
+{
+    if (ce15.read() == sc_dt::Log_1) 
+    {
+            if(address15.read().is_01() && address15.read().to_uint()<AddressRange)
+              q15 = ram[address15.read().to_uint()];
+            else
+              q15 = sc_lv<DataWidth>();
+    }
+}
+
+
+void prc_write_16()
+{
+    if (ce16.read() == sc_dt::Log_1) 
+    {
+            if(address16.read().is_01() && address16.read().to_uint()<AddressRange)
+              q16 = ram[address16.read().to_uint()];
+            else
+              q16 = sc_lv<DataWidth>();
+    }
+}
+
+
 }; //endmodule
 
 
 SC_MODULE(tiled_conv_conv_in_buf_V_RAM_1WNR_AUTO_1R1W) {
 
 
-static const unsigned DataWidth = 736;
-static const unsigned AddressRange = 156;
-static const unsigned AddressWidth = 8;
+static const unsigned DataWidth = 16;
+static const unsigned AddressRange = 7176;
+static const unsigned AddressWidth = 13;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in<sc_logic> ce0;
@@ -217,6 +407,36 @@ sc_core::sc_out <sc_lv<DataWidth> > q5;
 sc_core::sc_in <sc_lv<AddressWidth> > address6;
 sc_core::sc_in<sc_logic> ce6;
 sc_core::sc_out <sc_lv<DataWidth> > q6;
+sc_core::sc_in <sc_lv<AddressWidth> > address7;
+sc_core::sc_in<sc_logic> ce7;
+sc_core::sc_out <sc_lv<DataWidth> > q7;
+sc_core::sc_in <sc_lv<AddressWidth> > address8;
+sc_core::sc_in<sc_logic> ce8;
+sc_core::sc_out <sc_lv<DataWidth> > q8;
+sc_core::sc_in <sc_lv<AddressWidth> > address9;
+sc_core::sc_in<sc_logic> ce9;
+sc_core::sc_out <sc_lv<DataWidth> > q9;
+sc_core::sc_in <sc_lv<AddressWidth> > address10;
+sc_core::sc_in<sc_logic> ce10;
+sc_core::sc_out <sc_lv<DataWidth> > q10;
+sc_core::sc_in <sc_lv<AddressWidth> > address11;
+sc_core::sc_in<sc_logic> ce11;
+sc_core::sc_out <sc_lv<DataWidth> > q11;
+sc_core::sc_in <sc_lv<AddressWidth> > address12;
+sc_core::sc_in<sc_logic> ce12;
+sc_core::sc_out <sc_lv<DataWidth> > q12;
+sc_core::sc_in <sc_lv<AddressWidth> > address13;
+sc_core::sc_in<sc_logic> ce13;
+sc_core::sc_out <sc_lv<DataWidth> > q13;
+sc_core::sc_in <sc_lv<AddressWidth> > address14;
+sc_core::sc_in<sc_logic> ce14;
+sc_core::sc_out <sc_lv<DataWidth> > q14;
+sc_core::sc_in <sc_lv<AddressWidth> > address15;
+sc_core::sc_in<sc_logic> ce15;
+sc_core::sc_out <sc_lv<DataWidth> > q15;
+sc_core::sc_in <sc_lv<AddressWidth> > address16;
+sc_core::sc_in<sc_logic> ce16;
+sc_core::sc_out <sc_lv<DataWidth> > q16;
 sc_core::sc_in<sc_logic> reset;
 sc_core::sc_in<bool> clk;
 
@@ -256,15 +476,45 @@ meminst->address6(address6);
 meminst->ce6(ce6);
 meminst->q6(q6);
 
+meminst->address7(address7);
+meminst->ce7(ce7);
+meminst->q7(q7);
 
+meminst->address8(address8);
+meminst->ce8(ce8);
+meminst->q8(q8);
 
+meminst->address9(address9);
+meminst->ce9(ce9);
+meminst->q9(q9);
 
+meminst->address10(address10);
+meminst->ce10(ce10);
+meminst->q10(q10);
 
+meminst->address11(address11);
+meminst->ce11(ce11);
+meminst->q11(q11);
 
+meminst->address12(address12);
+meminst->ce12(ce12);
+meminst->q12(q12);
 
+meminst->address13(address13);
+meminst->ce13(ce13);
+meminst->q13(q13);
 
+meminst->address14(address14);
+meminst->ce14(ce14);
+meminst->q14(q14);
 
+meminst->address15(address15);
+meminst->ce15(ce15);
+meminst->q15(q15);
 
+meminst->address16(address16);
+meminst->ce16(ce16);
+meminst->q16(q16);
 
 meminst->reset(reset);
 meminst->clk(clk);

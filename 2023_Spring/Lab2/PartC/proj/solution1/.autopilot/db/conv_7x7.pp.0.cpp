@@ -33807,54 +33807,61 @@ void conv_7x7 (
     wt_t B_buf[4]
 )
 {
-# 30 "conv_7x7.cpp"
-    KERNEL:
-    for (int kernel = 0; kernel < 4; kernel++) {
+# 40 "conv_7x7.cpp"
+    HEIGHT:
+    for (int h = 0, oh = 0; oh < 46 / 2; h += 2, oh++) {
+
+        WIDTH:
+        for (int w = 0, ow = 0; ow < 40 / 2; w += 2, ow++) {
+
+            KERNEL:
+            for (int kernel = 0; kernel < 4; kernel++) {
 
 
 
-        HEIGHT:
-        for (int h = 0, oh = 0; oh < 46 / 2; h += 2, oh++) {
-
-
-            WIDTH:
-            for (int w = 0, ow = 0; ow < 40 / 2; w += 2, ow++) {
-
-
-                fm_t val = 0;
+                Y_buf[kernel][oh][ow] = 0;
 
                 CHANNEL:
                 for (int chan = 0; chan < 3; chan++) {
 
-
-
-
                     KERN_I:
                     for (int i = 0; i < 7; i++) {
+#pragma HLS unroll
 
-                        static fm_t acc[7] = {0};
-#pragma HLS array_reshape variable=acc complete dim=1
-
-
-
-
+ fm_t acc[7] = {0};
+#pragma HLS array_partition variable=acc complete dim=1
 
  KERN_J:
                         for (int j = 0; j < 7; j++) {
-                            acc[j] = X_buf[chan][h + i][w + j] * W_buf[kernel][chan][i][j];
+#pragma HLS unroll
+ acc[j] += X_buf[chan][h + i][w + j] * W_buf[kernel][chan][i][j];
                         }
 
-                        ACC:
-                        for (int j = 0; j < 7; j++) {
-                            val += acc[j];
-                        }
+                        fm_t a1 = acc[0] + acc[1];
+                        fm_t a2 = acc[2] + acc[3];
+                        fm_t a3 = acc[3] + acc[4];
+                        fm_t a4 = acc[5] + acc[6];
+
+                        fm_t b1 = a1 + a2;
+                        fm_t b2 = a3 + a4;
+
+                        Y_buf[kernel][oh][ow] = b1 + b2;
+
+
+
+
+
+
+
                     }
+
                 }
 
-                Y_buf[kernel][oh][ow] = val + B_buf[kernel];
+                Y_buf[kernel][oh][ow] += B_buf[kernel];
+
             }
         }
 
     }
-
+# 107 "conv_7x7.cpp"
 }
