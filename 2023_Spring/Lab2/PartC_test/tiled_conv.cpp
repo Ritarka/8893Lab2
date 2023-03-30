@@ -44,13 +44,13 @@ void tiled_conv (
 
     #pragma HLS array_partition variable=conv_out_buf complete dim=1
 
-    #pragma HLS array_partition variable=conv_in_buf_ping complete dim=3
+    #pragma HLS array_partition variable=conv_bias_buf_ping complete dim=3
     #pragma HLS array_partition variable=conv_wt_buf_ping complete dim=3
 
-    #pragma HLS array_partition variable=conv_in_buf_pong complete dim=3
+    #pragma HLS array_partition variable=conv_bias_buf_pong complete dim=3
     #pragma HLS array_partition variable=conv_wt_buf_pong complete dim=3
 
-    #pragma HLS array_partition variable=conv_bias_buf complete dim=1
+    #pragma HLS array_partition variable=conv_in_buf complete dim=1
 
     static const int depth = OUT_FM_DEPTH / OUT_BUF_DEPTH;
 
@@ -74,7 +74,6 @@ void tiled_conv (
             TILE_DEPTH:
             for(int tk = 0; tk < depth; tk++) {
 
-                #pragma HLS unroll
 
                 if (tk == 0) {
                     load_input_tile_block_from_DRAM(

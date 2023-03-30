@@ -28,50 +28,50 @@ void conv_7x7 (
 
 
 
-    HEIGHT:
-    for (int h = 0, oh = 0; oh < OUT_BUF_HEIGHT; h += STRIDE, oh++) {
+    int h, w;
 
-        WIDTH:
-        for (int w = 0, ow = 0; ow < OUT_BUF_WIDTH; w += STRIDE, ow++) {
+    // fm_t acc[7][7] = {0};
 
-            KERNEL:
-            for (int kernel = 0; kernel < OUT_BUF_DEPTH; kernel++) {
+    // #pragma HLS array_partition variable=acc complete dim=1
+    // #pragma HLS array_partition variable=acc complete dim=2
 
-                //#pragma HLS pipeline II=1
 
-                Y_buf[kernel][oh][ow] = 0;
 
-                CHANNEL:
-                for (int chan = 0; chan < 3; chan++) {
+    KERNEL:
+    for (int kernel = 0; kernel < OUT_BUF_DEPTH; kernel++) {
 
-                    KERN_I:
-                    for (int i = 0; i < 7; i++) {
-                        #pragma HLS unroll
+        //#pragma HLS pipeline
 
-                        fm_t acc[7] = {0};
-                        #pragma HLS array_partition variable=acc complete dim=1
+        CHANNEL:
+        for (int chan = 0; chan < 3; chan++) {
 
-                        KERN_J:
-                        for (int j = 0; j < 7; j++) {
+            KERN_I:
+            for (int i = 0; i < 7; i++) {
+                //#pragma HLS unroll
+
+                KERN_J:
+                for (int j = 0; j < 7; j++) {
+
+                    HEIGHT:
+                    for (int oh = 0; oh < OUT_BUF_HEIGHT; oh++) {
+
+                        h = oh << 1;
+
+                        WIDTH:
+                        for (int ow = 0; ow < OUT_BUF_WIDTH; ow++) {
                             #pragma HLS unroll
-                            acc[j] = X_buf[chan][h + i][w + j] * W_buf[kernel][chan][i][j];
+
+                            w = ow << 1;
+        
+                            if (!chan && !i && !j)
+                                Y_buf[kernel][oh][ow] = B_buf[kernel] + X_buf[chan][h + i][w + j] * W_buf[kernel][chan][i][j];
+                            else
+                                Y_buf[kernel][oh][ow] += X_buf[chan][h + i][w + j] * W_buf[kernel][chan][i][j];
+
                         }
-
-                        fm_t a1 = acc[0] + acc[1];
-                        fm_t a2 = acc[2] + acc[3];
-                        fm_t a3 = acc[4] + acc[5];
-
-                        fm_t b1 = a1 + a2;
-                        fm_t b2 = a3 + acc[6];
-
-                        Y_buf[kernel][oh][ow] += b1 + b2;
-
                     }
 
                 }
-
-                Y_buf[kernel][oh][ow] += B_buf[kernel];
-
             }
         }
 

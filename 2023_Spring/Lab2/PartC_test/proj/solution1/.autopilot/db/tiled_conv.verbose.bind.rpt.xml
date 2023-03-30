@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'tiled_conv'" level="0">
+<item name = "Date">Wed Mar 29 09:30:37 2023
+</item>
+<item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
+<item name = "Project">proj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.691 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">110100481, 174055425, 1.101 sec, 1.741 sec, 110100482, 174055426, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_tiled_conv_Pipeline_INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH_fu_427">tiled_conv_Pipeline_INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH, 7189, 7189, 71.890 us, 71.890 us, 7189, 7189, no</column>
+<column name="grp_load_layer_params_from_DRAM_fu_440">load_layer_params_from_DRAM, 617, 617, 6.170 us, 6.170 us, 617, 617, no</column>
+<column name="grp_conv_7x7_fu_465">conv_7x7, 11570, 11570, 0.116 ms, 0.116 ms, 11570, 11570, no</column>
+<column name="grp_tiled_conv_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH_1_1_fu_491">tiled_conv_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH_1_1, 1862, 1862, 18.620 us, 18.620 us, 1862, 1862, no</column>
+<column name="grp_tiled_conv_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH_1_fu_509">tiled_conv_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH_1, 1862, 1862, 18.620 us, 18.620 us, 1862, 1862, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- TILE_ROW_TILE_COL_TILE_DEPTH">110100480, 174055424, 13440 ~ 21247, -, -, 8192, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

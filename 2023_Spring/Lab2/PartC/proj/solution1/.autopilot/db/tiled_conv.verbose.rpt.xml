@@ -1,0 +1,575 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'tiled_conv'" level="0">
+<item name = "Date">Wed Mar 29 20:18:09 2023
+</item>
+<item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
+<item name = "Project">proj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 9.087 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">4455682561, 4455682561, 44.557 sec, 44.557 sec, 4455682562, 4455682562, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_tiled_conv_Pipeline_INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH_fu_525">tiled_conv_Pipeline_INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH, 7189, 7189, 71.890 us, 71.890 us, 7189, 7189, no</column>
+<column name="grp_tiled_conv_Pipeline_WEIGHT_KERNEL_NUM_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH_fu_542">tiled_conv_Pipeline_WEIGHT_KERNEL_NUM_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH, 591, 591, 5.910 us, 5.910 us, 591, 591, no</column>
+<column name="grp_tiled_conv_Pipeline_BIAS_fu_598">tiled_conv_Pipeline_BIAS, 7, 7, 70.000 ns, 70.000 ns, 7, 7, no</column>
+<column name="grp_tiled_conv_Pipeline_KERNEL_KERN_I_HEIGHT_WIDTH_fu_613">tiled_conv_Pipeline_KERNEL_KERN_I_HEIGHT_WIDTH, 540974, 540974, 5.410 ms, 5.410 ms, 540974, 540974, no</column>
+<column name="grp_tiled_conv_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH_fu_684">tiled_conv_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH, 1862, 1862, 18.620 us, 18.620 us, 1862, 1862, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- TILE_ROW_TILE_COL">4455682560, 4455682560, 8702505, -, -, 512, no</column>
+<column name=" + TILE_DEPTH">8695312, 8695312, 543457, -, -, 16, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, 1, -, -, -</column>
+<column name="Expression">-, -, 0, 331, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">0, 6, 7712, 10782, -</column>
+<column name="Memory">21, -, 800, 147, 0</column>
+<column name="Multiplexer">-, -, -, 2868, -</column>
+<column name="Register">-, -, 655, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">7, 3, 8, 26, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="control_s_axi_U">control_s_axi, 0, 0, 316, 552, 0</column>
+<column name="fm_m_axi_U">fm_m_axi, 0, 0, 743, 1415, 0</column>
+<column name="mul_5ns_6ns_9_1_1_U217">mul_5ns_6ns_9_1_1, 0, 0, 0, 26, 0</column>
+<column name="grp_tiled_conv_Pipeline_BIAS_fu_598">tiled_conv_Pipeline_BIAS, 0, 0, 93, 105, 0</column>
+<column name="grp_tiled_conv_Pipeline_INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH_fu_525">tiled_conv_Pipeline_INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH, 0, 1, 586, 928, 0</column>
+<column name="grp_tiled_conv_Pipeline_KERNEL_KERN_I_HEIGHT_WIDTH_fu_613">tiled_conv_Pipeline_KERNEL_KERN_I_HEIGHT_WIDTH, 0, 3, 3385, 4117, 0</column>
+<column name="grp_tiled_conv_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH_fu_684">tiled_conv_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH, 0, 2, 1778, 1934, 0</column>
+<column name="grp_tiled_conv_Pipeline_WEIGHT_KERNEL_NUM_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH_fu_542">tiled_conv_Pipeline_WEIGHT_KERNEL_NUM_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH, 0, 0, 68, 290, 0</column>
+<column name="wt_m_axi_U">wt_m_axi, 0, 0, 743, 1415, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="mac_muladd_5ns_6ns_3s_11_1_1_U218">mac_muladd_5ns_6ns_3s_11_1_1, i0 * i1 + i2</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="conv_in_buf_V_U">conv_in_buf_V_RAM_AUTO_1R1W, 2, 0, 0, 0, 1092, 16, 1, 17472</column>
+<column name="conv_in_buf_V_1_U">conv_in_buf_V_RAM_AUTO_1R1W, 2, 0, 0, 0, 1092, 16, 1, 17472</column>
+<column name="conv_in_buf_V_2_U">conv_in_buf_V_RAM_AUTO_1R1W, 2, 0, 0, 0, 1092, 16, 1, 17472</column>
+<column name="conv_in_buf_V_3_U">conv_in_buf_V_RAM_AUTO_1R1W, 2, 0, 0, 0, 1092, 16, 1, 17472</column>
+<column name="conv_in_buf_V_4_U">conv_in_buf_V_RAM_AUTO_1R1W, 2, 0, 0, 0, 1092, 16, 1, 17472</column>
+<column name="conv_in_buf_V_5_U">conv_in_buf_V_RAM_AUTO_1R1W, 2, 0, 0, 0, 1092, 16, 1, 17472</column>
+<column name="conv_in_buf_V_6_U">conv_in_buf_V_RAM_AUTO_1R1W, 2, 0, 0, 0, 1092, 16, 1, 17472</column>
+<column name="conv_out_buf_V_U">conv_out_buf_V_RAM_AUTO_1R1W, 1, 0, 0, 0, 320, 16, 1, 5120</column>
+<column name="conv_out_buf_V_1_U">conv_out_buf_V_RAM_AUTO_1R1W, 1, 0, 0, 0, 320, 16, 1, 5120</column>
+<column name="conv_out_buf_V_2_U">conv_out_buf_V_RAM_AUTO_1R1W, 1, 0, 0, 0, 320, 16, 1, 5120</column>
+<column name="conv_out_buf_V_3_U">conv_out_buf_V_RAM_AUTO_1R1W, 1, 0, 0, 0, 320, 16, 1, 5120</column>
+<column name="conv_out_buf_V_4_U">conv_out_buf_V_RAM_AUTO_1R1W, 1, 0, 0, 0, 320, 16, 1, 5120</column>
+<column name="conv_out_buf_V_5_U">conv_out_buf_V_RAM_AUTO_1R1W, 1, 0, 0, 0, 320, 16, 1, 5120</column>
+<column name="conv_out_buf_V_6_U">conv_out_buf_V_RAM_AUTO_1R1W, 1, 0, 0, 0, 320, 16, 1, 5120</column>
+<column name="conv_wt_buf_V_1_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_2_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_3_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_4_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_5_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_6_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_7_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_8_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_9_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_10_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_11_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_12_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_13_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_14_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_15_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_16_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_17_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_18_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_19_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_20_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_21_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_22_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_23_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_24_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_25_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_26_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_27_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_28_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_29_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_30_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_31_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_32_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_33_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_34_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_35_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_36_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_37_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_38_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_39_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_40_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_41_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_42_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_43_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_44_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_45_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_46_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_47_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_48_U">conv_wt_buf_V_1_RAM_AUTO_1R1W, 0, 16, 3, 0, 12, 16, 1, 192</column>
+<column name="conv_wt_buf_V_U">conv_wt_buf_V_RAM_1WNR_AUTO_1R1W, 0, 32, 3, 0, 12, 16, 1, 192</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln130_1_fu_880_p2">+, 0, 0, 19, 19, 19</column>
+<column name="add_ln130_9_fu_886_p2">+, 0, 0, 19, 19, 19</column>
+<column name="add_ln130_fu_844_p2">+, 0, 0, 13, 10, 10</column>
+<column name="add_ln46_fu_809_p2">+, 0, 0, 12, 11, 11</column>
+<column name="add_ln56_2_fu_730_p2">+, 0, 0, 13, 10, 1</column>
+<column name="add_ln56_fu_742_p2">+, 0, 0, 13, 5, 1</column>
+<column name="add_ln59_fu_960_p2">+, 0, 0, 14, 6, 1</column>
+<column name="add_ln70_1_fu_945_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln70_fu_914_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln74_1_fu_892_p2">+, 0, 0, 20, 15, 11</column>
+<column name="add_ln74_fu_904_p2">+, 0, 0, 13, 5, 1</column>
+<column name="icmp_ln56_fu_724_p2">icmp, 0, 0, 11, 10, 11</column>
+<column name="icmp_ln59_fu_748_p2">icmp, 0, 0, 10, 6, 7</column>
+<column name="icmp_ln74_fu_898_p2">icmp, 0, 0, 10, 5, 6</column>
+<column name="p_mid127_fu_816_p2">icmp, 0, 0, 11, 11, 10</column>
+<column name="select_ln39_1_fu_754_p3">select, 0, 0, 5, 1, 5</column>
+<column name="select_ln39_fu_766_p3">select, 0, 0, 6, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">125, 28, 1, 28</column>
+<column name="conv_in_buf_V_1_address0">14, 3, 11, 33</column>
+<column name="conv_in_buf_V_1_ce0">14, 3, 1, 3</column>
+<column name="conv_in_buf_V_1_ce1">9, 2, 1, 2</column>
+<column name="conv_in_buf_V_1_we0">9, 2, 1, 2</column>
+<column name="conv_in_buf_V_2_address0">14, 3, 11, 33</column>
+<column name="conv_in_buf_V_2_ce0">14, 3, 1, 3</column>
+<column name="conv_in_buf_V_2_ce1">9, 2, 1, 2</column>
+<column name="conv_in_buf_V_2_we0">9, 2, 1, 2</column>
+<column name="conv_in_buf_V_3_address0">14, 3, 11, 33</column>
+<column name="conv_in_buf_V_3_ce0">14, 3, 1, 3</column>
+<column name="conv_in_buf_V_3_ce1">9, 2, 1, 2</column>
+<column name="conv_in_buf_V_3_we0">9, 2, 1, 2</column>
+<column name="conv_in_buf_V_4_address0">14, 3, 11, 33</column>
+<column name="conv_in_buf_V_4_ce0">14, 3, 1, 3</column>
+<column name="conv_in_buf_V_4_ce1">9, 2, 1, 2</column>
+<column name="conv_in_buf_V_4_we0">9, 2, 1, 2</column>
+<column name="conv_in_buf_V_5_address0">14, 3, 11, 33</column>
+<column name="conv_in_buf_V_5_ce0">14, 3, 1, 3</column>
+<column name="conv_in_buf_V_5_ce1">9, 2, 1, 2</column>
+<column name="conv_in_buf_V_5_we0">9, 2, 1, 2</column>
+<column name="conv_in_buf_V_6_address0">14, 3, 11, 33</column>
+<column name="conv_in_buf_V_6_ce0">14, 3, 1, 3</column>
+<column name="conv_in_buf_V_6_ce1">9, 2, 1, 2</column>
+<column name="conv_in_buf_V_6_we0">9, 2, 1, 2</column>
+<column name="conv_in_buf_V_address0">14, 3, 11, 33</column>
+<column name="conv_in_buf_V_ce0">14, 3, 1, 3</column>
+<column name="conv_in_buf_V_ce1">9, 2, 1, 2</column>
+<column name="conv_in_buf_V_we0">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_1_address0">14, 3, 9, 27</column>
+<column name="conv_out_buf_V_1_ce0">14, 3, 1, 3</column>
+<column name="conv_out_buf_V_1_ce1">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_1_we0">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_1_we1">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_2_address0">14, 3, 9, 27</column>
+<column name="conv_out_buf_V_2_ce0">14, 3, 1, 3</column>
+<column name="conv_out_buf_V_2_ce1">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_2_we0">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_2_we1">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_3_address0">14, 3, 9, 27</column>
+<column name="conv_out_buf_V_3_ce0">14, 3, 1, 3</column>
+<column name="conv_out_buf_V_3_ce1">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_3_we0">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_3_we1">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_4_address0">14, 3, 9, 27</column>
+<column name="conv_out_buf_V_4_ce0">14, 3, 1, 3</column>
+<column name="conv_out_buf_V_4_ce1">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_4_we0">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_4_we1">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_5_address0">14, 3, 9, 27</column>
+<column name="conv_out_buf_V_5_ce0">14, 3, 1, 3</column>
+<column name="conv_out_buf_V_5_ce1">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_5_we0">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_5_we1">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_6_address0">14, 3, 9, 27</column>
+<column name="conv_out_buf_V_6_ce0">14, 3, 1, 3</column>
+<column name="conv_out_buf_V_6_ce1">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_6_we0">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_6_we1">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_address0">20, 4, 9, 36</column>
+<column name="conv_out_buf_V_ce0">20, 4, 1, 4</column>
+<column name="conv_out_buf_V_ce1">9, 2, 1, 2</column>
+<column name="conv_out_buf_V_d0">14, 3, 16, 48</column>
+<column name="conv_out_buf_V_we0">14, 3, 1, 3</column>
+<column name="conv_out_buf_V_we1">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_10_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_10_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_10_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_11_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_11_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_11_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_12_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_12_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_12_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_13_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_13_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_13_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_14_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_14_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_14_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_15_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_15_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_15_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_16_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_16_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_16_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_17_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_17_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_17_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_18_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_18_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_18_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_19_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_19_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_19_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_1_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_1_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_1_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_20_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_20_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_20_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_21_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_21_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_21_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_22_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_22_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_22_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_23_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_23_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_23_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_24_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_24_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_24_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_25_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_25_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_25_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_26_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_26_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_26_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_27_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_27_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_27_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_28_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_28_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_28_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_29_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_29_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_29_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_2_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_2_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_2_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_30_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_30_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_30_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_31_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_31_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_31_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_32_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_32_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_32_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_33_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_33_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_33_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_34_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_34_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_34_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_35_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_35_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_35_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_36_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_36_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_36_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_37_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_37_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_37_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_38_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_38_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_38_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_39_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_39_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_39_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_3_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_3_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_3_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_40_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_40_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_40_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_41_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_41_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_41_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_42_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_42_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_42_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_43_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_43_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_43_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_44_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_44_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_44_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_45_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_45_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_45_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_46_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_46_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_46_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_47_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_47_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_47_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_48_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_48_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_48_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_4_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_4_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_4_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_5_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_5_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_5_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_6_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_6_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_6_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_7_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_7_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_7_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_8_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_8_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_8_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_9_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_9_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_9_we0">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_address0">14, 3, 4, 12</column>
+<column name="conv_wt_buf_V_ce0">14, 3, 1, 3</column>
+<column name="conv_wt_buf_V_ce1">9, 2, 1, 2</column>
+<column name="conv_wt_buf_V_we0">9, 2, 1, 2</column>
+<column name="fm_ARVALID">9, 2, 1, 2</column>
+<column name="fm_AWVALID">9, 2, 1, 2</column>
+<column name="fm_BREADY">9, 2, 1, 2</column>
+<column name="fm_RREADY">9, 2, 1, 2</column>
+<column name="fm_WVALID">9, 2, 1, 2</column>
+<column name="indvar_flatten746_fu_162">9, 2, 10, 20</column>
+<column name="phi_mul_reg_514">9, 2, 15, 30</column>
+<column name="ti_fu_158">9, 2, 5, 10</column>
+<column name="tj_fu_154">9, 2, 6, 12</column>
+<column name="tk_reg_503">9, 2, 5, 10</column>
+<column name="wt_ARADDR">25, 5, 64, 320</column>
+<column name="wt_ARLEN">25, 5, 32, 160</column>
+<column name="wt_ARVALID">20, 4, 1, 4</column>
+<column name="wt_RREADY">14, 3, 1, 3</column>
+<column name="wt_blk_n_AR">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln130_9_reg_1236">16, 0, 19, 3</column>
+<column name="add_ln39_reg_1177">11, 0, 11, 0</column>
+<column name="add_ln46_reg_1201">8, 0, 11, 3</column>
+<column name="add_ln56_2_reg_1158">10, 0, 10, 0</column>
+<column name="add_ln74_1_reg_1241">15, 0, 15, 0</column>
+<column name="add_ln74_reg_1249">5, 0, 5, 0</column>
+<column name="ap_CS_fsm">27, 0, 27, 0</column>
+<column name="conv_bias_buf_V_1_fu_170">16, 0, 16, 0</column>
+<column name="conv_bias_buf_V_2_fu_174">16, 0, 16, 0</column>
+<column name="conv_bias_buf_V_3_fu_178">16, 0, 16, 0</column>
+<column name="conv_bias_buf_V_fu_166">16, 0, 16, 0</column>
+<column name="grp_tiled_conv_Pipeline_BIAS_fu_598_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_tiled_conv_Pipeline_INPUT_BUFFER_DEPTH_INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH_fu_525_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_tiled_conv_Pipeline_KERNEL_KERN_I_HEIGHT_WIDTH_fu_613_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_tiled_conv_Pipeline_OUTPUT_BUFFER_DEPTH_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH_fu_684_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_tiled_conv_Pipeline_WEIGHT_KERNEL_NUM_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH_fu_542_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_ln59_reg_1166">1, 0, 1, 0</column>
+<column name="indvar_flatten746_fu_162">10, 0, 10, 0</column>
+<column name="input_feature_map_read_reg_1126">64, 0, 64, 0</column>
+<column name="layer_bias_read_reg_1116">64, 0, 64, 0</column>
+<column name="layer_weights_read_reg_1121">64, 0, 64, 0</column>
+<column name="mul_ln39_reg_1188">9, 0, 9, 0</column>
+<column name="output_feature_map_read_reg_1111">64, 0, 64, 0</column>
+<column name="p_mid127_reg_1206">1, 0, 1, 0</column>
+<column name="phi_mul_reg_514">15, 0, 15, 0</column>
+<column name="select_ln39_1_reg_1171">5, 0, 5, 0</column>
+<column name="select_ln39_reg_1183">6, 0, 6, 0</column>
+<column name="shl_ln130_1_mid_reg_1231">9, 0, 17, 8</column>
+<column name="shl_ln130_3_reg_1221">8, 0, 11, 3</column>
+<column name="shl_ln130_mid_reg_1226">9, 0, 19, 10</column>
+<column name="shl_ln70_1_reg_1305">4, 0, 6, 2</column>
+<column name="ti_fu_158">5, 0, 5, 0</column>
+<column name="tj_fu_154">6, 0, 6, 0</column>
+<column name="tk_reg_503">5, 0, 5, 0</column>
+<column name="tmp_11_reg_1216">5, 0, 9, 4</column>
+<column name="tmp_s_reg_1211">5, 0, 7, 2</column>
+<column name="trunc_ln28_reg_1195">5, 0, 5, 0</column>
+<column name="trunc_ln2_reg_1254">63, 0, 63, 0</column>
+<column name="trunc_ln3_reg_1265">63, 0, 63, 0</column>
+<column name="trunc_ln70_reg_1260">4, 0, 4, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_control_AWVALID">in, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_AWREADY">out, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_AWADDR">in, 6, s_axi, control, scalar</column>
+<column name="s_axi_control_WVALID">in, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_WREADY">out, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_WDATA">in, 32, s_axi, control, scalar</column>
+<column name="s_axi_control_WSTRB">in, 4, s_axi, control, scalar</column>
+<column name="s_axi_control_ARVALID">in, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_ARREADY">out, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_ARADDR">in, 6, s_axi, control, scalar</column>
+<column name="s_axi_control_RVALID">out, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_RREADY">in, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_RDATA">out, 32, s_axi, control, scalar</column>
+<column name="s_axi_control_RRESP">out, 2, s_axi, control, scalar</column>
+<column name="s_axi_control_BVALID">out, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_BREADY">in, 1, s_axi, control, scalar</column>
+<column name="s_axi_control_BRESP">out, 2, s_axi, control, scalar</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, tiled_conv, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, tiled_conv, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, tiled_conv, return value</column>
+<column name="m_axi_fm_AWVALID">out, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_AWREADY">in, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_AWADDR">out, 64, m_axi, fm, pointer</column>
+<column name="m_axi_fm_AWID">out, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_AWLEN">out, 8, m_axi, fm, pointer</column>
+<column name="m_axi_fm_AWSIZE">out, 3, m_axi, fm, pointer</column>
+<column name="m_axi_fm_AWBURST">out, 2, m_axi, fm, pointer</column>
+<column name="m_axi_fm_AWLOCK">out, 2, m_axi, fm, pointer</column>
+<column name="m_axi_fm_AWCACHE">out, 4, m_axi, fm, pointer</column>
+<column name="m_axi_fm_AWPROT">out, 3, m_axi, fm, pointer</column>
+<column name="m_axi_fm_AWQOS">out, 4, m_axi, fm, pointer</column>
+<column name="m_axi_fm_AWREGION">out, 4, m_axi, fm, pointer</column>
+<column name="m_axi_fm_AWUSER">out, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_WVALID">out, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_WREADY">in, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_WDATA">out, 32, m_axi, fm, pointer</column>
+<column name="m_axi_fm_WSTRB">out, 4, m_axi, fm, pointer</column>
+<column name="m_axi_fm_WLAST">out, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_WID">out, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_WUSER">out, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_ARVALID">out, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_ARREADY">in, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_ARADDR">out, 64, m_axi, fm, pointer</column>
+<column name="m_axi_fm_ARID">out, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_ARLEN">out, 8, m_axi, fm, pointer</column>
+<column name="m_axi_fm_ARSIZE">out, 3, m_axi, fm, pointer</column>
+<column name="m_axi_fm_ARBURST">out, 2, m_axi, fm, pointer</column>
+<column name="m_axi_fm_ARLOCK">out, 2, m_axi, fm, pointer</column>
+<column name="m_axi_fm_ARCACHE">out, 4, m_axi, fm, pointer</column>
+<column name="m_axi_fm_ARPROT">out, 3, m_axi, fm, pointer</column>
+<column name="m_axi_fm_ARQOS">out, 4, m_axi, fm, pointer</column>
+<column name="m_axi_fm_ARREGION">out, 4, m_axi, fm, pointer</column>
+<column name="m_axi_fm_ARUSER">out, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_RVALID">in, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_RREADY">out, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_RDATA">in, 32, m_axi, fm, pointer</column>
+<column name="m_axi_fm_RLAST">in, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_RID">in, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_RUSER">in, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_RRESP">in, 2, m_axi, fm, pointer</column>
+<column name="m_axi_fm_BVALID">in, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_BREADY">out, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_BRESP">in, 2, m_axi, fm, pointer</column>
+<column name="m_axi_fm_BID">in, 1, m_axi, fm, pointer</column>
+<column name="m_axi_fm_BUSER">in, 1, m_axi, fm, pointer</column>
+<column name="m_axi_wt_AWVALID">out, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_AWREADY">in, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_AWADDR">out, 64, m_axi, wt, pointer</column>
+<column name="m_axi_wt_AWID">out, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_AWLEN">out, 8, m_axi, wt, pointer</column>
+<column name="m_axi_wt_AWSIZE">out, 3, m_axi, wt, pointer</column>
+<column name="m_axi_wt_AWBURST">out, 2, m_axi, wt, pointer</column>
+<column name="m_axi_wt_AWLOCK">out, 2, m_axi, wt, pointer</column>
+<column name="m_axi_wt_AWCACHE">out, 4, m_axi, wt, pointer</column>
+<column name="m_axi_wt_AWPROT">out, 3, m_axi, wt, pointer</column>
+<column name="m_axi_wt_AWQOS">out, 4, m_axi, wt, pointer</column>
+<column name="m_axi_wt_AWREGION">out, 4, m_axi, wt, pointer</column>
+<column name="m_axi_wt_AWUSER">out, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_WVALID">out, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_WREADY">in, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_WDATA">out, 32, m_axi, wt, pointer</column>
+<column name="m_axi_wt_WSTRB">out, 4, m_axi, wt, pointer</column>
+<column name="m_axi_wt_WLAST">out, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_WID">out, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_WUSER">out, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_ARVALID">out, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_ARREADY">in, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_ARADDR">out, 64, m_axi, wt, pointer</column>
+<column name="m_axi_wt_ARID">out, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_ARLEN">out, 8, m_axi, wt, pointer</column>
+<column name="m_axi_wt_ARSIZE">out, 3, m_axi, wt, pointer</column>
+<column name="m_axi_wt_ARBURST">out, 2, m_axi, wt, pointer</column>
+<column name="m_axi_wt_ARLOCK">out, 2, m_axi, wt, pointer</column>
+<column name="m_axi_wt_ARCACHE">out, 4, m_axi, wt, pointer</column>
+<column name="m_axi_wt_ARPROT">out, 3, m_axi, wt, pointer</column>
+<column name="m_axi_wt_ARQOS">out, 4, m_axi, wt, pointer</column>
+<column name="m_axi_wt_ARREGION">out, 4, m_axi, wt, pointer</column>
+<column name="m_axi_wt_ARUSER">out, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_RVALID">in, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_RREADY">out, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_RDATA">in, 32, m_axi, wt, pointer</column>
+<column name="m_axi_wt_RLAST">in, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_RID">in, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_RUSER">in, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_RRESP">in, 2, m_axi, wt, pointer</column>
+<column name="m_axi_wt_BVALID">in, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_BREADY">out, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_BRESP">in, 2, m_axi, wt, pointer</column>
+<column name="m_axi_wt_BID">in, 1, m_axi, wt, pointer</column>
+<column name="m_axi_wt_BUSER">in, 1, m_axi, wt, pointer</column>
+</table>
+</item>
+</section>
+</profile>

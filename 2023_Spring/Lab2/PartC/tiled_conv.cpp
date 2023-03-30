@@ -37,10 +37,14 @@ void tiled_conv (
     fm_t conv_out_buf[OUT_BUF_DEPTH][OUT_BUF_HEIGHT][OUT_BUF_WIDTH] = {0};
 
 
-    #pragma HLS array_partition variable=conv_out_buf complete dim=1
+    #pragma HLS array_partition variable=conv_out_buf complete dim=2
+    #pragma HLS array_partition variable=conv_out_buf type=cyclic factor=7 dim=1
+
+    #pragma HLS array_partition variable=conv_wt_buf complete dim=4
+    #pragma HLS array_partition variable=conv_wt_buf complete dim=3
 
     #pragma HLS array_partition variable=conv_in_buf complete dim=3
-    #pragma HLS array_partition variable=conv_wt_buf complete dim=3
+    #pragma HLS array_partition variable=conv_in_buf type=cyclic factor=7 dim=2
 
     #pragma HLS array_partition variable=conv_bias_buf complete dim=1
 
@@ -54,8 +58,6 @@ void tiled_conv (
         TILE_COL:
         for(int tj = 0; tj < N_TILE_COLS; tj++)
         {
-
-            //#pragma HLS pipeline
 
             std::cout << "Processing Tile " << ti*N_TILE_COLS + tj + 1;
             std::cout << "/" << N_TILE_ROWS * N_TILE_COLS << std::endl;
@@ -71,7 +73,6 @@ void tiled_conv (
             TILE_DEPTH:
             for(int tk = 0; tk < OUT_FM_DEPTH / OUT_BUF_DEPTH; tk++) {
 
-                #pragma HLS unroll
 
                 //read
                 load_layer_params_from_DRAM(

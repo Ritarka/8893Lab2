@@ -23,6 +23,7 @@ create_clock -period 10 -name default
 
 ## C code synthesis to generate Verilog code
 config_schedule -enable_dsp_full_reg=false
+##config_array_partition -throughput_driven off
 csynth_design
 
 ## C and Verilog co-simulation

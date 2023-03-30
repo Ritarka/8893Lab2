@@ -1,0 +1,185 @@
+
+
+================================================================
+== Vitis HLS Report for 'load_layer_params_from_DRAM_Pipeline_BIAS'
+================================================================
+* Date:           Wed Mar 29 09:30:14 2023
+
+* Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
+* Project:        proj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- BIAS    |        4|        4|         2|          1|          1|     4|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.23>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%f = alloca i32 1"   --->   Operation 5 'alloca' 'f' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%bias_buf3_04 = alloca i32 1"   --->   Operation 6 'alloca' 'bias_buf3_04' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%write_flag_0 = alloca i32 1"   --->   Operation 7 'alloca' 'write_flag_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%write_flag11_0 = alloca i32 1"   --->   Operation 8 'alloca' 'write_flag11_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%bias_buf2_05 = alloca i32 1"   --->   Operation 9 'alloca' 'bias_buf2_05' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%bias_buf_06 = alloca i32 1"   --->   Operation 10 'alloca' 'bias_buf_06' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%write_flag8_0 = alloca i32 1"   --->   Operation 11 'alloca' 'write_flag8_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%bias_buf16_07 = alloca i32 1"   --->   Operation 12 'alloca' 'bias_buf16_07' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%write_flag4_0 = alloca i32 1"   --->   Operation 13 'alloca' 'write_flag4_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%sext_ln91_read = read i63 @_ssdm_op_Read.ap_auto.i63, i63 %sext_ln91"   --->   Operation 14 'read' 'sext_ln91_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%sext_ln91_cast = sext i63 %sext_ln91_read"   --->   Operation 15 'sext' 'sext_ln91_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %wt, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 1, void @empty_7, void @empty_9, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln0 = store i1 0, i1 %write_flag4_0"   --->   Operation 17 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 18 [1/1] (1.58ns)   --->   "%store_ln0 = store i1 0, i1 %write_flag8_0"   --->   Operation 18 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 19 [1/1] (1.58ns)   --->   "%store_ln0 = store i1 0, i1 %write_flag11_0"   --->   Operation 19 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 20 [1/1] (1.58ns)   --->   "%store_ln0 = store i1 0, i1 %write_flag_0"   --->   Operation 20 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 21 [1/1] (1.58ns)   --->   "%store_ln0 = store i3 0, i3 %f"   --->   Operation 21 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc46"   --->   Operation 22 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%f_2 = load i3 %f" [utils.cpp:93]   --->   Operation 23 'load' 'f_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%wt_addr = getelementptr i16 %wt, i64 %sext_ln91_cast" [utils.cpp:91]   --->   Operation 24 'getelementptr' 'wt_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 25 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (1.13ns)   --->   "%icmp_ln91 = icmp_eq  i3 %f_2, i3 4" [utils.cpp:91]   --->   Operation 26 'icmp' 'icmp_ln91' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4"   --->   Operation 27 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (1.65ns)   --->   "%add_ln91 = add i3 %f_2, i3 1" [utils.cpp:91]   --->   Operation 28 'add' 'add_ln91' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln91 = br i1 %icmp_ln91, void %for.inc46.split, void %for.end48.exitStub" [utils.cpp:91]   --->   Operation 29 'br' 'br_ln91' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%trunc_ln93 = trunc i3 %f_2" [utils.cpp:93]   --->   Operation 30 'trunc' 'trunc_ln93' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.95ns)   --->   "%switch_ln93 = switch i2 %trunc_ln93, void %branch3, i2 0, void %for.inc46.split.for.inc46.split7_crit_edge, i2 1, void %for.inc46.split.for.inc46.split7_crit_edge3, i2 2, void %branch2" [utils.cpp:93]   --->   Operation 31 'switch' 'switch_ln93' <Predicate = (!icmp_ln91)> <Delay = 0.95>
+ST_1 : Operation 32 [1/1] (1.58ns)   --->   "%store_ln91 = store i3 %add_ln91, i3 %f" [utils.cpp:91]   --->   Operation 32 'store' 'store_ln91' <Predicate = (!icmp_ln91)> <Delay = 1.58>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln91 = br void %for.inc46" [utils.cpp:91]   --->   Operation 33 'br' 'br_ln91' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%bias_buf3_04_load = load i16 %bias_buf3_04"   --->   Operation 48 'load' 'bias_buf3_04_load' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%write_flag_0_load = load i1 %write_flag_0"   --->   Operation 49 'load' 'write_flag_0_load' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%write_flag11_0_load = load i1 %write_flag11_0"   --->   Operation 50 'load' 'write_flag11_0_load' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%bias_buf2_05_load = load i16 %bias_buf2_05"   --->   Operation 51 'load' 'bias_buf2_05_load' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%bias_buf_06_load = load i16 %bias_buf_06"   --->   Operation 52 'load' 'bias_buf_06_load' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%write_flag8_0_load = load i1 %write_flag8_0"   --->   Operation 53 'load' 'write_flag8_0_load' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%bias_buf16_07_load = load i16 %bias_buf16_07"   --->   Operation 54 'load' 'bias_buf16_07_load' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%write_flag4_0_load = load i1 %write_flag4_0"   --->   Operation 55 'load' 'write_flag4_0_load' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %write_flag4_0_out, i1 %write_flag4_0_load"   --->   Operation 56 'write' 'write_ln0' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %bias_buf16_07_out, i16 %bias_buf16_07_load"   --->   Operation 57 'write' 'write_ln0' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %write_flag8_0_out, i1 %write_flag8_0_load"   --->   Operation 58 'write' 'write_ln0' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %bias_buf_06_out, i16 %bias_buf_06_load"   --->   Operation 59 'write' 'write_ln0' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %bias_buf2_05_out, i16 %bias_buf2_05_load"   --->   Operation 60 'write' 'write_ln0' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %write_flag11_0_out, i1 %write_flag11_0_load"   --->   Operation 61 'write' 'write_ln0' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %write_flag_0_out, i1 %write_flag_0_load"   --->   Operation 62 'write' 'write_ln0' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %bias_buf3_04_out, i16 %bias_buf3_04_load"   --->   Operation 63 'write' 'write_ln0' <Predicate = (icmp_ln91)> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 64 'ret' 'ret_ln0' <Predicate = (icmp_ln91)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%specloopname_ln91 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13" [utils.cpp:91]   --->   Operation 34 'specloopname' 'specloopname_ln91' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (7.30ns)   --->   "%wt_addr_read = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %wt_addr" [utils.cpp:93]   --->   Operation 35 'read' 'wt_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 36 [1/1] (1.58ns)   --->   "%store_ln93 = store i1 1, i1 %write_flag8_0" [utils.cpp:93]   --->   Operation 36 'store' 'store_ln93' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%store_ln93 = store i16 %wt_addr_read, i16 %bias_buf2_05" [utils.cpp:93]   --->   Operation 37 'store' 'store_ln93' <Predicate = (trunc_ln93 == 2)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln93 = br void %for.inc46.split7" [utils.cpp:93]   --->   Operation 38 'br' 'br_ln93' <Predicate = (trunc_ln93 == 2)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (1.58ns)   --->   "%store_ln93 = store i1 1, i1 %write_flag4_0" [utils.cpp:93]   --->   Operation 39 'store' 'store_ln93' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%store_ln93 = store i16 %wt_addr_read, i16 %bias_buf16_07" [utils.cpp:93]   --->   Operation 40 'store' 'store_ln93' <Predicate = (trunc_ln93 == 1)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln93 = br void %for.inc46.split7" [utils.cpp:93]   --->   Operation 41 'br' 'br_ln93' <Predicate = (trunc_ln93 == 1)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%store_ln93 = store i16 %wt_addr_read, i16 %bias_buf_06" [utils.cpp:93]   --->   Operation 42 'store' 'store_ln93' <Predicate = (trunc_ln93 == 0)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (1.58ns)   --->   "%store_ln93 = store i1 1, i1 %write_flag_0" [utils.cpp:93]   --->   Operation 43 'store' 'store_ln93' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln93 = br void %for.inc46.split7" [utils.cpp:93]   --->   Operation 44 'br' 'br_ln93' <Predicate = (trunc_ln93 == 0)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (1.58ns)   --->   "%store_ln93 = store i1 1, i1 %write_flag11_0" [utils.cpp:93]   --->   Operation 45 'store' 'store_ln93' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%store_ln93 = store i16 %wt_addr_read, i16 %bias_buf3_04" [utils.cpp:93]   --->   Operation 46 'store' 'store_ln93' <Predicate = (trunc_ln93 == 3)> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln93 = br void %for.inc46.split7" [utils.cpp:93]   --->   Operation 47 'br' 'br_ln93' <Predicate = (trunc_ln93 == 3)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.24ns
+The critical path consists of the following:
+	'alloca' operation ('f') [11]  (0 ns)
+	'load' operation ('f', utils.cpp:93) on local variable 'f' [30]  (0 ns)
+	'add' operation ('add_ln91', utils.cpp:91) [35]  (1.65 ns)
+	'store' operation ('store_ln91', utils.cpp:91) of variable 'add_ln91', utils.cpp:91 on local variable 'f' [59]  (1.59 ns)
+
+ <State 2>: 7.3ns
+The critical path consists of the following:
+	bus read operation ('wt_addr_read', utils.cpp:93) on port 'wt' (utils.cpp:93) [39]  (7.3 ns)
+	'store' operation ('store_ln93', utils.cpp:93) of variable 'wt_addr_read', utils.cpp:93 on local variable 'bias_buf_06' [51]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

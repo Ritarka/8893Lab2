@@ -45,3 +45,4 @@ synth:
 clean:
 	rm -f -r csim.d 
 	rm -f *.out *.gcno *.gcda *.txt *.o *.d
+	rm -rf proj/
