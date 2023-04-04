@@ -20,8 +20,8 @@ using namespace sc_dt;
 struct tiled_conv_conv_in_buf_V_RAM_AUTO_1R1W_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 16;
-  static const unsigned AddressRange = 1092;
-  static const unsigned AddressWidth = 11;
+  static const unsigned AddressRange = 46;
+  static const unsigned AddressWidth = 6;
 
 //latency = 1
 //input_reg = 1
@@ -33,7 +33,8 @@ sc_core::sc_in<sc_logic> we0;
 sc_core::sc_in<sc_lv<DataWidth> > d0;
 sc_core::sc_in <sc_lv<AddressWidth> > address1;
 sc_core::sc_in <sc_logic> ce1;
-sc_core::sc_out <sc_lv<DataWidth> > q1;
+sc_core::sc_in<sc_logic> we1;
+sc_core::sc_in<sc_lv<DataWidth> > d1;
 sc_core::sc_in<sc_logic> reset;
 sc_core::sc_in<bool> clk;
 
@@ -81,10 +82,13 @@ void prc_write_1()
 {
     if (ce1.read() == sc_dt::Log_1) 
     {
-            if(address1.read().is_01() && address1.read().to_uint()<AddressRange)
-              q1 = ram[address1.read().to_uint()];
-            else
-              q1 = sc_lv<DataWidth>();
+        if (we1.read() == sc_dt::Log_1) 
+        {
+           if(address1.read().is_01() && address1.read().to_uint()<AddressRange)
+           {
+              ram[address1.read().to_uint()] = d1.read(); 
+           }
+        }
     }
 }
 
@@ -96,8 +100,8 @@ SC_MODULE(tiled_conv_conv_in_buf_V_RAM_AUTO_1R1W) {
 
 
 static const unsigned DataWidth = 16;
-static const unsigned AddressRange = 1092;
-static const unsigned AddressWidth = 11;
+static const unsigned AddressRange = 46;
+static const unsigned AddressWidth = 6;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in<sc_logic> ce0;
@@ -106,7 +110,8 @@ sc_core::sc_in<sc_logic> we0;
 sc_core::sc_in<sc_lv<DataWidth> > d0;
 sc_core::sc_in <sc_lv<AddressWidth> > address1;
 sc_core::sc_in<sc_logic> ce1;
-sc_core::sc_out <sc_lv<DataWidth> > q1;
+sc_core::sc_in<sc_logic> we1;
+sc_core::sc_in<sc_lv<DataWidth> > d1;
 sc_core::sc_in<sc_logic> reset;
 sc_core::sc_in<bool> clk;
 
@@ -124,7 +129,8 @@ meminst->d0(d0);
 
 meminst->address1(address1);
 meminst->ce1(ce1);
-meminst->q1(q1);
+meminst->we1(we1);
+meminst->d1(d1);
 
 meminst->reset(reset);
 meminst->clk(clk);

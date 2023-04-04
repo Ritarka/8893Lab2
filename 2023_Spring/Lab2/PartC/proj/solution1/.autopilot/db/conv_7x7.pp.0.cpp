@@ -33809,29 +33809,30 @@ void conv_7x7 (
 {
 # 31 "conv_7x7.cpp"
     int h, w;
-# 40 "conv_7x7.cpp"
-    KERNEL:
-    for (int kernel = 0; kernel < 4; kernel++) {
+# 42 "conv_7x7.cpp"
+    KERN_I:
+    for (int i = 0; i < 7; i++) {
+
+        KERN_J:
+        for (int j = 0; j < 7; j++) {
+
+            WIDTH:
+            for (int ow = 0; ow < 40 / 2; ow++) {
 
 
-
-        CHANNEL:
-        for (int chan = 0; chan < 3; chan++) {
-
-            KERN_I:
-            for (int i = 0; i < 7; i++) {
+                HEIGHT:
+                for (int oh = 0; oh < 46 / 2; oh++) {
 
 
-                KERN_J:
-                for (int j = 0; j < 7; j++) {
+                    h = oh << 1;
 
-                    HEIGHT:
-                    for (int oh = 0; oh < 46 / 2; oh++) {
 
-                        h = oh << 1;
+                    CHANNEL:
+                    for (int chan = 0; chan < 3; chan++) {
+#pragma HLS unroll
 
-                        WIDTH:
-                        for (int ow = 0; ow < 40 / 2; ow++) {
+ KERNEL:
+                        for (int kernel = 0; kernel < 4; kernel++) {
 #pragma HLS unroll
 
  w = ow << 1;

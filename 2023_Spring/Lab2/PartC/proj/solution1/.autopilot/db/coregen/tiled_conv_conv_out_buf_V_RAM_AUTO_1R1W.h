@@ -20,8 +20,8 @@ using namespace sc_dt;
 struct tiled_conv_conv_out_buf_V_RAM_AUTO_1R1W_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 16;
-  static const unsigned AddressRange = 320;
-  static const unsigned AddressWidth = 9;
+  static const unsigned AddressRange = 20;
+  static const unsigned AddressWidth = 5;
 
 //latency = 1
 //input_reg = 1
@@ -110,8 +110,8 @@ SC_MODULE(tiled_conv_conv_out_buf_V_RAM_AUTO_1R1W) {
 
 
 static const unsigned DataWidth = 16;
-static const unsigned AddressRange = 320;
-static const unsigned AddressWidth = 9;
+static const unsigned AddressRange = 20;
+static const unsigned AddressWidth = 5;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in<sc_logic> ce0;

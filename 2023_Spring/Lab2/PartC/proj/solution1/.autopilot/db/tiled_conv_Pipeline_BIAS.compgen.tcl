@@ -10,67 +10,67 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 72 \
-    name conv_bias_buf_V_7 \
+    id 175 \
+    name conv_bias_buf_V_3_2 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_conv_bias_buf_V_7 \
+    corename dc_conv_bias_buf_V_3_2 \
     op interface \
-    ports { conv_bias_buf_V_7 { I 16 vector } } \
+    ports { conv_bias_buf_V_3_2 { I 16 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 73 \
-    name conv_bias_buf_V_6 \
+    id 176 \
+    name conv_bias_buf_V_27 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_conv_bias_buf_V_6 \
+    corename dc_conv_bias_buf_V_27 \
     op interface \
-    ports { conv_bias_buf_V_6 { I 16 vector } } \
+    ports { conv_bias_buf_V_27 { I 16 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 74 \
-    name conv_bias_buf_V_5 \
+    id 177 \
+    name conv_bias_buf_V_1_2 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_conv_bias_buf_V_5 \
+    corename dc_conv_bias_buf_V_1_2 \
     op interface \
-    ports { conv_bias_buf_V_5 { I 16 vector } } \
+    ports { conv_bias_buf_V_1_2 { I 16 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 75 \
-    name conv_bias_buf_V_4 \
+    id 178 \
+    name conv_bias_buf_V_2_2 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_conv_bias_buf_V_4 \
+    corename dc_conv_bias_buf_V_2_2 \
     op interface \
-    ports { conv_bias_buf_V_4 { I 16 vector } } \
+    ports { conv_bias_buf_V_2_2 { I 16 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 76 \
+    id 179 \
     name wt \
     type other \
     dir I \
@@ -85,7 +85,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 77 \
+    id 180 \
     name sext_ln91 \
     type other \
     dir I \
@@ -100,60 +100,60 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 78 \
-    name conv_bias_buf_V_11_out \
+    id 181 \
+    name conv_bias_buf_V_3_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_conv_bias_buf_V_11_out \
+    corename dc_conv_bias_buf_V_3_out \
     op interface \
-    ports { conv_bias_buf_V_11_out { O 16 vector } conv_bias_buf_V_11_out_ap_vld { O 1 bit } } \
+    ports { conv_bias_buf_V_3_out { O 16 vector } conv_bias_buf_V_3_out_ap_vld { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 79 \
-    name conv_bias_buf_V_10_out \
+    id 182 \
+    name conv_bias_buf_V_2_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_conv_bias_buf_V_10_out \
+    corename dc_conv_bias_buf_V_2_out \
     op interface \
-    ports { conv_bias_buf_V_10_out { O 16 vector } conv_bias_buf_V_10_out_ap_vld { O 1 bit } } \
+    ports { conv_bias_buf_V_2_out { O 16 vector } conv_bias_buf_V_2_out_ap_vld { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 80 \
-    name conv_bias_buf_V_9_out \
+    id 183 \
+    name conv_bias_buf_V_1_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_conv_bias_buf_V_9_out \
+    corename dc_conv_bias_buf_V_1_out \
     op interface \
-    ports { conv_bias_buf_V_9_out { O 16 vector } conv_bias_buf_V_9_out_ap_vld { O 1 bit } } \
+    ports { conv_bias_buf_V_1_out { O 16 vector } conv_bias_buf_V_1_out_ap_vld { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 81 \
-    name conv_bias_buf_V_8_out \
+    id 184 \
+    name conv_bias_buf_V_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_conv_bias_buf_V_8_out \
+    corename dc_conv_bias_buf_V_out \
     op interface \
-    ports { conv_bias_buf_V_8_out { O 16 vector } conv_bias_buf_V_8_out_ap_vld { O 1 bit } } \
+    ports { conv_bias_buf_V_out { O 16 vector } conv_bias_buf_V_out_ap_vld { O 1 bit } } \
 } "
 }
 

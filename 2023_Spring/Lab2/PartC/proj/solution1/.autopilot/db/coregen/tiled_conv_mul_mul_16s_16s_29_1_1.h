@@ -5,7 +5,7 @@
 // ==============================================================
 #ifndef __tiled_conv_mul_mul_16s_16s_29_1_1__HH__
 #define __tiled_conv_mul_mul_16s_16s_29_1_1__HH__
-#include "tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_1.h"
+#include "tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_0.h"
 #include <systemc>
 
 template<
@@ -21,12 +21,12 @@ SC_MODULE(tiled_conv_mul_mul_16s_16s_29_1_1) {
 
 
 
-    tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_1 tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_1_U;
+    tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_0 tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_0_U;
 
-    SC_CTOR(tiled_conv_mul_mul_16s_16s_29_1_1):  tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_1_U ("tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_1_U") {
-        tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_1_U.a(din0);
-        tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_1_U.b(din1);
-        tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_1_U.p(dout);
+    SC_CTOR(tiled_conv_mul_mul_16s_16s_29_1_1):  tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_0_U ("tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_0_U") {
+        tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_0_U.a(din0);
+        tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_0_U.b(din1);
+        tiled_conv_mul_mul_16s_16s_29_1_1_DSP48_0_U.p(dout);
 
     }
 

@@ -2,7 +2,6 @@
     <config>
         <config_interface m_axi_latency="0"/>
         <config_schedule enable_dsp_full_reg="0"/>
-        <config_array_partition throughput_driven="off"/>
     </config>
     <name>
         <value string="solution1"/>

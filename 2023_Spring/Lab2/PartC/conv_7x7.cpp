@@ -37,28 +37,31 @@ void conv_7x7 (
 
 
 
-    KERNEL:
-    for (int kernel = 0; kernel < OUT_BUF_DEPTH; kernel++) {
-
         //#pragma HLS pipeline
 
-        CHANNEL:
-        for (int chan = 0; chan < 3; chan++) {
+    KERN_I:
+    for (int i = 0; i < 7; i++) {
 
-            KERN_I:
-            for (int i = 0; i < 7; i++) {
+        KERN_J:
+        for (int j = 0; j < 7; j++) {
+
+            WIDTH:
+            for (int ow = 0; ow < OUT_BUF_WIDTH; ow++) {
                 //#pragma HLS unroll
 
-                KERN_J:
-                for (int j = 0; j < 7; j++) {
+                HEIGHT:
+                for (int oh = 0; oh < OUT_BUF_HEIGHT; oh++) {
+                    //#pragma HLS pipeline
 
-                    HEIGHT:
-                    for (int oh = 0; oh < OUT_BUF_HEIGHT; oh++) {
+                    h = oh << 1;
 
-                        h = oh << 1;
 
-                        WIDTH:
-                        for (int ow = 0; ow < OUT_BUF_WIDTH; ow++) {
+                    CHANNEL:
+                    for (int chan = 0; chan < 3; chan++) {
+                        #pragma HLS unroll
+
+                        KERNEL:
+                        for (int kernel = 0; kernel < OUT_BUF_DEPTH; kernel++) {
                             #pragma HLS unroll
 
                             w = ow << 1;
